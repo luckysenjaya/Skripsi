@@ -1,0 +1,9 @@
+Resume Topik
+In this topic, we have discussed process identification.
+
+First, we distinguished and described the phases of designation and evaluation. 
+
+The designation phase aims at enumerating the major processes within an organization, as well as determining the boundaries between those processes. An insight into the major processes that are being carried out in an organization is important to set up any process management activity.
+
+The evaluation phase is dedicated to prioritizing process analysis and redesign efforts. It is good practice to base priorities upon the importance of processes, their potential dysfunction, and the feasibility of improvements.
+The designation phase may be used not only to enumerate the most important processes, but also to design a consistent overarching process architecture. A process architecture defines the relationship between the different processes. Often, different levels of detail are distinguished. We discussed a specific approach for the definition of level one of the process architecture. This approach builds on the identification of case types, of the functions for these case types, the construction of a case/function matrix, the identification of processes based on guidelines, and the eventual completion of the architecture.

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;loan-approval/src/main/java/camunda&apos;" deleteContents="false" description="Delete resource &apos;loan-approval/src/main/java/camunda&apos;" element1="/loan-approval/src/main/java/camunda" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1460343787831"/>
+</session>

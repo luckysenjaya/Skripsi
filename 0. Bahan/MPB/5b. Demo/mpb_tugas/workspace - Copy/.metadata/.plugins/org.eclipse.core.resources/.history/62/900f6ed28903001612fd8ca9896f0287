@@ -1,0 +1,13 @@
+<html>
+
+<head></head>
+
+<body>
+	<script>
+		camForm.on('form-loaded', function() {
+		  // fetch the variable named 'customerData'
+		  camForm.variableManager.fetchVariable('customerData');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+UTS bersifat close book.
+
+Soal ada 5 uraian:
+
+1. Definisi dan contoh [20].
+
+2. Diberikan kasus, diminta dibuatkan FC dan BPMN [40].
+
+3. Otomasi dan BPMS Camunda [40].
+
+
+
+
+
+5 soal 
+1 definisi dan contoh 
+
+
+3. apa, bagaimana, prinsip
+
+
+bpms camunda --> salah satu bpms
+
+konsep software yang memiliki kemampuan"
+ciri khas basis java, open source, support eksekusi bpmn, support cmnn, dmn, etc.
+
+maven 

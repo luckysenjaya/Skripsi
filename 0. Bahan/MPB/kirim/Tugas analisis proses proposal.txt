@@ -1,0 +1,55 @@
+Coba cek kembali kasus Pendaftaran BPJS yang telah anda otomasi. 
+
+Dengan asumsi proses ini sudah digunakan (dijalankan) oleh kantor BPJS dalam melayani pendaftara BPJS, usulkanlah metodologi untuk melakukan analisis proses bisnis, paling tidak menggunakan:
+
+1. Dua metode kualitatif.
+
+2. Dua metode kuantitatif.
+
+Atas dasar metode yang anda pilih, usulkan bagaimana langkah-langkahnya, khusus untuk kasus Pendaftaran BPJS tersebut. Sebut juga siapa yang anda jadikan sebagai nara sumber/ business expertnya!
+
+Kumpulkan usulan anda di sini!
+
+
+Kelompok 
+Roy 2012730019
+
+Lucky 2012730009
+
+Irvan 2012730094
+
+
+Metode Kualitatif
+
+Why-Why Diagrams
+
+Mencari permasalahan pada proses pendaftaran BPJS. Permasalahan didapatkan dengan mewawancarai proses partisipan (petugas BPJS, pemohon).
+
+Menentukan alasan dari masalah tersebut. Dari setiap alasan(sub-masalah) yang ditentukan, dicari alasan lebih lanjut mengapa sub-masalah itu bisa terjadi. Hal ini dilakukan hingga menemukan permasalahan dasar.
+Value Added
+
+Mengategorikan proses-proses yang termasuk VA, BVA, atau NVA
+
+VA menambah value ke pemohon bpjs
+
+BVA tidak menambah value ke pemohon bpjs, namun diperlukan untuk menyelesaikan proses
+
+Proses NVA bisa dihilangkan
+
+
+
+
+Metode Kuantitatif
+
+Flow Analysis
+Menghitung keseluruhan cycle time dari proses pendaftaran BPJS.
+
+Langkah-langkah :
+Menentukan cycle time setiap proses
+Menghitung jumlah cycle time dari keseluruhan proses
+Membandingkan jumlah cycle time dengan data lain yang didapat dari survey pendaftaran BPJS secara manual (membandingkan pendaftaran BPJS secara online dan secara manual). Dilihat apakah ada perbedaan yang signifikan.
+
+Simulation
+
+Melakukan simulasi dan menghitung berbagai data yang diperlukan untuk mengukur proses pendaftaran bpjs. Misalnya cycle time, waiting time, jumlah antrian, dll yang dapat digunakan untuk meningkatkan proses bpjs menjadi lebih baik.
+

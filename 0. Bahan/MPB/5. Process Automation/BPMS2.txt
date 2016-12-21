@@ -1,0 +1,11 @@
+Pertanyaan kunci BPMS Camunda:
+
+1. Apa itu BPMS Camunda? Apa saja fitur-fitur nya!
+
+2. Gambarkan arsitektur BPMS Camunda! Jelaskan fungsi dari setiap komponen dalam arsitektur tersebut! Asosiasikan setiap komponen dengan arsitektur BPMS pada pertanyaan kunci 1!
+
+3. Setelah model proses diubah menjadi spesifikasi yang siap dieksekusi oleh sebuah BPMS,  apa langkah selanjutnya yang perlu dilakukan jika anda menggunakan BPMS Camunda? (lihat soal nomor 5 pada pertanyaan kunci 1).
+
+4. Untuk menjalankan otomasi proses, aplikasi/ tools apa saja yang perlu diinstal?
+
+5. Apa saja yang perlu dikembangkan/ disain/ coding untuk mengimplementasikan otomasi proses pada Camunda BPMS?

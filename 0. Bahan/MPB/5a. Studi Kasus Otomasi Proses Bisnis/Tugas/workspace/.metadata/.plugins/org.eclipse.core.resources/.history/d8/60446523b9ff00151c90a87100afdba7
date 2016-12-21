@@ -1,0 +1,12 @@
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class PembangkitNomor {
+
+	public int nomorPembayaran(){
+		
+		
+	}
+}

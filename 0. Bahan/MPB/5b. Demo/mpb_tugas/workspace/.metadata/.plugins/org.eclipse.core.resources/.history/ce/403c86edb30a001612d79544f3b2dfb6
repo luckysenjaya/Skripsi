@@ -1,0 +1,109 @@
+<html>
+<head><title>Pendaftaran BPJS</title></head>
+
+<body>
+
+	<form name="pendaftaranBPJS" role="form">
+	
+		<!--script cam-script type="text/form-script">
+	
+	    // angular form works on scope object
+	    var pemohon = $scope.pemohon = {
+	      addresses : []
+	    };
+	
+	    // hook into camunda SDK JS Form Lifecycle
+	    camForm.on('form-loaded', function() {
+	
+	      // declare variable 'customerData' incuding metadata for serialization
+	      camForm.variableManager.createVariable({
+	        name: 'pemohon',
+	        type: 'Object',
+	        value: pemohon,
+	        valueInfo: {
+	          // indicate that object is serialized as json
+	          serializationDataFormat: 'application/json',
+	          // provide classname of java object
+	          objectTypeName: 'org.camunda.bpm.getstarted.pendaftaranbpjs.Pemohon'
+	        }
+	      });
+	
+	    });
+	
+	  </script-->
+	
+	  <h3>Pendaftaran BPJS</h3>
+	
+	  <div class="control-group">
+	    
+		
+		<label class="control-label" for="nama">Nama</label>
+	    <div class="controls">
+	      <input id="nama"
+	             class="form-control"
+	             cam-variable-name = "nama"
+	             cam-variable-type = "String"
+	             type="text"
+	             required 
+	             !--ng-model="pemohon.nama"-->
+	    </div>
+		
+		<label class="control-label" for="tanggalLahir">Tanggal Lahir</label>
+	    <div class="controls">
+	      <input id="tanggalLahir"
+	             class="form-control"
+	             cam-variable-name = "tanggalLahir"
+	             cam-variable-type = "String"
+	             type="text"
+	             required 
+	             ng-model="pemohon.tanggalLahir">
+	    </div>
+		
+		<label class="control-label" for="nik">NIK</label>
+	    <div class="controls">
+	      <input id="nik"
+	             class="form-control"
+	             cam-variable-name = "nik"
+	             cam-variable-type = "String"
+	             type="text"
+	             required 
+	             ng-model="pemohon.nik">
+	    </div>
+		
+		<label class="control-label" for="kelas">Kelas</label>
+	    <div class="controls">
+	      <input id="kelas"
+	             class="form-control"
+	             cam-variable-name = "kelas"
+	             cam-variable-type = "String"
+	             type="text"
+	             required 
+	             ng-model="pemohon.kelas">
+	    </div>
+	
+	  <!-- ... Additional fields ommitted -->
+	
+	  </div>
+		<!--h3>Formulir Pendaftaran BPJS</h3>
+		
+		<div class="form-group">
+			<input type = "text" placeholder="Nama" name = "nama" ng-model="pemohon.nama"/><br>
+		</div>
+		<div class="form-group">
+			<input type = "text" placeholder="Tanggal Lahir" name = "tanggalLahir" ng-model="pemohon.tanggalLahir"/><br>
+		</div>
+		<div class="form-group">
+			<input type = "text" placeholder="NIK" name = "nik" ng-model="pemohon.nik"/><br>
+		</div>
+		<select name="kelas">
+			<option value="kelas1">Kelas 1</option>
+			<option value="kelas2">Kelas 2</option>
+			<option value="kelas3">Kelas 3</option>
+		</select>
+		<div class="form-group">
+			<input type = "text" placeholder="Nama Klinik" name="namaKlinik" disabled/><br>
+		</div-->
+	</form>
+
+</body>
+</html>

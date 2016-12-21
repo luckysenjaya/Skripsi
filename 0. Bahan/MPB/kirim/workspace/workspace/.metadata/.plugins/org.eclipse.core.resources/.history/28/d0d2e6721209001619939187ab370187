@@ -1,0 +1,8 @@
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+public class PembangkitBarcode implements JavaDelegate{
+
+	public int getBarcode(){
+		return 12345;
+	}
+}

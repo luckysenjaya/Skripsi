@@ -1,0 +1,9 @@
+1. Apa kepanjangan dan maksud dari BPMS?
+
+2. Gambarkan arsitektur BPMS! Jelaskan masing-masing fungsi dari setiap komponen dari BPMS! Jelaskan pula hubungan setiap komponen dengan komponen lainnya!
+
+3. Apa manfaat yang diperoleh dengan mengotomasi proses menggunakan BPMS?
+
+4. Apa saja tantangan yang harus dihadapi dalam mengimplementasikan BPMS?
+
+5. Misalkan anda sudah memiliki model proses dalam bentuk BPMN. Sebut dan jelaskan bagaimana cara mentransformasi model proses tersebut menjadi spesifikasi yang siap dieksekusi oleh BPMS?

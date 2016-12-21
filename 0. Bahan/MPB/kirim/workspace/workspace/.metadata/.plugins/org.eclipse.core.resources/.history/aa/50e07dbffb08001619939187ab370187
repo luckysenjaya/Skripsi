@@ -1,0 +1,64 @@
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('uangDaftar');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.uangDaftar = camForm.variableManager.variableValue('uangDaftar');
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      
+    });
+  	</script>
+  	<table>
+
+    <tr>
+      <td>Uang Daftar:</td>
+      <td>{{ uangDaftar }}</td>
+    </tr>
+
+    <tr>
+      <td>Nomor:</td>
+      <td>{{nomor}}</td>
+    </tr>
+    </table>
+</form> 
+</body>
+</html>
+
+
+
+	<!--div class="controls">
+	      <input id="nama"
+	             cam-variable-name = "nama"
+	             cam-variable-type = "String"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="kelas"
+	             cam-variable-name = "kelas"
+	             cam-variable-type = "String"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="nomor"
+	             cam-variable-name = "nomor"
+	             cam-variable-type = "int"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="uangDaftar"
+	             cam-variable-name = "uangDaftar"
+	             cam-variable-type = "int"
+	             type="text"
+	             class="form-control"
+	      />
+	    </div-->

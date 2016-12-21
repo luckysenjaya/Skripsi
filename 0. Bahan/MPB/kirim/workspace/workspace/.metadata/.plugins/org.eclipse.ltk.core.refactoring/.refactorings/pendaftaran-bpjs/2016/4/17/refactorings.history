@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal&apos; to &apos;ringkasan-jadwal.html&apos;" description="Rename resource &apos;ringkasan-jadwal&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/forms/ringkasan-jadwal" name="ringkasan-jadwal.html" stamp="1461382480758" updateReferences="true"/>
+</session>

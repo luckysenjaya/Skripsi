@@ -1,0 +1,117 @@
+07-Apr-2016 12:23:07.838 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+07-Apr-2016 12:23:07.842 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+07-Apr-2016 12:23:07.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+07-Apr-2016 12:23:07.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 8.1
+07-Apr-2016 12:23:07.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.3
+07-Apr-2016 12:23:07.846 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86
+07-Apr-2016 12:23:07.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files (x86)\Java\jre1.8.0_74
+07-Apr-2016 12:23:07.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_74-b02
+07-Apr-2016 12:23:07.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+07-Apr-2016 12:23:07.850 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+07-Apr-2016 12:23:07.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+07-Apr-2016 12:23:07.854 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\conf\logging.properties
+07-Apr-2016 12:23:07.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+07-Apr-2016 12:23:07.858 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx512m
+07-Apr-2016 12:23:07.862 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:MaxPermSize=256m
+07-Apr-2016 12:23:07.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:PermSize=256m
+07-Apr-2016 12:23:07.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\endorsed
+07-Apr-2016 12:23:07.870 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+07-Apr-2016 12:23:07.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+07-Apr-2016 12:23:07.874 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\temp
+07-Apr-2016 12:23:07.882 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre1.8.0_74\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Broadcom\Broadcom 802.11;;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\nodejs\;C:\Program Files\Git\bin;C:\Program Files\Java\jdk1.8.0_65;C:\Program Files\Java\jre1.8.0_65;C:\Users\LukeOne\AppData\Roaming\npm;.
+07-Apr-2016 12:23:09.991 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+07-Apr-2016 12:23:10.273 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Apr-2016 12:23:10.273 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+07-Apr-2016 12:23:10.304 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+07-Apr-2016 12:23:10.304 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 4670 ms
+07-Apr-2016 12:23:10.382 WARNING [main] org.apache.tomcat.jdbc.pool.ConnectionPool.init maxIdle is larger than maxActive, setting maxIdle to: 20
+07-Apr-2016 12:23:14.833 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08046 Found camunda bpm platform configuration in CATALINA_BASE/CATALINA_HOME conf directory [D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\conf\bpm-platform.xml] at 'file:/D:/KULIAH/kuliah/Semester%208/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/conf/bpm-platform.xml'
+07-Apr-2016 12:23:17.072 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ProcessApplicationEventListenerPlugin' activated on process engine 'default'
+07-Apr-2016 12:23:17.088 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'SpinProcessEnginePlugin' activated on process engine 'default'
+07-Apr-2016 12:23:17.150 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormatProvider[name = application/json]
+07-Apr-2016 12:23:17.884 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormatProvider[name = application/xml]
+07-Apr-2016 12:23:18.025 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormat[name = application/xml]
+07-Apr-2016 12:23:18.041 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
+07-Apr-2016 12:23:18.041 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ConnectProcessEnginePlugin' activated on process engine 'default'
+07-Apr-2016 12:23:19.103 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'http-connector' and class 'org.camunda.connect.httpclient.impl.HttpConnectorImpl': 'org.camunda.connect.httpclient.impl.HttpConnectorProviderImpl'
+07-Apr-2016 12:23:19.134 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'soap-http-connector' and class 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorImpl': 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorProviderImpl'
+07-Apr-2016 12:23:28.019 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-00001 Process Engine default created.
+07-Apr-2016 12:23:28.019 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor].
+07-Apr-2016 12:23:28.035 INFO [Thread-6] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14018 JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor] starting to acquire jobs
+07-Apr-2016 12:23:28.082 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08048 Camunda BPM platform sucessfully started at 'Apache Tomcat/8.0.24'.
+07-Apr-2016 12:23:28.176 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+07-Apr-2016 12:23:28.176 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+07-Apr-2016 12:23:28.738 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT.war
+07-Apr-2016 12:23:39.634 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.loanapproval.LoanApprovalApplication'
+07-Apr-2016 12:23:39.874 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+07-Apr-2016 12:23:40.030 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/KULIAH/kuliah/Semester%208/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/loan-approval-0.1.0-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+07-Apr-2016 12:23:40.142 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'loan-approval': 
+
+        loan.bpmn
+        loan-approval.bpmn
+
+07-Apr-2016 12:23:40.762 SEVERE [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logError ENGINE-16004 Exception while closing command context: The deployment contains definitions with the same key 'approve_loan' (id attribute), this is not allowed
+ org.camunda.bpm.engine.ProcessEngineException: The deployment contains definitions with the same key 'approve_loan' (id attribute), this is not allowed
+	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.ensureNoDuplicateDefinitionKeys(AbstractDefinitionDeployer.java:198)
+	at org.camunda.bpm.engine.impl.AbstractDefinitionDeployer.deploy(AbstractDefinitionDeployer.java:57)
+	at org.camunda.bpm.engine.impl.persistence.deploy.DeploymentCache$1.call(DeploymentCache.java:69)
+	at org.camunda.bpm.engine.impl.persistence.deploy.DeploymentCache$1.call(DeploymentCache.java:66)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:553)
+	at org.camunda.bpm.engine.impl.persistence.deploy.DeploymentCache.deploy(DeploymentCache.java:66)
+	at org.camunda.bpm.engine.impl.persistence.entity.DeploymentManager.insertDeployment(DeploymentManager.java:52)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.deploy(DeployCmd.java:470)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:137)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd$1.call(DeployCmd.java:126)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.runWithoutAuthorization(CommandContext.java:553)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.doExecute(DeployCmd.java:126)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:93)
+	at org.camunda.bpm.engine.impl.cmd.DeployCmd.execute(DeployCmd.java:75)
+	at org.camunda.bpm.engine.impl.interceptor.CommandExecutorImpl.execute(CommandExecutorImpl.java:24)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:95)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30)
+	at org.camunda.bpm.engine.impl.RepositoryServiceImpl.deploy(RepositoryServiceImpl.java:92)
+	at org.camunda.bpm.engine.impl.repository.DeploymentBuilderImpl.deploy(DeploymentBuilderImpl.java:207)
+	at org.camunda.bpm.engine.impl.repository.ProcessApplicationDeploymentBuilderImpl.deploy(ProcessApplicationDeploymentBuilderImpl.java:59)
+	at org.camunda.bpm.container.impl.deployment.DeployProcessArchiveStep.performOperationStep(DeployProcessArchiveStep.java:132)
+	at org.camunda.bpm.container.impl.spi.DeploymentOperation.execute(DeploymentOperation.java:114)
+	at org.camunda.bpm.container.impl.jmx.MBeanServiceContainer.executeDeploymentOperation(MBeanServiceContainer.java:156)
+	at org.camunda.bpm.container.impl.spi.DeploymentOperation$DeploymentOperationBuilder.execute(DeploymentOperation.java:203)
+	at org.camunda.bpm.container.impl.RuntimeContainerDelegateImpl.deployProcessApplication(RuntimeContainerDelegateImpl.java:88)
+	at org.camunda.bpm.application.AbstractProcessApplication.deploy(AbstractProcessApplication.java:58)
+	at org.camunda.bpm.application.impl.ServletProcessApplication.contextInitialized(ServletProcessApplication.java:131)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4727)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5167)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:725)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:701)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:717)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:945)
+	at org.apache.catalina.startup.HostConfig$DeployWar.run(HostConfig.java:1768)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Unknown Source)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+
+07-Apr-2016 12:23:40.794 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal One or more listeners failed to start. Full details will be found in the appropriate container log file
+07-Apr-2016 12:23:40.798 SEVERE [localhost-startStop-1] org.apache.catalina.core.StandardContext.startInternal Context [/loan-approval-0.1.0-SNAPSHOT] startup failed due to previous errors
+07-Apr-2016 12:23:40.798 WARNING [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logWarn ENGINE-07017 Calling undeploy() on process application that is not deployed.
+07-Apr-2016 12:23:40.866 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT.war has finished in 12,124 ms
+07-Apr-2016 12:23:40.866 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda
+07-Apr-2016 12:23:58.615 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda has finished in 17,749 ms
+07-Apr-2016 12:23:58.619 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice
+07-Apr-2016 12:24:07.023 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.example.invoice.InvoiceProcessApplication'
+07-Apr-2016 12:24:07.123 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/KULIAH/kuliah/Semester%208/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/camunda-invoice/WEB-INF/classes/META-INF/processes.xml
+07-Apr-2016 12:24:07.271 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'camunda-invoice': 
+
+        invoice.png
+        assign-approver-groups.dmn
+        invoice.bpmn
+
+07-Apr-2016 12:24:15.598 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application camunda-invoice successfully deployed
+07-Apr-2016 12:24:15.614 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice has finished in 16,995 ms
+07-Apr-2016 12:24:15.614 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome
+07-Apr-2016 12:24:21.366 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome has finished in 5,752 ms
+07-Apr-2016 12:24:21.366 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs
+07-Apr-2016 12:24:27.925 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs has finished in 6,559 ms
+07-Apr-2016 12:24:27.925 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Semester 8\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\engine-rest

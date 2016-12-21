@@ -1,0 +1,36 @@
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('jadwal');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.jadwal = camForm.variableManager.variableValue('jadwal');
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      
+    });
+  	</script>
+  	<table>
+
+    <tr>
+      <td>Jadwal :</td>
+      <td>{{ jadwal }}</td>
+    </tr>
+
+    <tr>
+      <td>Nomor:</td>
+      <td>{{nomor}}</td>
+    </tr>
+    </table>
+</form> 
+
+</body>
+</html>

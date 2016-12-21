@@ -1,0 +1,29 @@
+<html>
+<head><title>Pendaftaran BPJS</title></head>
+
+<body>
+<div>
+	<form name="pendaftaranBPJS" method="POST">
+		<h3>Formulir Pendaftaran BPJS</h3>
+		
+		<div class="form-group">
+			<input type = "text" placeholder="Nama" name = "nama"/><br>
+		</div>
+		<div class="form-group">
+			<input type = "text" placeholder="Tanggal Lahir" name = "tanggalLahir"/><br>
+		</div>
+		<div class="form-group">
+			<input type = "text" placeholder="NIK" name = "nik"/><br>
+		</div>
+		<select name="kelas">
+			<option value="kelas1">Kelas 1</option>
+			<option value="kelas2">Kelas 2</option>
+			<option value="kelas3">Kelas 3</option>
+		</select>
+		<div class="form-group">
+			<input type = "text" placeholder="Nama Klinik" name="namaKlinik" disabled/><br>
+		</div>
+</form>
+</div>
+</body>
+</html>

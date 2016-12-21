@@ -1,0 +1,19 @@
+BASIC PROCESS MODELS IN BPMN.
+
+A basic BPMN model includes simple activities, events, gateways, data objects, pools, and lanes.
+
+Activities capture units of work within a process. Events define the start and end of a process, and signal something that happens during the execution of it. Gateways model exclusive and inclusive decisions, merges, parallelism and synchronization, and repetition.
+
+Difference between process model and process instance. A process model depicts all the possible ways a given business process can be executed, while a process instance captures one specific process execution out of all possible ones. The progress, or state, of a process instance is represented by tokens. Using tokens we can define the behavior of gateways.
+
+Data objects to model the information flow between activities and events. A data object captures a physical or an electronic artifact required to execute an activity or trigger an event, or that results from the execution of an activity or an event occurrence. Data objects can be stored in a data store like a database or file cabinet such that they can be persisted beyond the process instance where they are created.
+
+Pools and lanes can be used to model both human and non-human resources that perform process activities. Pools generally model resource classes while lanes are used to partition pools. The interaction between pools is captured by message flows. Message flows can be directly attached to the boundary of a pool, should the details of the interaction not be relevant.
+
+
+Modeling Perspectives. Activities, events, gateways, artifacts, and resources belong to the main modeling perspectives of a business process.
+
+Functional perspective captures the activities that are performed in a business process.
+Control-flow perspective combines these activities and related events in a given order.
+Data perspective covers the artifacts manipulated in the process.
+Resource perspective covers the resources that perform the various activities.

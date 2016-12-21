@@ -1,0 +1,32 @@
+<html>
+
+<head></head>
+
+	<script>
+//		camForm.on('form-loaded', function() {
+//  			// fetch the variable named 'customerData'
+//  			camForm.variableManager.fetchVariable('nik');
+//		});
+		
+//		camForm.on('variables-fetched', function() {
+  			// after the variables are fetched, bind the value of customerData to a angular
+  			// scope value such that the form can work on it
+//  		document.getElementById("nik").innerHTML= camForm.variableManager.variable('nik').value;
+//		});
+//	document.getElementById("nik").innerHTML= ;
+//	</script>
+	
+<body>
+	<form>
+		<div class="controls">
+	      <input id="kelas"
+	             
+	             cam-variable-name = "kelas"
+	             cam-variable-type = "String"
+	             type="text"
+	             class="form-control"
+	             />
+	    </div>
+	</form>
+</body>
+</html>

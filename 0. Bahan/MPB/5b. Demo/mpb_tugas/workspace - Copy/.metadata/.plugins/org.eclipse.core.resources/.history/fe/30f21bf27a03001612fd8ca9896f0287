@@ -1,0 +1,11 @@
+<html>
+<head></head>
+
+<body>
+	<form method="post">
+		<p>Upload Dokumen Persyaratan:</p>
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<input type ="submit" value="Unggah Dokumen" name="submit">
+	</form>
+</body>
+</html>

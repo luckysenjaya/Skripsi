@@ -1,0 +1,37 @@
+<html>
+
+<head></head>
+
+
+	
+<body>
+	<form>
+		<div class="controls">
+	      <input id="nama"
+	             cam-variable-name = "nama"
+	             cam-variable-type = "String"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="kelas"
+	             cam-variable-name = "kelas"
+	             cam-variable-type = "String"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="kelas"
+	             cam-variable-name = "nomor"
+	             cam-variable-type = "int"
+	             type="text"
+	             class="form-control"
+	      />
+	      <input id="kelas"
+	             cam-variable-name = "uangDaftar"
+	             cam-variable-type = "int"
+	             type="text"
+	             class="form-control"
+	      />
+	    </div>
+	</form>
+</body>
+</html>

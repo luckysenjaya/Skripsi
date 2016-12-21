@@ -1,0 +1,22 @@
+Tujuan:
+
+Memahami Proses Bisnis
+Memahami Manajemen Proses Bisnis
+Mampu Memodelkan Proses Bisnis menggunakan BPMN
+Mampu Menerapkan Siklus Manajemen Proses Bisnis
+Mampu Mengotomasi Proses Bisnis menggunakan BPMS
+Ringkasan Materi:
+
+Definisi proses bisnis, manajemen proses bisnis (BPM, BPI), system informasi dan perannya dalam menentukan keberhasilan suatu organisasi.
+Business Process Management (BPM) Life Cycle
+Pemodelan proses bisnis (block diagram, ANSI flow chart, functional flow chart, geographical flow chart;  Business Process Modeling and Notation (BPMN); Penggunaan tools pemodelan BPMN)
+Analisis proses bisnis eksisting (as-is model) 
+Disain proses bisnis (to-be model)
+Otomasi proses bisnis menggukanan BPMS/ Work Flow system Camunda berbasis Java 2 Enterprise Edition (J2EE).
+Referensi:
+
+Fundamentals of Business Process Management, Springer, 2013
+Business Process Improvement, McGraw-Hill, Inc. 1991
+BPMN 2.0 (www.bpmn.org)
+Camunda BPMS (www.camunda.org)
+BPMN 2.0 & Process Implementation Examples https://github.com/camunda/camunda-bpm-examples#getting-started-with-camunda-bpm

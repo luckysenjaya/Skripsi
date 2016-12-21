@@ -1,0 +1,25 @@
+<html>
+
+<head></head>
+
+<body>
+	<p>Halaman pilih jadwal verifikasi dokumen.</p>
+	
+	
+
+
+	<select 
+		cam-variable-name="jadwalHari"
+        cam-choices="jadwalHariPilihan"
+        multiple>
+  		<option value="senin">Senin</option>
+  		<option value="selasa">Selasa</option>
+  		<option value="rabu">Rabu</option>
+  		<option value="kamis">Kamis</option>
+  		<option value="jumat">Jumat</option>
+	</select>
+
+
+
+</body>
+</html>

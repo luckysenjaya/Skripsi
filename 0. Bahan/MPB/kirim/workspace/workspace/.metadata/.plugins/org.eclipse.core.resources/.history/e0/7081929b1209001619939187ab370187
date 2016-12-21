@@ -1,0 +1,27 @@
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class PembangkitBarcode implements JavaDelegate{
+
+	public int getBarcode(){
+		return 12345;
+	}
+	
+	public void execute(DelegateExecution execution) throws Exception {
+		Pemohon pemohon = new Pemohon();
+		pemohon.setNama(execution.getVariable("nama"));
+		pemohon.setNik(execution.getVariable("nik"));
+		pemohon.setTanggalLahir(execution.getVariable("tanggalLahir"));
+		pemohon.setKelas(execution.getVariable("kelas"));
+		pemohon.setNamaKlinik(execution.getVariable("namaKlinik"));
+		this.nomorPembayaran();
+		this.uangPendaftaran();
+		execution.setVariable("uangDaftar", uangDaftar);
+		execution.setVariable("nomor", nomor);
+		//pemohon.setKelas("Kelas 1");
+		//pemohon.setNamaKlinik("Klinik Suka Sehat");
+		//LOGGER.info("memproses '"+execution.getVariable("nama") +"' a");// '"+pemohon.getNama() + "' dengan id ");
+	}
+}

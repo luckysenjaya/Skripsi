@@ -1,0 +1,75 @@
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nama');
+	      camForm.variableManager.fetchVariable('tanggalLahir');
+	      camForm.variableManager.fetchVariable('nik');
+	      camForm.variableManager.fetchVariable('kelas');
+	      camForm.variableManager.fetchVariable('jadwal');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+		$scope.nama = camForm.variableManager.variableValue('nama');
+	    $scope.tanggalLahir = camForm.variableManager.variableValue('tanggalLahir');
+	    $scope.nik = camForm.variableManager.variableValue('nik');
+	    $scope.kelas = camForm.variableManager.variableValue('kelas');
+	    $scope.nomor = camForm.variableManager.variableValue('nomor');
+	    $scope.jadwal = camForm.variableManager.variableValue('jadwal');
+	      
+    });
+  	</script>
+  	<p>Download Dokumen Persyaratan</p>
+  	<a cam-file-download="INVOICE_DOCUMENT">Download</a>
+  	<table>
+  	
+  	
+
+    <tr>
+      <td>Nama:</td>
+      <td>{{ nama }}</td>
+    </tr>
+    
+    <tr>
+      <td>Tanggal Lahir:</td>
+      <td>{{ tanggalLahir }}</td>
+    </tr>
+    
+    <tr>
+      <td>Nik:</td>
+      <td>{{ nik }}</td>
+    </tr>
+    
+    <tr>
+      <td>Kelas:</td>
+      <td>{{ kelas }}</td>
+    </tr>
+    
+    <tr>
+      <td>Nomor:</td>
+      <td>{{ nomor }}</td>
+    </tr>
+
+    <tr>
+      <td>jadwal:</td>
+      <td>{{jadwal}}</td>
+    </tr>
+    </table>
+    
+    <p>Apakah dokumen dan persyaratan lengkap?</p>
+    <input cam-variable-name="valid"
+             cam-variable-type="Boolean"
+             type="checkbox"
+             name="valid"
+             class="form-control" />
+    
+</form> 
+</body>
+</html>

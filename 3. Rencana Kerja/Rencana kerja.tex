@@ -1,0 +1,118 @@
+\documentclass[a4paper,twoside]{article}
+\usepackage[T1]{fontenc}
+\usepackage[bahasa]{babel}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{float}
+\usepackage[cm]{fullpage}
+\pagestyle{myheadings}
+\usepackage{etoolbox}
+\usepackage{setspace} 
+\usepackage{lipsum} 
+\setlength{\headsep}{30pt}
+\usepackage[inner=2cm,outer=2.5cm,top=2.5cm,bottom=2cm]{geometry} %margin
+% \pagestyle{empty}
+
+\makeatletter
+\renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
+\renewcommand{\thispagestyle}[1]{}
+\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2015/2016}}}
+
+\onehalfspacing
+ 
+\begin{document}
+
+\title{\@judultopik}
+\author{\nama \textendash \@npm} 
+
+%tulis nama dan NPM anda di sini:
+\newcommand{\nama}{Lucky Senjaya Darmawan}
+\newcommand{\@npm}{2012730009}
+\newcommand{\@judultopik}{Studi dan Integrasi Workflow menggunakan BPMS dan Sistem Email} % Judul/topik anda
+\newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
+\newcommand{\tanggal}{20/12/2016}
+
+% Dokumen hasil template ini harus dicetak bolak-balik !!!!
+
+\maketitle
+
+\pagenumbering{arabic}
+
+\section{Deskripsi}
+\textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email.
+
+\section{Rumusan Masalah}
+\begin{itemize}
+	\item Bagaimana memodelkan \textit{workflow} dengan BPMN?
+	\item Event-event \textit{workflow} apa saja yang dapat dipropagasi ke sistem email?
+	\item Bagaimana mekanisme propagasi dan integrasi \textit{workflow} dengan sistem email?
+\end{itemize}
+\section{Tujuan}
+\begin{itemize}
+	\item Memodelkan \textit{workflow} dengan BPMN.
+	\item Mengidentifikasi event-event \textit{workflow} yang dapat dipropagasi ke sistem email.
+	\item Menentukan mekanisme propagasi dan mengintegrasikan \textit{workflow} dengan sistem email.
+\end{itemize}
+
+\section{Deskripsi Perangkat Lunak}
+Hasil akhir dari skripsi ini adalah integrasi \textit{workflow} yang diotomasi BPMS dengan sistem email. Ketika ada \textit{event} yang membutuhkan sistem email, maka perangkat lunak akan mengirimkan email atau membuka email yang masuk.
+
+		
+
+\section{Detail Pengerjaan Skripsi}
+Bagian-bagian pekerjaan skripsi ini adalah sebagai berikut :
+	\begin{enumerate}
+		\item Studi tentang proses bisnis, \textit{workflow}, pemodelan BPMN, BPMS, sistem email.
+		\item Memodelkan suatu proses bisnis tertentu menggunakan BPMN.
+		\item Mengidentifikasikan event-event dari \textit{workflow} yang perlu dipropagasi via sistem email.
+		\item Mengimplementasikan integrasi BPMS dengan sistem email.
+		\item Membuat dokumen skripsi.
+	\end{enumerate}
+
+\section{Rencana Kerja}
+
+
+\begin{center}
+  \begin{tabular}{ | c | c | c | c | l |}
+    \hline
+    1*  & 2*(\%) & 3*(\%) & 4*(\%) &5*\\ \hline \hline
+    1   & 25  &   & 25 &  \\ \hline
+    2   & 15  &   & 15 &  \\ \hline
+    3   & 15  &   & 15 &  \\ \hline
+    4   & 25  &   & 25 &  \\ \hline
+    5   & 20  &   & 20 &  \\ \hline
+    Total  & 100  &   & 100 &  \\ \hline
+                          \end{tabular}
+\end{center}
+
+Keterangan (*)\\
+1 : Bagian pengerjaan Skripsi (nomor disesuaikan dengan detail pengerjaan di bagian 5)\\
+2 : Persentase total \\
+3 : Persentase yang akan diselesaikan di Skripsi 1 \\
+4 : Persentase yang akan diselesaikan di Skripsi 2 \\
+5 : Penjelasan singkat apa yang dilakukan di S1 (Skripsi 1) atau S2 (skripsi 2)
+
+\vspace{1cm}
+\centering Bandung, \tanggal\\
+\vspace{2cm} \nama \\ 
+\vspace{1cm}
+
+Menyetujui, \\
+\ifdefstring{\jumpemb}{2}{
+\vspace{1.5cm}
+\begin{centering} Menyetujui,\\ \end{centering} \vspace{0.75cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013 \\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Utama
+\end{minipage} \hspace{0.5cm}
+\begin{minipage}[b]{0.45\linewidth}
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Pendamping
+\end{minipage}
+\vspace{0.5cm}
+}{
+% \centering Bandung, \makebox[0.5cm]{\hrulefill}/\makebox[0.5cm]{\hrulefill}/2013\\
+\vspace{2cm} Nama: \makebox[3cm]{\hrulefill}\\ Pembimbing Tunggal
+}
+\end{document}
+

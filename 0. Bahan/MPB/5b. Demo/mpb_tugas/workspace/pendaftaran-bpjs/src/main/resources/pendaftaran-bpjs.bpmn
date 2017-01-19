@@ -78,6 +78,7 @@
     <bpmn:userTask id="UserTask_18tusp0" name="Melihat nomor pembayaran dan besar uang pendafataran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="demo">
       <bpmn:extensionElements>
         <camunda:executionListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.PembangkitNomor" event="start" />
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0dl5g33</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1q9a1nj</bpmn:outgoing>

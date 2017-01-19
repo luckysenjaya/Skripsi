@@ -3,4 +3,5 @@
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
 <fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.JavaDelegate"/>
+<fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
 </qualifiedTypeNameHistroy>

@@ -16,7 +16,7 @@
 \makeatletter
 \renewcommand{\@maketitle} {\begin{center} {\LARGE \textbf{ \textsc{\@title}} \par} \bigskip {\large \textbf{\textsc{\@author}} }\end{center} }
 \renewcommand{\thispagestyle}[1]{}
-\markright{\textbf{\textsc{AIF401/AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2015/2016}}}
+\markright{\textbf{\textsc{AIF402 \textemdash Rencana Kerja Skripsi \textemdash Sem. Genap 2016/2017}}}
 
 \onehalfspacing
  
@@ -30,7 +30,7 @@
 \newcommand{\@npm}{2012730009}
 \newcommand{\@judultopik}{Studi dan Integrasi Workflow menggunakan BPMS dan Sistem Email} % Judul/topik anda
 \newcommand{\jumpemb}{1} % Jumlah pembimbing, 1 atau 2
-\newcommand{\tanggal}{20/01/2016}
+\newcommand{\tanggal}{31/01/2016}
 
 % Dokumen hasil template ini harus dicetak bolak-balik !!!!
 
@@ -40,7 +40,7 @@
 
 \section{Deskripsi}
 \textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email. 
-Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh \textit{user}. Ketika ada suatu \textit{user task}, sistem email akan mengirimkan email ke user yang akan mengerjakan task tersebut. Email tersebut akan berisi link yang mengarah ke link tersebut.
+Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh \textit{user}. Ketika ada suatu \textit{user task}, sistem email akan mengirimkan email ke user yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.
 
 \section{Rumusan Masalah}
 \begin{itemize}
@@ -56,7 +56,7 @@ Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sis
 \end{itemize}
 
 \section{Deskripsi Perangkat Lunak}
-Hasil akhir dari skripsi ini adalah integrasi \textit{workflow} yang diotomasi BPMS dengan sistem email. Ketika ada \textit{event} suatu \textit{user task}, sistem akan mengirimkan \textit{email} kepada \textit{user} yang akan mengerjakan \textit{task} tersebut. Email tersebut akan berisi \textit{link} ke \textit{task} yang akan dikerjakan. 
+Hasil akhir dari skripsi ini adalah integrasi \textit{workflow} yang diotomasi BPMS dengan sistem email. Ketika ada \textit{event} berupa \textit{user task}, sistem akan mengirimkan \textit{email} kepada \textit{user} yang akan mengerjakan \textit{task} tersebut. Email tersebut akan berisi \textit{link} ke \textit{task} yang akan dikerjakan. 
 
 		
 

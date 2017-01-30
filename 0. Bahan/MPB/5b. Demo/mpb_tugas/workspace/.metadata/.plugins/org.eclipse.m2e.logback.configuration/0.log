@@ -1645,3 +1645,26 @@ java.net.UnknownHostException: services.gradle.org
 2016-12-26 11:11:42,183 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
 2016-12-26 11:11:42,187 [Worker-25] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2016-12-26 11:11:42,197 [Worker-25] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs\src\test\resources
+2017-01-23 08:39:35,047 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:39:35,129 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-01-23 08:39:35,182 [Worker-14] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:39:35,195 [Worker-14] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs\src\test\resources
+2017-01-23 08:39:46,286 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.
+2017-01-23 08:40:05,438 [Worker-10] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs
+2017-01-23 08:40:05,443 [Worker-10] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -e
+2017-01-23 08:41:01,160 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs
+2017-01-23 08:41:01,160 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -e
+2017-01-23 08:41:01,441 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:41:01,524 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 2 resources
+2017-01-23 08:41:01,569 [Worker-18] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:41:01,586 [Worker-18] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs\src\test\resources
+2017-01-23 08:41:36,201 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs
+2017-01-23 08:41:36,202 [Worker-16] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -e
+2017-01-23 08:41:54,703 [Worker-19] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs
+2017-01-23 08:41:54,705 [Worker-19] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B -X
+2017-01-23 08:42:36,244 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate - D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs
+2017-01-23 08:42:36,245 [Worker-20] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B install
+2017-01-23 08:42:55,782 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:42:55,793 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2017-01-23 08:42:55,797 [Worker-17] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-01-23 08:42:55,808 [Worker-17] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory D:\Skripsi 2\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs\src\test\resources

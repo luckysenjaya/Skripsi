@@ -1,0 +1,1038 @@
+23-Jan-2017 08:15:38.132 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+23-Jan-2017 08:15:38.136 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+23-Jan-2017 08:15:38.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+23-Jan-2017 08:15:38.137 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 8.1
+23-Jan-2017 08:15:38.138 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.3
+23-Jan-2017 08:15:38.139 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          x86
+23-Jan-2017 08:15:38.140 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             C:\Program Files (x86)\Java\jre1.8.0_74
+23-Jan-2017 08:15:38.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_74-b02
+23-Jan-2017 08:15:38.142 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+23-Jan-2017 08:15:38.143 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+23-Jan-2017 08:15:38.144 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+23-Jan-2017 08:15:38.145 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\conf\logging.properties
+23-Jan-2017 08:15:38.147 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+23-Jan-2017 08:15:38.148 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx512m
+23-Jan-2017 08:15:38.151 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:MaxPermSize=256m
+23-Jan-2017 08:15:38.152 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:PermSize=256m
+23-Jan-2017 08:15:38.154 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\endorsed
+23-Jan-2017 08:15:38.155 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+23-Jan-2017 08:15:38.157 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+23-Jan-2017 08:15:38.160 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\temp
+23-Jan-2017 08:15:38.162 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files (x86)\Java\jre1.8.0_74\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Program Files\Broadcom\Broadcom 802.11;C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\nodejs\;C:\Program Files\Git\bin;C:\Program Files\Java\jdk1.8.0_65;C:\Program Files\Java\jre1.8.0_65;C:\xampp\php;C:\ProgramData\ComposerSetup\bin;C:\Program Files (x86)\OpenVPN\bin;C:\Program Files\TortoiseGit\bin;C:\Python27;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Users\LukeOne\AppData\Roaming\npm;C:\Users\LukeOne\AppData\Roaming\Composer\vendor\bin;C:\Users\LukeOne\AppData\Local\atom\bin;C:\Python27;.
+23-Jan-2017 08:15:40.023 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+23-Jan-2017 08:15:40.438 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Jan-2017 08:15:40.445 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+23-Jan-2017 08:15:40.458 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+23-Jan-2017 08:15:40.460 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 4011 ms
+23-Jan-2017 08:15:40.639 WARNING [main] org.apache.tomcat.jdbc.pool.ConnectionPool.init maxIdle is larger than maxActive, setting maxIdle to: 20
+23-Jan-2017 08:15:47.692 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08046 Found camunda bpm platform configuration in CATALINA_BASE/CATALINA_HOME conf directory [D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\conf\bpm-platform.xml] at 'file:/D:/Skripsi%202/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/conf/bpm-platform.xml'
+23-Jan-2017 08:15:49.788 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ProcessApplicationEventListenerPlugin' activated on process engine 'default'
+23-Jan-2017 08:15:49.796 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'SpinProcessEnginePlugin' activated on process engine 'default'
+23-Jan-2017 08:15:49.825 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormatProvider[name = application/json]
+23-Jan-2017 08:15:50.477 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormatProvider[name = application/xml]
+23-Jan-2017 08:15:50.558 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormat[name = application/xml]
+23-Jan-2017 08:15:50.559 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
+23-Jan-2017 08:15:50.560 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ConnectProcessEnginePlugin' activated on process engine 'default'
+23-Jan-2017 08:15:51.390 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'http-connector' and class 'org.camunda.connect.httpclient.impl.HttpConnectorImpl': 'org.camunda.connect.httpclient.impl.HttpConnectorProviderImpl'
+23-Jan-2017 08:15:51.405 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'soap-http-connector' and class 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorImpl': 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorProviderImpl'
+23-Jan-2017 08:15:57.998 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-00001 Process Engine default created.
+23-Jan-2017 08:15:58.004 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor].
+23-Jan-2017 08:15:58.016 INFO [Thread-6] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14018 JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor] starting to acquire jobs
+23-Jan-2017 08:15:58.041 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08048 Camunda BPM platform sucessfully started at 'Apache Tomcat/8.0.24'.
+23-Jan-2017 08:15:58.149 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+23-Jan-2017 08:15:58.151 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+23-Jan-2017 08:15:58.416 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war
+23-Jan-2017 08:16:07.341 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.pendaftaranbpjs.PendaftaranBPJS'
+23-Jan-2017 08:16:07.512 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:16:07.640 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/Skripsi%202/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/pendaftaran-bpjs-0.0.1-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+23-Jan-2017 08:16:07.735 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'pendaftaran-bpjs': 
+
+        pendaftaran-bpjs.bpmn
+
+23-Jan-2017 08:16:09.128 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application PendaftaranBPJS App successfully deployed
+23-Jan-2017 08:16:09.209 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war has finished in 10,792 ms
+23-Jan-2017 08:16:09.213 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda
+23-Jan-2017 08:16:21.459 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:16:22.607 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda has finished in 13,394 ms
+23-Jan-2017 08:16:22.608 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice
+23-Jan-2017 08:16:27.793 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.example.invoice.InvoiceProcessApplication'
+23-Jan-2017 08:16:27.854 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:16:27.861 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/Skripsi%202/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/camunda-invoice/WEB-INF/classes/META-INF/processes.xml
+23-Jan-2017 08:16:27.961 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'camunda-invoice': 
+
+        invoice.png
+        assign-approver-groups.dmn
+        invoice.bpmn
+
+23-Jan-2017 08:16:32.850 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application camunda-invoice successfully deployed
+23-Jan-2017 08:16:32.860 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice has finished in 10,252 ms
+23-Jan-2017 08:16:32.861 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome
+23-Jan-2017 08:16:38.800 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:16:38.813 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome has finished in 5,952 ms
+23-Jan-2017 08:16:38.814 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs
+23-Jan-2017 08:16:44.253 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:16:44.264 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs has finished in 5,450 ms
+23-Jan-2017 08:16:44.265 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\engine-rest
+23-Jan-2017 08:16:59.608 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:00.088 INFO [localhost-startStop-1] org.jboss.resteasy.logging.impl.Slf4jLogger.info Deploying javax.ws.rs.core.Application: class org.camunda.bpm.engine.rest.impl.application.DefaultApplication
+23-Jan-2017 08:17:00.393 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\engine-rest has finished in 16,127 ms
+23-Jan-2017 08:17:00.412 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\examples
+23-Jan-2017 08:17:08.626 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:08.759 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\examples has finished in 8,347 ms
+23-Jan-2017 08:17:08.759 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\h2
+23-Jan-2017 08:17:14.071 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:14.086 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\h2 has finished in 5,327 ms
+23-Jan-2017 08:17:14.087 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\host-manager
+23-Jan-2017 08:17:18.766 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:18.778 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\host-manager has finished in 4,691 ms
+23-Jan-2017 08:17:18.779 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT
+23-Jan-2017 08:17:24.957 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.loanapproval.LoanApprovalApplication'
+23-Jan-2017 08:17:25.017 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:25.022 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/Skripsi%202/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/loan-approval-0.1.0-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+23-Jan-2017 08:17:25.071 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'loan-approval': 
+
+        loan-approval.bpmn
+
+23-Jan-2017 08:17:25.143 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application Loan Approval App successfully deployed
+23-Jan-2017 08:17:25.151 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT has finished in 6,371 ms
+23-Jan-2017 08:17:25.151 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\manager
+23-Jan-2017 08:17:30.437 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:30.445 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\manager has finished in 5,294 ms
+23-Jan-2017 08:17:30.446 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\ROOT
+23-Jan-2017 08:17:35.643 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+23-Jan-2017 08:17:35.649 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\ROOT has finished in 5,203 ms
+23-Jan-2017 08:17:35.660 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["http-nio-8080"]
+23-Jan-2017 08:17:35.679 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+23-Jan-2017 08:17:35.687 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 115223 ms
+23-Jan-2017 08:17:45.619 INFO [http-nio-8080-exec-10] org.jboss.resteasy.logging.impl.Slf4jLogger.info Deploying javax.ws.rs.core.Application: class org.camunda.bpm.tasklist.impl.web.TasklistApplication
+23-Jan-2017 08:17:47.189 INFO [http-nio-8080-exec-2] org.jboss.resteasy.logging.impl.Slf4jLogger.info Deploying javax.ws.rs.core.Application: class org.camunda.bpm.webapp.impl.engine.EngineRestApplication
+23-Jan-2017 08:17:47.332 INFO [http-nio-8080-exec-3] org.jboss.resteasy.logging.impl.Slf4jLogger.info Deploying javax.ws.rs.core.Application: class org.camunda.bpm.admin.impl.web.AdminApplication
+23-Jan-2017 08:19:23.481 INFO [http-nio-8080-exec-10] null.null enter class
+23-Jan-2017 08:19:23.497 INFO [http-nio-8080-exec-10] org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener.notify 
+ 1st ===> setup Mail Server Properties..
+23-Jan-2017 08:19:23.497 INFO [http-nio-8080-exec-10] null.null Mail Server Properties have been setup successfully..
+23-Jan-2017 08:19:23.497 INFO [http-nio-8080-exec-10] org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener.notify 
+
+ 2nd ===> get Mail Session..
+23-Jan-2017 08:19:23.704 INFO [http-nio-8080-exec-10] null.null Mail Session has been created successfully..
+23-Jan-2017 08:19:23.704 INFO [http-nio-8080-exec-10] null.null 
+
+ 3rd ===> Get Session and Send mail
+23-Jan-2017 08:19:25.067 INFO [http-nio-8080-exec-1] null.null enter class
+23-Jan-2017 08:19:25.070 INFO [http-nio-8080-exec-1] null.null 
+ 1st ===> setup Mail Server Properties..
+23-Jan-2017 08:19:25.070 INFO [http-nio-8080-exec-1] null.null Mail Server Properties have been setup successfully..
+23-Jan-2017 08:19:25.070 INFO [http-nio-8080-exec-1] null.null 
+
+ 2nd ===> get Mail Session..
+23-Jan-2017 08:19:25.070 INFO [http-nio-8080-exec-1] null.null Mail Session has been created successfully..
+23-Jan-2017 08:19:25.070 INFO [http-nio-8080-exec-1] null.null 
+
+ 3rd ===> Get Session and Send mail
+23-Jan-2017 08:19:29.716 SEVERE [http-nio-8080-exec-1] org.camunda.commons.logging.BaseLogger.logError ENGINE-16004 Exception while closing command context: ENGINE-03004 Exception while executing Database Operation 'INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]' with message '
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]'. Flush summary: 
+ [
+  INSERT HistoricVariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  INSERT AuthorizationEntity[fcf21ea1-e109-11e6-b8be-606dc7dcad9f]
+  INSERT UserOperationLogEntryEventEntity[fa3c7475-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3c2652-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10b8-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10ba-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cc-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cd-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricTaskInstanceEventEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[ServiceTask_0xkgh2d:fa3ce9a6-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[UserTask_18tusp0:fa3d37cb-e109-11e6-b8be-606dc7dcad9f]
+  INSERT TaskEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c264f-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2651-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2653-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  DELETE TaskEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE ExecutionEntity[ed1d3b57-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricActivityInstanceEventEntity[UserTask_1w7apo5:f3cde0eb-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricTaskInstanceEventEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  DELETE_BULK deleteAuthorizationsForResourceId {resourceId=f3cde0ec-e109-11e6-b8be-606dc7dcad9f, resourceType=7}
+]
+ org.camunda.bpm.engine.ProcessEngineException: ENGINE-03004 Exception while executing Database Operation 'INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]' with message '
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]'. Flush summary: 
+ [
+  INSERT HistoricVariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  INSERT AuthorizationEntity[fcf21ea1-e109-11e6-b8be-606dc7dcad9f]
+  INSERT UserOperationLogEntryEventEntity[fa3c7475-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3c2652-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10b8-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10ba-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cc-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cd-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricTaskInstanceEventEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[ServiceTask_0xkgh2d:fa3ce9a6-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[UserTask_18tusp0:fa3d37cb-e109-11e6-b8be-606dc7dcad9f]
+  INSERT TaskEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c264f-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2651-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2653-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  DELETE TaskEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE ExecutionEntity[ed1d3b57-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricActivityInstanceEventEntity[UserTask_1w7apo5:f3cde0eb-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricTaskInstanceEventEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  DELETE_BULK deleteAuthorizationsForResourceId {resourceId=f3cde0ec-e109-11e6-b8be-606dc7dcad9f, resourceType=7}
+]
+	at org.camunda.bpm.engine.impl.db.EnginePersistenceLogger.flushDbOperationException(EnginePersistenceLogger.java:113)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flushDbOperationManager(DbEntityManager.java:296)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flush(DbEntityManager.java:282)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.flushSessions(CommandContext.java:315)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.close(CommandContext.java:243)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:104)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30)
+	at org.camunda.bpm.engine.impl.FormServiceImpl.submitTaskForm(FormServiceImpl.java:86)
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.submit(TaskResourceImpl.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:159)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:107)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:154)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:92)
+	at org.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.engine.rest.filter.CacheControlFilter.doFilter(CacheControlFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilterSecure(SecurityFilter.java:67)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilter(SecurityFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:59)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:56)
+	at org.camunda.bpm.webapp.impl.security.SecurityActions.runWithAuthentications(SecurityActions.java:38)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter.doFilter(AuthenticationFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1527)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1484)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at org.camunda.bpm.engine.impl.db.sql.DbSqlSession.executeInsertEntity(DbSqlSession.java:145)
+	at org.camunda.bpm.engine.impl.db.sql.DbSqlSession.insertEntity(DbSqlSession.java:137)
+	at org.camunda.bpm.engine.impl.db.AbstractPersistenceSession.executeDbOperation(AbstractPersistenceSession.java:41)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flushDbOperationManager(DbEntityManager.java:293)
+	... 59 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:81)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:147)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeNode.addRowTry(PageBtreeNode.java:200)
+	at org.h2.index.PageBtreeNode.addRowTry(PageBtreeNode.java:200)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:105)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:96)
+	at org.h2.index.MultiVersionIndex.add(MultiVersionIndex.java:50)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:121)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:124)
+	at org.h2.command.dml.Insert.update(Insert.java:84)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:75)
+	at org.h2.command.Command.executeUpdate(Command.java:230)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:194)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	... 64 more
+
+23-Jan-2017 08:19:29.776 WARNING [http-nio-8080-exec-1] org.camunda.bpm.engine.rest.exception.RestExceptionHandler.toResponse org.camunda.bpm.engine.rest.exception.RestException: Cannot submit task form f3cde0ec-e109-11e6-b8be-606dc7dcad9f: ENGINE-03004 Exception while executing Database Operation 'INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]' with message '
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]'. Flush summary: 
+ [
+  INSERT HistoricVariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  INSERT AuthorizationEntity[fcf21ea1-e109-11e6-b8be-606dc7dcad9f]
+  INSERT UserOperationLogEntryEventEntity[fa3c7475-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3c2652-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10b8-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10ba-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cc-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cd-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricTaskInstanceEventEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[ServiceTask_0xkgh2d:fa3ce9a6-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[UserTask_18tusp0:fa3d37cb-e109-11e6-b8be-606dc7dcad9f]
+  INSERT TaskEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c264f-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2651-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2653-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  DELETE TaskEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE ExecutionEntity[ed1d3b57-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricActivityInstanceEventEntity[UserTask_1w7apo5:f3cde0eb-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricTaskInstanceEventEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  DELETE_BULK deleteAuthorizationsForResourceId {resourceId=f3cde0ec-e109-11e6-b8be-606dc7dcad9f, resourceType=7}
+]
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.submit(TaskResourceImpl.java:120)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.jboss.resteasy.core.MethodInjectorImpl.invoke(MethodInjectorImpl.java:167)
+	at org.jboss.resteasy.core.ResourceMethod.invokeOnTarget(ResourceMethod.java:257)
+	at org.jboss.resteasy.core.ResourceMethod.invoke(ResourceMethod.java:222)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:159)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:107)
+	at org.jboss.resteasy.core.ResourceLocator.invokeOnTargetObject(ResourceLocator.java:154)
+	at org.jboss.resteasy.core.ResourceLocator.invoke(ResourceLocator.java:92)
+	at org.jboss.resteasy.core.SynchronousDispatcher.getResponse(SynchronousDispatcher.java:542)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:524)
+	at org.jboss.resteasy.core.SynchronousDispatcher.invoke(SynchronousDispatcher.java:126)
+	at org.jboss.resteasy.plugins.server.servlet.ServletContainerDispatcher.service(ServletContainerDispatcher.java:208)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:55)
+	at org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher.service(HttpServletDispatcher.java:50)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:729)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:291)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:52)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.engine.rest.filter.CacheControlFilter.doFilter(CacheControlFilter.java:41)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilterSecure(SecurityFilter.java:67)
+	at org.camunda.bpm.webapp.impl.security.filter.SecurityFilter.doFilter(SecurityFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:59)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter$1.execute(AuthenticationFilter.java:56)
+	at org.camunda.bpm.webapp.impl.security.SecurityActions.runWithAuthentications(SecurityActions.java:38)
+	at org.camunda.bpm.webapp.impl.security.auth.AuthenticationFilter.doFilter(AuthenticationFilter.java:56)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:239)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:219)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:106)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:502)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:142)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:79)
+	at org.apache.catalina.valves.AbstractAccessLogValve.invoke(AbstractAccessLogValve.java:617)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:88)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:518)
+	at org.apache.coyote.http11.AbstractHttp11Processor.process(AbstractHttp11Processor.java:1091)
+	at org.apache.coyote.AbstractProtocol$AbstractConnectionHandler.process(AbstractProtocol.java:668)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1527)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.run(NioEndpoint.java:1484)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: org.camunda.bpm.engine.ProcessEngineException: ENGINE-03004 Exception while executing Database Operation 'INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]' with message '
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]'. Flush summary: 
+ [
+  INSERT HistoricVariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  INSERT AuthorizationEntity[fcf21ea1-e109-11e6-b8be-606dc7dcad9f]
+  INSERT UserOperationLogEntryEventEntity[fa3c7475-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3c2652-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10b8-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d10ba-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cc-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricVariableUpdateEventEntity[fa3d37cd-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricTaskInstanceEventEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[ServiceTask_0xkgh2d:fa3ce9a6-e109-11e6-b8be-606dc7dcad9f]
+  INSERT HistoricActivityInstanceEventEntity[UserTask_18tusp0:fa3d37cb-e109-11e6-b8be-606dc7dcad9f]
+  INSERT TaskEntity[fa3d85ee-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c264f-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2651-e109-11e6-b8be-606dc7dcad9f]
+  INSERT ByteArrayEntity[fa3c2653-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3c2650-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b7-e109-11e6-b8be-606dc7dcad9f]
+  INSERT VariableInstanceEntity[fa3d10b9-e109-11e6-b8be-606dc7dcad9f]
+  DELETE TaskEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE ExecutionEntity[ed1d3b57-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricActivityInstanceEventEntity[UserTask_1w7apo5:f3cde0eb-e109-11e6-b8be-606dc7dcad9f]
+  UPDATE HistoricTaskInstanceEventEntity[f3cde0ec-e109-11e6-b8be-606dc7dcad9f]
+  DELETE_BULK deleteAuthorizationsForResourceId {resourceId=f3cde0ec-e109-11e6-b8be-606dc7dcad9f, resourceType=7}
+]
+	at org.camunda.bpm.engine.impl.db.EnginePersistenceLogger.flushDbOperationException(EnginePersistenceLogger.java:113)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flushDbOperationManager(DbEntityManager.java:296)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flush(DbEntityManager.java:282)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.flushSessions(CommandContext.java:315)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContext.close(CommandContext.java:243)
+	at org.camunda.bpm.engine.impl.interceptor.CommandContextInterceptor.execute(CommandContextInterceptor.java:104)
+	at org.camunda.bpm.engine.impl.interceptor.LogInterceptor.execute(LogInterceptor.java:30)
+	at org.camunda.bpm.engine.impl.FormServiceImpl.submitTaskForm(FormServiceImpl.java:86)
+	at org.camunda.bpm.engine.rest.sub.task.impl.TaskResourceImpl.submit(TaskResourceImpl.java:109)
+	... 52 more
+Caused by: org.apache.ibatis.exceptions.PersistenceException: 
+### Error updating database.  Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+### The error may involve org.camunda.bpm.engine.impl.persistence.entity.VariableInstanceEntity.insertVariableInstance-Inline
+### The error occurred while setting parameters
+### SQL: insert into ACT_RU_VARIABLE     (       ID_,       TYPE_,       NAME_,       PROC_INST_ID_,       EXECUTION_ID_,       CASE_INST_ID_,       CASE_EXECUTION_ID_,       TASK_ID_,       BYTEARRAY_ID_,       DOUBLE_,       LONG_,       TEXT_,       TEXT2_,       VAR_SCOPE_,       SEQUENCE_COUNTER_,       IS_CONCURRENT_LOCAL_,       REV_     )     values (       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       ?,       1     )
+### Cause: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+	at org.apache.ibatis.exceptions.ExceptionFactory.wrapException(ExceptionFactory.java:26)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:154)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.insert(DefaultSqlSession.java:141)
+	at org.camunda.bpm.engine.impl.db.sql.DbSqlSession.executeInsertEntity(DbSqlSession.java:145)
+	at org.camunda.bpm.engine.impl.db.sql.DbSqlSession.insertEntity(DbSqlSession.java:137)
+	at org.camunda.bpm.engine.impl.db.AbstractPersistenceSession.executeDbOperation(AbstractPersistenceSession.java:41)
+	at org.camunda.bpm.engine.impl.db.entitymanager.DbEntityManager.flushDbOperationManager(DbEntityManager.java:293)
+	... 59 more
+Caused by: org.h2.jdbc.JdbcSQLException: Unique index or primary key violation: "ACT_UNIQ_VARIABLE_INDEX_C ON PUBLIC.ACT_RU_VARIABLE(VAR_SCOPE_, NAME_)"; SQL statement:
+insert into ACT_RU_VARIABLE
+    (
+      ID_,
+      TYPE_,
+      NAME_,
+      PROC_INST_ID_,
+      EXECUTION_ID_,
+      CASE_INST_ID_,
+      CASE_EXECUTION_ID_,
+      TASK_ID_,
+      BYTEARRAY_ID_,
+      DOUBLE_,
+      LONG_,
+      TEXT_,
+      TEXT2_,
+      VAR_SCOPE_,
+      SEQUENCE_COUNTER_,
+      IS_CONCURRENT_LOCAL_,
+      REV_
+    )
+    values (
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      ?,
+      1
+    ) [23505-168]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:329)
+	at org.h2.message.DbException.get(DbException.java:169)
+	at org.h2.message.DbException.get(DbException.java:146)
+	at org.h2.index.BaseIndex.getDuplicateKeyException(BaseIndex.java:81)
+	at org.h2.index.PageBtree.find(PageBtree.java:121)
+	at org.h2.index.PageBtreeLeaf.addRow(PageBtreeLeaf.java:147)
+	at org.h2.index.PageBtreeLeaf.addRowTry(PageBtreeLeaf.java:100)
+	at org.h2.index.PageBtreeNode.addRowTry(PageBtreeNode.java:200)
+	at org.h2.index.PageBtreeNode.addRowTry(PageBtreeNode.java:200)
+	at org.h2.index.PageBtreeIndex.addRow(PageBtreeIndex.java:105)
+	at org.h2.index.PageBtreeIndex.add(PageBtreeIndex.java:96)
+	at org.h2.index.MultiVersionIndex.add(MultiVersionIndex.java:50)
+	at org.h2.table.RegularTable.addRow(RegularTable.java:121)
+	at org.h2.command.dml.Insert.insertRows(Insert.java:124)
+	at org.h2.command.dml.Insert.update(Insert.java:84)
+	at org.h2.command.CommandContainer.update(CommandContainer.java:75)
+	at org.h2.command.Command.executeUpdate(Command.java:230)
+	at org.h2.jdbc.JdbcPreparedStatement.execute(JdbcPreparedStatement.java:194)
+	at org.apache.ibatis.executor.statement.PreparedStatementHandler.update(PreparedStatementHandler.java:44)
+	at org.apache.ibatis.executor.statement.RoutingStatementHandler.update(RoutingStatementHandler.java:69)
+	at org.apache.ibatis.executor.SimpleExecutor.doUpdate(SimpleExecutor.java:48)
+	at org.apache.ibatis.executor.BaseExecutor.update(BaseExecutor.java:105)
+	at org.apache.ibatis.executor.CachingExecutor.update(CachingExecutor.java:71)
+	at org.apache.ibatis.session.defaults.DefaultSqlSession.update(DefaultSqlSession.java:152)
+	... 64 more
+
+23-Jan-2017 08:19:48.905 INFO [http-nio-8080-exec-3] null.null memproses 'senin' a
+23-Jan-2017 08:44:01.801 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.apache.catalina.startup.HostConfig.undeploy Undeploying context [/pendaftaran-bpjs-0.0.1-SNAPSHOT]
+23-Jan-2017 08:44:02.877 INFO [ContainerBackgroundProcessor[StandardEngine[Catalina]]] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08051 Process application PendaftaranBPJS App undeployed
+23-Jan-2017 08:44:03.076 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war
+23-Jan-2017 08:44:10.671 INFO [localhost-startStop-2] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.pendaftaranbpjs.PendaftaranBPJS'
+23-Jan-2017 08:44:10.745 INFO [localhost-startStop-2] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/Skripsi%202/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/pendaftaran-bpjs-0.0.1-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+23-Jan-2017 08:44:10.765 INFO [localhost-startStop-2] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'pendaftaran-bpjs': 
+
+        pendaftaran-bpjs.bpmn
+
+23-Jan-2017 08:44:10.862 INFO [localhost-startStop-2] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application PendaftaranBPJS App successfully deployed
+23-Jan-2017 08:44:10.874 INFO [localhost-startStop-2] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive D:\Skripsi 2\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war has finished in 7,798 ms
+23-Jan-2017 08:45:11.464 INFO [http-nio-8080-exec-1] null.null enter class
+23-Jan-2017 08:45:11.477 INFO [http-nio-8080-exec-1] org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener.notify 
+ 1st ===> setup Mail Server Properties..
+23-Jan-2017 08:45:11.478 INFO [http-nio-8080-exec-1] null.null 
+
+ 2nd ===> get Mail Session..
+23-Jan-2017 08:45:11.630 INFO [http-nio-8080-exec-1] org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener.notify Mail Session has been created successfully..
+23-Jan-2017 08:45:11.631 INFO [http-nio-8080-exec-1] null.null 
+
+ 3rd ===> Get Session and Send mail
+23-Jan-2017 08:45:43.629 INFO [http-nio-8080-exec-11] null.null memproses 'senin' a

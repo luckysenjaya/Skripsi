@@ -1,0 +1,24 @@
+
+event sebelum user task
+
+bikin handler buat admin
+
+
+kalo belum di assign email
+analisis 1 asumsi semua task sudah email
+analisis 2 group --> next? 
+
+next task belum diasign user tapi group udah ada
+
+admin assign or ngerjain task
+
+
+
+
+or
+
+web service 
+
+
+bab 3 analisis
+kemungkinan

@@ -1,0 +1,172 @@
+02-Apr-2017 11:05:13.278 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server version:        Apache Tomcat/8.0.24
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server built:          Jul 1 2015 20:19:55 UTC
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Server number:         8.0.24.0
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Name:               Windows 7
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log OS Version:            6.1
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Architecture:          amd64
+02-Apr-2017 11:05:13.280 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Java Home:             c:\Program Files\Java\jdk1.8.0_31\jre
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Version:           1.8.0_31-b13
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log JVM Vendor:            Oracle Corporation
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_BASE:         D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log CATALINA_HOME:         D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.config.file=./server/apache-tomcat-8.0.24/conf/logging.properties
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager
+02-Apr-2017 11:05:13.281 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Xmx512m
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:MaxPermSize=256m
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -XX:PermSize=256m
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.endorsed.dirs=./server/apache-tomcat-8.0.24/endorsed
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.base=./server/apache-tomcat-8.0.24
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Dcatalina.home=./server/apache-tomcat-8.0.24
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.startup.VersionLoggerListener.log Command line argument: -Djava.io.tmpdir=./server/apache-tomcat-8.0.24/temp
+02-Apr-2017 11:05:13.282 INFO [main] org.apache.catalina.core.AprLifecycleListener.lifecycleEvent The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: c:\Program Files\Java\jdk1.8.0_31\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;c:\Users\Luke\bin;.;C:\Program Files (x86)\Git\local\bin;C:\Program Files (x86)\Git\mingw\bin;C:\Program Files (x86)\Git\bin;c:\Windows\system32;c:\Windows;c:\Windows\system32\wbem;c:\Program Files\Java\jdk1.8.0_31\bin;d:\KULIAH\kuliah\Semester6\PBWL\4\typesafe-activator-1.3.2-minimal\activator-1.3.2-minimal;c:\Program Files (x86)\AutoLyric;c:\Program Files\nodejs;c:\Windows\system32\config\systemprofile\.dnx\bin;c:\Program Files\Microsoft DNX\Dnvm;c:\Program Files (x86)\Windows Kits\8.1\Windows Performance Toolkit;c:\ant\bin;c:\Users\Luke\AppData\Local\Android\android-sdk\tools;c:\Users\Luke\AppData\Local\Android\android-sdk\platform-tools;c:\Program Files (x86)\OpenVPN\bin;c:\Program Files\TortoiseGit\bin;c:\xampp\php;c:\ProgramData\ComposerSetup\bin;c:\Program Files (x86)\GtkSharp\2.12\bin;c:\Program Files\Java\jdk1.8.0_31\bin;d:\KULIAH\kuliah\Semester6\PBWL\4\typesafe-activator-1.3.2-minimal\activator-1.3.2-minimal;d:\PHALCON\phalcon-devtools-2.0.1\phalcon-devtools-2.0.1;c:\Users\Luke\AppData\Roaming\npm;c:\Users\Luke\AppData\Roaming\Composer\vendor\bin;c:\Users\Luke\AppData\Local\atom\bin;.
+02-Apr-2017 11:05:13.471 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["http-nio-8080"]
+02-Apr-2017 11:05:13.494 SEVERE [main] org.apache.coyote.AbstractProtocol.init Failed to initialize end point associated with ProtocolHandler ["http-nio-8080"]
+ java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+
+02-Apr-2017 11:05:13.497 SEVERE [main] org.apache.catalina.core.StandardService.initInternal Failed to initialize connector [Connector[HTTP/1.1-8080]]
+ org.apache.catalina.LifecycleException: Failed to initialize component [Connector[HTTP/1.1-8080]]
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:106)
+	at org.apache.catalina.core.StandardService.initInternal(StandardService.java:567)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.core.StandardServer.initInternal(StandardServer.java:851)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:576)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:599)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:310)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:484)
+Caused by: org.apache.catalina.LifecycleException: Protocol handler initialization failed
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:962)
+	at org.apache.catalina.util.LifecycleBase.init(LifecycleBase.java:102)
+	... 12 more
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method)
+	at sun.nio.ch.Net.bind(Net.java:436)
+	at sun.nio.ch.Net.bind(Net.java:428)
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214)
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74)
+	at org.apache.tomcat.util.net.NioEndpoint.bind(NioEndpoint.java:339)
+	at org.apache.tomcat.util.net.AbstractEndpoint.init(AbstractEndpoint.java:737)
+	at org.apache.coyote.AbstractProtocol.init(AbstractProtocol.java:457)
+	at org.apache.coyote.http11.AbstractHttp11JsseProtocol.init(AbstractHttp11JsseProtocol.java:120)
+	at org.apache.catalina.connector.Connector.initInternal(Connector.java:960)
+	... 13 more
+
+02-Apr-2017 11:05:13.498 INFO [main] org.apache.coyote.AbstractProtocol.init Initializing ProtocolHandler ["ajp-nio-8009"]
+02-Apr-2017 11:05:13.563 INFO [main] org.apache.tomcat.util.net.NioSelectorPool.getSharedSelector Using a shared selector for servlet write/read
+02-Apr-2017 11:05:13.565 INFO [main] org.apache.catalina.startup.Catalina.load Initialization processed in 950 ms
+02-Apr-2017 11:05:13.588 WARNING [main] org.apache.tomcat.jdbc.pool.ConnectionPool.init maxIdle is larger than maxActive, setting maxIdle to: 20
+02-Apr-2017 11:05:13.891 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08046 Found camunda bpm platform configuration in CATALINA_BASE/CATALINA_HOME conf directory [D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\conf\bpm-platform.xml] at 'file:/D:/KULIAH/kuliah/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/conf/bpm-platform.xml'
+02-Apr-2017 11:05:14.421 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ProcessApplicationEventListenerPlugin' activated on process engine 'default'
+02-Apr-2017 11:05:14.423 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'SpinProcessEnginePlugin' activated on process engine 'default'
+02-Apr-2017 11:05:14.428 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormatProvider[name = application/json]
+02-Apr-2017 11:05:14.561 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01010 Discovered Spin data format provider: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormatProvider[name = application/xml]
+02-Apr-2017 11:05:14.618 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.xml.dom.format.DomXmlDataFormat[name = application/xml]
+02-Apr-2017 11:05:14.618 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo SPIN-01009 Discovered Spin data format: org.camunda.spin.impl.json.jackson.format.JacksonJsonDataFormat[name = application/json]
+02-Apr-2017 11:05:14.618 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-12003 Plugin 'ConnectProcessEnginePlugin' activated on process engine 'default'
+02-Apr-2017 11:05:14.746 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'http-connector' and class 'org.camunda.connect.httpclient.impl.HttpConnectorImpl': 'org.camunda.connect.httpclient.impl.HttpConnectorProviderImpl'
+02-Apr-2017 11:05:14.753 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo CNCT-01004 Discovered provider for connector id 'soap-http-connector' and class 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorImpl': 'org.camunda.connect.httpclient.soap.impl.SoapHttpConnectorProviderImpl'
+02-Apr-2017 11:05:16.274 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.engine.sql'
+02-Apr-2017 11:05:16.287 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.history.sql'
+02-Apr-2017 11:05:16.293 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'identity' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.identity.sql'
+02-Apr-2017 11:05:16.306 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'case.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.engine.sql'
+02-Apr-2017 11:05:16.316 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'case.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.case.history.sql'
+02-Apr-2017 11:05:16.319 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'decision.engine' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.engine.sql'
+02-Apr-2017 11:05:16.324 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03016 Performing database operation 'create' on component 'decision.history' with resource 'org/camunda/bpm/engine/db/create/activiti.h2.create.decision.history.sql'
+02-Apr-2017 11:05:16.336 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03067 No history level property found in database
+02-Apr-2017 11:05:16.338 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-03065 Creating historyLevel property in database for level: HistoryLevelFull(name=full, id=3)
+02-Apr-2017 11:05:16.342 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-00001 Process Engine default created.
+02-Apr-2017 11:05:16.343 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14014 Starting up the JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor].
+02-Apr-2017 11:05:16.345 INFO [Thread-5] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-14018 JobExecutor[org.camunda.bpm.engine.impl.jobexecutor.RuntimeContainerJobExecutor] starting to acquire jobs
+02-Apr-2017 11:05:16.354 INFO [main] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08048 Camunda BPM platform sucessfully started at 'Apache Tomcat/8.0.24'.
+02-Apr-2017 11:05:16.484 INFO [main] org.apache.catalina.core.StandardService.startInternal Starting service Catalina
+02-Apr-2017 11:05:16.484 INFO [main] org.apache.catalina.core.StandardEngine.startInternal Starting Servlet Engine: Apache Tomcat/8.0.24
+02-Apr-2017 11:05:16.507 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deploying web application archive D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war
+02-Apr-2017 11:05:18.241 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.pendaftaranbpjs.PendaftaranBPJS'
+02-Apr-2017 11:05:18.270 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:18.287 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/KULIAH/kuliah/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/pendaftaran-bpjs-0.0.1-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+02-Apr-2017 11:05:18.298 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'pendaftaran-bpjs': 
+
+        pendaftaran-bpjs.bpmn
+
+02-Apr-2017 11:05:18.415 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application PendaftaranBPJS App successfully deployed
+02-Apr-2017 11:05:18.428 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployWAR Deployment of web application archive D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\pendaftaran-bpjs-0.0.1-SNAPSHOT.war has finished in 1,921 ms
+02-Apr-2017 11:05:18.428 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda
+02-Apr-2017 11:05:20.037 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:20.307 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda has finished in 1,879 ms
+02-Apr-2017 11:05:20.307 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice
+02-Apr-2017 11:05:21.671 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.example.invoice.InvoiceProcessApplication'
+02-Apr-2017 11:05:21.686 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:21.688 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/KULIAH/kuliah/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/camunda-invoice/WEB-INF/classes/META-INF/processes.xml
+02-Apr-2017 11:05:21.693 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'camunda-invoice': 
+
+        invoice.png
+        assign-approver-groups.dmn
+        invoice.bpmn
+
+02-Apr-2017 11:05:21.973 INFO [localhost-startStop-1] org.camunda.bpm.example.invoice.DemoDataGenerator.createUsers Generating demo data for invoice showcase
+02-Apr-2017 11:05:23.142 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application camunda-invoice successfully deployed
+02-Apr-2017 11:05:23.146 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-invoice has finished in 2,838 ms
+02-Apr-2017 11:05:23.146 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome
+02-Apr-2017 11:05:24.400 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:24.403 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\camunda-welcome has finished in 1,257 ms
+02-Apr-2017 11:05:24.403 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs
+02-Apr-2017 11:05:25.570 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:25.572 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\docs has finished in 1,169 ms
+02-Apr-2017 11:05:25.572 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\engine-rest
+02-Apr-2017 11:05:27.037 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:27.127 INFO [localhost-startStop-1] org.jboss.resteasy.logging.impl.Slf4jLogger.info Deploying javax.ws.rs.core.Application: class org.camunda.bpm.engine.rest.impl.application.DefaultApplication
+02-Apr-2017 11:05:27.188 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\engine-rest has finished in 1,616 ms
+02-Apr-2017 11:05:27.188 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\examples
+02-Apr-2017 11:05:28.683 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:28.715 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\examples has finished in 1,527 ms
+02-Apr-2017 11:05:28.715 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\h2
+02-Apr-2017 11:05:29.753 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:29.766 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\h2 has finished in 1,051 ms
+02-Apr-2017 11:05:29.766 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\host-manager
+02-Apr-2017 11:05:30.765 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:30.767 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\host-manager has finished in 1,001 ms
+02-Apr-2017 11:05:30.767 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT
+02-Apr-2017 11:05:31.862 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-07015 Detected @ProcessApplication class 'org.camunda.bpm.getstarted.loanapproval.LoanApprovalApplication'
+02-Apr-2017 11:05:31.872 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:31.873 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08024 Found processes.xml file at file:/D:/KULIAH/kuliah/Skripsi/0.%20Bahan/MPB/camunda-bpm-tomcat-7.4.0/server/apache-tomcat-8.0.24/webapps/loan-approval-0.1.0-SNAPSHOT/WEB-INF/classes/META-INF/processes.xml
+02-Apr-2017 11:05:31.877 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08023 Deployment summary for process archive 'loan-approval': 
+
+        loan-approval.bpmn
+
+02-Apr-2017 11:05:31.934 INFO [localhost-startStop-1] org.camunda.commons.logging.BaseLogger.logInfo ENGINE-08050 Process application Loan Approval App successfully deployed
+02-Apr-2017 11:05:31.936 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\loan-approval-0.1.0-SNAPSHOT has finished in 1,168 ms
+02-Apr-2017 11:05:31.936 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\manager
+02-Apr-2017 11:05:32.941 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:32.943 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\manager has finished in 1,007 ms
+02-Apr-2017 11:05:32.943 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deploying web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\ROOT
+02-Apr-2017 11:05:33.944 INFO [localhost-startStop-1] org.apache.jasper.servlet.TldScanner.scanJars At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+02-Apr-2017 11:05:33.946 INFO [localhost-startStop-1] org.apache.catalina.startup.HostConfig.deployDirectory Deployment of web application directory D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\camunda-bpm-tomcat-7.4.0\server\apache-tomcat-8.0.24\webapps\ROOT has finished in 1,002 ms
+02-Apr-2017 11:05:33.949 INFO [main] org.apache.coyote.AbstractProtocol.start Starting ProtocolHandler ["ajp-nio-8009"]
+02-Apr-2017 11:05:33.957 INFO [main] org.apache.catalina.startup.Catalina.start Server startup in 20391 ms

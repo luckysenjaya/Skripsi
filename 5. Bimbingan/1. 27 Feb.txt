@@ -22,3 +22,13 @@ web service
 
 bab 3 analisis
 kemungkinan
+
+
+
+/////////////
+my analysis
+
+User dari sisi service bukan customer --> external tasks
+
+
+sebelumnya harus sudah assign semua task ke masing-masing user

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.7.2">
   <bpmn:collaboration id="pendaftaran-bpjs">
     <bpmn:participant id="Participant_1fw3p2v" name="Pendaftaran BPJS" processRef="Process_1" />
   </bpmn:collaboration>
@@ -63,11 +63,17 @@
       <bpmn:incoming>SequenceFlow_0y7mnva</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0y7mnva" sourceRef="ManualTask_0juzjny" targetRef="EndEvent_0a0r3mt" />
-    <bpmn:userTask id="UserTask_15dx9zp" name="Mengisi formulir pendaftaran BPJS" camunda:formKey="embedded:app:forms/pendaftaran-bpjs.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_15dx9zp" name="Mengisi formulir pendaftaran BPJS" camunda:formKey="embedded:app:forms/pendaftaran-bpjs.html" camunda:assignee="john" camunda:candidateUsers="john, mary">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0pe7aj4</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1vur1c9</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:assignee="john" camunda:candidateUsers="john, peter">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1vur1c9</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0djwa0b</bpmn:outgoing>
     </bpmn:userTask>
@@ -75,7 +81,7 @@
       <bpmn:incoming>SequenceFlow_0djwa0b</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0dl5g33</bpmn:outgoing>
     </bpmn:serviceTask>
-    <bpmn:userTask id="UserTask_18tusp0" name="Melihat nomor pembayaran dan besar uang pendafataran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_18tusp0" name="Melihat nomor pembayaran dan besar uang pendafataran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="john">
       <bpmn:extensionElements>
         <camunda:executionListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.PembangkitNomor" event="start" />
         <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
@@ -83,7 +89,10 @@
       <bpmn:incoming>SequenceFlow_0dl5g33</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1q9a1nj</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_16s4q73" name="Memilih jadwal verifikasi dokumen" camunda:formKey="embedded:app:forms/pilih-jadwal.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_16s4q73" name="Memilih jadwal verifikasi dokumen" camunda:formKey="embedded:app:forms/pilih-jadwal.html" camunda:assignee="john">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_12ccfoy</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1jta3fy</bpmn:outgoing>
     </bpmn:userTask>
@@ -112,19 +121,31 @@
       <bpmn:incoming>SequenceFlow_0y8dxh6</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0pe7aj4</bpmn:outgoing>
     </bpmn:manualTask>
-    <bpmn:userTask id="UserTask_0lel05c" name="Mencetak jadwal kedatangan dan nomor antrian" camunda:formKey="embedded:app:forms/ringkasan-jadwal.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_0lel05c" name="Mencetak jadwal kedatangan dan nomor antrian" camunda:formKey="embedded:app:forms/ringkasan-jadwal.html" camunda:assignee="john">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1hdb7rm</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1jsymg8</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1aqe9p1" name="Memverifikasi pendaftaran dan attachment dokumen persyaratan dan keaslian" camunda:formKey="embedded:app:forms/verifikasi-pendaftaran.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_1aqe9p1" name="Memverifikasi pendaftaran dan attachment dokumen persyaratan dan keaslian" camunda:formKey="embedded:app:forms/verifikasi-pendaftaran.html" camunda:assignee="mary">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1w67uem</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0hwuehb</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1lb5nj5" name="Mencetak kartu BPJS dan menyerahkan" camunda:formKey="embedded:app:forms/cetak-kartu.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_1lb5nj5" name="Mencetak kartu BPJS dan menyerahkan" camunda:formKey="embedded:app:forms/cetak-kartu.html" camunda:assignee="mary">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_0j9fee7</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0x8fbzs</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1euizii" name="Menerima pembayaran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="demo">
+    <bpmn:userTask id="UserTask_1euizii" name="Menerima pembayaran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="peter">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+      </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1rb6uvq</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_12ccfoy</bpmn:outgoing>
     </bpmn:userTask>

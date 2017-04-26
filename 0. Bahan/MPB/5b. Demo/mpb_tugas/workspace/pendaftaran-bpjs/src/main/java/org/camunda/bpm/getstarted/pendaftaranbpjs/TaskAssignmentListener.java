@@ -52,7 +52,6 @@ public class TaskAssignmentListener implements TaskListener {
        Address a;
         // Get Email Address from User Profile
         String recipient = user.getEmail();
-        recipient = "lucky.kls9b@gmail.com";
         if (recipient != null && !recipient.isEmpty()) {
            try {
                // Step1
@@ -71,9 +70,8 @@ public class TaskAssignmentListener implements TaskListener {
                generateMailMessage.addRecipient(Message.RecipientType.CC, new InternetAddress(recipient));
                generateMailMessage.setSubject("TEST");
                String emailBody = "Test email";
-               emailBody += "Task assigned: " + delegateTask.getName();
-               emailBody += " Please complete: http://localhost:8080/camunda/app/tasklist/default/#/task/" + taskId;
-               
+               emailBody += "Task assigned: " + delegateTask.getName()+"\n";
+               emailBody += user.getFirstName() +" with email :"+ user.getEmail() + " Please complete : http://localhost:1234/camunda/app/tasklist/default/#/?searchQuery=%5B%5D&filter=e0553560-278a-11e7-92f8-902b3437070c&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D&task="+ taskId;
                generateMailMessage.setContent(emailBody, "text/html");
                LOGGER.info("Mail Session has been created successfully..");
                

@@ -71,7 +71,7 @@ public class TaskAssignmentListener implements TaskListener {
                generateMailMessage.setSubject("TEST");
                String emailBody = "Test email";
                emailBody += "Task assigned: " + delegateTask.getName()+"\n";
-               emailBody += user.getFirstName() +" with email :"+ user.getEmail() + " Please complete : http://localhost:1234/camunda/app/tasklist/default/#/?searchQuery=%5B%5D&filter=e0553560-278a-11e7-92f8-902b3437070c&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D&task="+ taskId;
+               emailBody += user.getFirstName() +" with email :"+ user.getEmail() + " Please complete : http://localhost:1234/camunda/app/tasklist/default/#/?searchQuery=task="+taskId;// %5B%5D&filter=e0553560-278a-11e7-92f8-902b3437070c&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D&task="+ taskId;
                generateMailMessage.setContent(emailBody, "text/html");
                LOGGER.info("Mail Session has been created successfully..");
                

@@ -1,0 +1,43 @@
+bab 3
+cara assign task/group di skenario atau implementasi atau analisis
+contoh skenario seperti apa?
+
+masalah solusi apa aja
+integras email
+
+melaporkan sesuatu
+assignment vs completed
+
+peluang propagasi 
+
+plus/minus
+mana yang mau dipropagasi
+coding independen terhadap platform
+
+keuntungan 
+apapun bisa dipropagasi coding sama
+bisa di event manapun
+full control
+
+
+use case diagram  sebelum ada integrasi email atau sesudah ada integrasi email
+
+diagram sekuen 
+
+
+
+library
+diagram kelas camunda
+
+ui? 
+
+
+bab 4
+algoritma kirim email
+
+
+contoh kasus perlu berapa 3
+
+\
+
+http://localhost:1234/camunda/app/tasklist/default/#/?task=

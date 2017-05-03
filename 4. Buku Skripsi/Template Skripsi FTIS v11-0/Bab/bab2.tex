@@ -1,102 +1,193 @@
 %versi 2 (8-10-2016)
-\chapter{Landasan Teori}
+\chapter{Dasar Teori}
 \label{chap:teori}
 
 \section{Skripsi}
 \label{sec:skripsi} 
-
-\textsc{
-Rencananya akan diisi dengan penjelasan umum mengenai buku skripsi.
-}
-
-\kant[11]
-
-\section{\LaTeX}
-\label{sec:latex}
-
-\textsc{
-Mengapa menggunakan \LaTeX{} untuk buku skripsi dan apa keunggulan/kerugiannya bagi mahasiswa dan pembuat template. 
-}
-
-\kant[12]
+Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan sistem email
 
 
-\section{Template Skripsi FTIS UNPAR}
-\label{sec:template}
+
+
+\section{\textit{Business Process Management} (BPM)}
+\label{sec:bpm}
+\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen. Dari definisi proses bisnis, \textit{Business Process Management} dapat didefinisikan sebagai kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
+
+\subsection{Komponen \textit{Business Process}}
+\label{sec:komponenBP}
+\textit{Business Process Management} memiliki komponen-komponen sebagai berikut :
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Gambar/Bab-2/1-bp-components}
+	\caption{Komponen BPM} 
+	\label{komponenbp}
+\end{figure}
+
+\begin{description}
+	\item{\textit{Event}} \hfill \\\textit{Event} adalah kejadian yang terjadi saat proses bisnis berjalan. 
+	\item{\textit{Activity}} \hfill \\\textit{Activity} adalah kumpulan kegiatan yang dapat dikerjakan. Ketika suatu \textit{Activity} berupa sebuah kegiatan yang sederhana, \textit{activity} disebut dengan \textit{task}. 
+	\item{\textit{Decision Point}} \hfill \\\textit{Decision point} adalah keputusan yang mempengaruhi proses selanjutnya.
+	\item{\textit{Actor}} \hfill \\ \textit{Actor} berupa individu, organisasi, maupun sistem yang mempengaruhi proses bisnis. 
+	\item{\textit{Object}} \hfill \\ \textit{Object} dapat berupa objek fisik (peralatan, bahan baku, produk, dokumen) maupun non fisik (dokumen elektronik, basis data elektronik).
+	\item{\textit{Positive/Negative Outcome}} \hfill \\ Hasil dari bisnis proses dapat menghasilkan nilai bagi konsumen (positif) atau tidak menghasilkan nilai (negatif).
+\end{description}
+
+
+
+
+\subsection{Siklus \textit{Business Process Management}}
+\label{sec:siklusBPM}
+Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Gambar/Bab-2/2-bpm-lifeCycle}
+	\caption{Siklus BPM} 
+	\label{siklusbpm}
+\end{figure}
+
+\begin{description}
+	\item{\textit{Process Identification}} \hfill \\ Pada fase ini, suatu masalah bisnis ditemukan, kemudian proses-proses yang berhubungan dengan masalah bisnis tersebut diidentifikasi, dibatasi, dan dihubungkan satu sama lain. Proses ini terbagi menjadi dua tahap, yaitu \textit{designation} dan \textit{evaluation}. Tahap \textit{designation} bertujuan untuk mengenali proses-proses yang ada dan hubungan antar proses tersebut. Sedangkan tahap \textit{evaluation} memprioritaskan proses-proses yang menghasilkan nilai dan mempertimbangkan proses yang memiliki risiko atau tidak menghasilkan nilai. Fase ini menghasilkan arsitektur dari proses bisnis yang merepresentasikan proses bisnis dan relasi-relasinya.   
+	\item{\textit{Process Discovery}} \hfill \\ Setiap proses yang relevan dengan masalah bisnis didokumentasikan, umumnya dalam bentuk model proses. Fase ini menghasilkan \textit{as-is process model}
+	\item{\textit{Process Analysis}} \hfill \\ Pada fase ini, masalah pada model proses diidentifikasi, didokumentasikan, dan diukur kinerjanya dengan ukuran yang telah ditetapkan. Hasil dari fase ini adalah kumpulan masalah pada proses model.
+	\item{\textit{Process Redesign}} \hfill \\ Tujuan dari fase ini adalah membuat perubahan pada proses yang dapat mengatasi berbagai kumpulan masalah yang telah diidentifikasi pada fase sebelumnya. Proses ini menghasilkan \textit{to-be process model}.
+	\item{\textit{Process Implementation}} \hfill \\ Pada fase ini, model proses diimplementasikan untuk diekseskusi menggunakan \textit{Business Process Management System}.
+	\item{\textit{Process Monitoring and Controlling}} \hfill \\ Setelah proses bisnis berjalan pada BPMS, berbagai data yang relevan dikumpulkan dan dianalisa untuk menentukan kualitas dari proses. Apabila terdapat masalah baru yang ditemukan, maka proses diulangi.
+\end{description}
+
+
+
+\section{\textit{Business Process Model Notation}}
+\label{sec:bpmn}
+Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis. Notasi-notasi tersebut terdiri dari :
+
+\subsection{\textit{Event}}
+\label{sec:event}
+Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan dengan bentuk lingkaran. Notasi event secara umum terbagi menjadi tiga, yaitu \textit{start event, intermediate event,} dan \textit{end event}. \textit{Start event} menunjukkan dimulainya proses, \textit{intermediate event} dapat muncul ketika proses berjalan, sedangkan \textit{end event} menunjukkan berakhirnya proses.  
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/event1}
+	\caption{Notasi \textit{Event}} 
+	\label{event}
+\end{figure}
+
+\subsection{\textit{Activity}}
+\label{sec:activity}
+
+\
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/activity}
+	\caption{Notasi \textit{Activity}} 
+	\label{activity}
+\end{figure}
+
+\subsection{\textit{Gateway}}
+\label{sec:gateway}
+\textit{Gateway} merupakan simbol yang menentukan percabangan dan penggabungan jalur dalam proses. Gateway dilambangakan dengan belah ketupat. Beberapa macam adalah :
+\begin{itemize}
+	\item \textit{Exclusive Gateway} (XOR) berarti memilih salah satu dari cabang yang ada. 
+	\item \textit{Inclusive Gateway} berarti memilih satu, beberapa, atau seluruh cabang yang ada.
+	\item \textit{Parallel Gateway} berarti mengerjakan proses pada seluruh cabang yang ada.
+	\item \textit{Event Based} berarti mengerjakan proses setelah suatu \textit{event} selesai.
+\end{itemize} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/gateway}
+	\caption{Notasi \textit{Gateway}} 
+	\label{gateway}
+\end{figure}
+
+
+\subsection{\textit{Flow}}
+\label{sec:flow}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/flow}
+	\caption{Notasi \textit{Flow}} 
+	\label{flow}
+\end{figure}
+
+\subsection{\textit{Data}}
+\label{sec:data}
+\textit{Data Object} melambangkan informasi yang berjalan dalam proses seperti dokumen, e-mail, atau surat. Sedangkan \textit{Data Store} merupakan tempat proses membaca atau menyimpan data seperti basis data atau rak. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/data}
+	\caption{Notasi \textit{Data}} 
+	\label{data}
+\end{figure}
+
+
+\subsection{\textit{Artifact}}
+\label{sec:artifacts}
+\textit{Artifact} tidak mempengaruhi jalannya proses, tetapi hanya sebagai informasi tambahan agar proses lebih mudah dimengerti. Terdapat dua jenis, yaitu \textit{Text Annotation} dan \textit{Group}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/artifact}
+	\caption{Notasi \textit{Artifact} }
+	\label{artifact}
+\end{figure}
+
+
+\subsection{\textit{Lanes} dan \textit{Pools}
+\label{sec:poolslanes}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/swimlane}
+	\caption{Notasi \textit{Lanes & Pools}} 
+	\label{lanespools}
+\end{figure}
+
+
  
- \textsc{
- Akan dipaparkan bagaimana menggunakan template ini, termasuk petunjuk singkat membuat referensi, gambar dan tabel.
- Juga hal-hal lain yang belum terpikir sampai saat ini. 
- }
- 
- \kant[13]
 
-\subsection{Tabel}  
- 
-Berikut adalah contoh pembuatan tabel. 
-Penempatan tabel dan gambar secara umum diatur secara otomatis oleh \LaTeX{}, perhatikan contoh di file bab2.tex untuk melihat bagaimana cara memaksa tabel ditempatkan sesuai keinginan kita.
+\section{\textit{Business Process Management System (BPMS)}}
+\textit{Business Process Management System (BPMS)} adalah sistem yang mengkoordinasikan otomatisasi proses bisnis. Tujuan dari BPMS adalah menyelesaikan proses pada waktu yang ditentukan dan menggunakan sumber daya yang tepat. 
 
-Perhatikan bawa berbeda dengan penempatan judul gambar gambar, keterangan tabel harus diletakkan di atas tabel!!
-Lihat Tabel~\ref{tab:contoh1} berikut ini:
+\subsection{Arsitektur BPMS}
+Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fig:arsitekturbpms} terdiri dari :
+\begin{itemize}
+	\item \textit{Execution Engine}, menyediakan beberapa fungsi seperti mengeksekusi proses, mendistribusikan \textit{task}, mengambil dan menyimpan data yang diperlukan. 
+	\item \textit{Process Modeling Tool}, \textit{tool} untuk membuat model proses.
+	\item \textit{Worklist Handler}, me
+	\item \textit{Administration & Monitoring Tool}
+	\item \textit{Repository}
+	\item \textit{Execution Logs}
+\end{itemize}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Gambar/Bab-2/bpms/bpms}
+	\caption{Arsitektur BPMS} 
+	\label{fig:arsitekturbpms}
+\end{figure}
 
-\begin{table}[H] %atau h saja untuk "kira kira di sini"
-	\centering 
-	\caption{Tabel contoh}
-	\label{tab:contoh1}
-	\begin{tabular}{cccc}
-		\toprule
-		& $v_{start}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
 
-		\midrule
-		$\tau_{1}$ & 1 & 12& 20\\
-		$\tau_{2}$ & 1 &  & 20\\
-		$\tau_{3}$ & 1 & 9 & 20\\
-		$\tau_{4}$ & 1 &  & 20\\
 
-		\bottomrule
+\section{Camunda}
+Camunda adalah \textit{framework} BPMS berbasis Java yang mendukung \textit{workflow} BPMN dan otomatisasi proses bisnis. 
+
+\subsection{Arsitektur BPMS Camunda}
+Camunda memiliki komponen-komponen yang sama dengan BPMS. 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.5]{Gambar/Bab-2/bpms/arsitektur-camunda}
+	\caption{Arsitektur BPMS Camunda} 
+	\label{fig:arsitekturcamunda}
+\end{figure}
+
+
+\section{Email}
+
+
+
+
+
+
+
 		
-	\end{tabular} 
-\end{table}
-Tabel~\ref{tab:cthwarna1} dan Tabel~\ref{tab:cthwarna2} berikut ini adalah tabel dengan sel yang berwarna dan ada dua tabel yang bersebelahan. 
-\begin{table}[H]
-	\begin{minipage}[c]{0.49\linewidth}
-		\centering
-		\caption{Tabel bewarna(1)}
-		\label{tab:cthwarna1}
-		\begin{tabular}{ccccc}
-			\toprule
-			 & $v_{start}$ & $\mathcal{S}_{2}$ & $\mathcal{S}_{1}$ & $v_{end}$\\
-			
-			\midrule
-			$\tau_{1}$ & 1 & 5 \cellcolor{green}& 12& 20\\
-			$\tau_{2}$ & 1 & 8 \cellcolor{green}& & 20\\
-			$\tau_{3}$ & 1 & 2/8/17 \cellcolor{green}& 9 & 20\\
-			$\tau_{4}$ & 1 & \cellcolor{red}& & 20\\
-			
-			\bottomrule
-
-		\end{tabular}
-	\end{minipage}
-	\begin{minipage}[c]{0.49\linewidth}
-		
-		\centering 
-		\caption{Tabel bewarna(2)}
-		\label{tab:cthwarna2}
-		\begin{tabular}{ccccc}
-			\toprule
-			 & $v_{start}$ & $\mathcal{S}_{1}$ & $\mathcal{S}_{2}$ & $v_{end}$\\
-			
-			\midrule
-			$\tau_{1}$ & 1 & 12& 5 \cellcolor{red} &20\\
-			$\tau_{2}$ & 1 &  &  8 \cellcolor{green} &20\\
-			$\tau_{3}$ & 1 & 9 & 2/8/17 \cellcolor{green} &20\\
-			$\tau_{4}$ & 1 &   & \cellcolor{red} &20\\
-			
-			\bottomrule
-		
-		\end{tabular}
-	\end{minipage}
-\end{table}
+	
 
  
 \subsection{Kutipan}

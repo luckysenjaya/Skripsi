@@ -32,3 +32,14 @@ User dari sisi service bukan customer --> external tasks
 
 
 sebelumnya harus sudah assign semua task ke masing-masing user
+
+
+
+http://localhost:1234/camunda/app/tasklist/default/#/task/d808d115-2ad0-11e7-8c15-902b3437070c
+
+
+http://localhost:1234/camunda/app/tasklist/default/#/?searchQuery=%5B%5D&filter=e0553560-278a-11e7-92f8-902b3437070c&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D&task=d808d115-2ad0-11e7-8c15-902b3437070c
+
+http://localhost:1234/camunda/app/tasklist/default/#/?searchQuery=%5B%5D&filter=e0553560-278a-11e7-92f8-902b3437070c&sorting=%5B%7B%22sortBy%22:%22created%22,%22sortOrder%22:%22desc%22%7D%5D&task=5afb00d8-2ad1-11e7-8c15-902b3437070c
+
+

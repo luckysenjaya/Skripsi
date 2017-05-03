@@ -4,52 +4,72 @@
    
 \section{Latar Belakang}
 \label{sec:label}
-\textsc{
-Bagian ini akan diisi dengan apa yang melatarbelakangi pembuatan template skripsi ini.
-Termasuk juga masalah-masalah yang akan dihadapi untuk membuatnya, termasuk kurangnya kemampuan penguasaan \LaTeX{} sehingga template ini dibuat dengan mengandalkan berbagai contoh yang tersebar di dunia maya, yang digabung-gabung menjadi satu jua.
-Bagian lain juga akan dilengkapi, untuk sementara diisi dengan lorem ipsum versi bahasa inggris.
-}
 
-\kant[5-10]
+\textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email. 
+Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh \textit{user}. Ketika ada suatu \textit{user task}, sistem email akan mengirimkan email ke user yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.
+
+
+
+
 
 \section{Rumusan Masalah}
 \label{sec:rumusan}
-\textsc{
-Bagian ini akan diisi dengan penajaman dari masalah-masalah yang sudah diidentifikasi di bagian sebelumnya. 
-}
 
-\kant[6]
+Berdasarkan latar belakang yang dipaparkan sebelumnya, maka rumusan masalah dalam skripsi ini adalah sebagai berikut :
+\begin{enumerate}
+	\item Bagaimana memodelkan \textit{workflow} dengan BPMN?
+	\item Event-event \textit{workflow} apa saja yang dapat dipropagasi ke sistem email?
+	\item Bagaimana mekanisme propagasi dan integrasi \textit{workflow} dengan sistem email?
+\end{enumerate} 
+
+
+
 
 \section{Tujuan}
 \label{sec:tujuan}
-\textsc{
-Akan dipaparkan secara lebih terperinci dan tersturkur apa yang menjadi tujuan pembuatan template skripsi ini
-}
 
-\kant[7]
+Berdasarkan rumusan masalah yang dipaparkan sebelumnya, tujuan dari penelitian ini adalah :
+\begin{enumerate}
+	\item Memodelkan \textit{workflow} dengan BPMN.
+	\item Mengidentifikasi event-event \textit{workflow} yang dapat dipropagasi ke sistem email.
+	\item Menentukan mekanisme propagasi dan mengintegrasikan \textit{workflow} dengan sistem email.
+\end{enumerate}
+
+
+
 
 \section{Batasan Masalah}
 \label{sec:batasan}
-\textsc{
-Untuk mempermudah pembuatan template ini, tentu ada hal-hal yang harus dibatasi, misalnya saja bahwa template ini bukan berupa style \LaTeX{} pada umumnya (dengan alasannya karena belum mampu jika diminta membuat seperti itu)
-}
 
-\kant[8]
+
+
 
 \section{Metodologi}
 \label{sec:metlit}
-\textsc{
-Tentunya akan diisi dengan metodologi yang serius sehingga templatenya terkesan lebih serius.
-}
 
-\kant[9]
+Metodologi yang digunakan dalam penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+	\item Melakukan studi mengenai proses bisnis, \textit{workflow}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, dan sistem e-mail. 
+	\item Memodelkan proses bisnis tertentu menggunakan BPMN.
+	\item Mengidentifikasikan \textit{event-event} dari \textit{workflow} yang dapat diintegrasikan dengan sistem email.
+	\item Merancang integrasi sistem email.
+	\item Mengimplementasikan sistem email ke BPMS.
+	\item Melakukan pengujian fungsionalitas.
+\end{enumerate}
+
+
+
 
 \section{Sistematika Pembahasan}
 \label{sec:sispem}
-\textsc{
-Rencananya Bab 2 akan berisi petunjuk penggunaan template dan dasar-dasar \LaTeX.
-Mungkin bab 3,4,5 dapt diisi oleh ketiga jurusan, misalnya peraturan dasar skripsi atau pedoman penulisan, tentu jika berkenan.
-Bab 6 akan diisi dengan kesimpulan, bahwa membuat template ini ternyata sungguh menghabiskan banyak waktu.
-}
 
-\kant[10]
+\begin{enumerate}
+	\item Bab 1 Pendahuluan, berisi latar belakang masalah, rumusan masalah, tujuan penelitian, batasan masalah, metodologi penelitian, dan sistematika penulisan.
+	\item Bab 2 Dasar Teori, berisi dasar teori yang mencakup \textit{Business Process Management}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, dan sistem e-mail.
+	\item Bab 3 Analisis, Berisi analisis Camunda dan analisis BPMN dengan menggunakan contoh kasus.
+	\item Bab 4 Perancangan, Berisi rancangan algoritma yang akan dibuat.
+	\item Bab 5 Implementasi, dan Pengujian Berisi implementasi dari program yang dibuat dan pengujian aplikasi berdasarkan contoh kasus pada bab 3.
+	\item Bab 6 Penutup, Berisi kesimpulan dan saran-saran untuk pengembangan selanjutnya.
+\end{enumerate}
+
+

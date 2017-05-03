@@ -72,13 +72,18 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 
 \subsection{\textit{Activity}}
 \label{sec:activity}
-
-\
+\textit{Activity} merupakan kumpulan kegiatan yang dapat dikerjakan. Sebuah \textit{task} merupakan bagian dari \textit{Activity} yang tidak dapat dipecah lagi. Beberapa contoh \textit{Task} adalah :
+	\begin{enumerate}
+		\item{\textit{User Task}}, yaitu pekerjaan yang perlu dilakukan oleh manusia melalui sistem.
+		\item{\textit{Manual Task}}, yaitu pekerjaan yang dilakukan manusia tanpa melalui sistem.
+		\item{\textit{Service Task}}, yaitu pekerjaan yang dilakukan oleh sistem dengan memangggil kode Java. 
+	\end{enumerate}
+	
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/activity}
-	\caption{Notasi \textit{Activity}} 
-	\label{activity}
+	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/task}
+	\caption{Notasi \textit{Task}} 
+	\label{task}
 \end{figure}
 
 \subsection{\textit{Gateway}}
@@ -90,6 +95,7 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 	\item \textit{Parallel Gateway} berarti mengerjakan proses pada seluruh cabang yang ada.
 	\item \textit{Event Based} berarti mengerjakan proses setelah suatu \textit{event} selesai.
 \end{itemize} 
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/gateway}
@@ -98,15 +104,15 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 \end{figure}
 
 
-\subsection{\textit{Flow}}
-\label{sec:flow}
+%\subsection{\textit{Flow}}
+%\label{sec:flow}
 
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/flow}
-	\caption{Notasi \textit{Flow}} 
-	\label{flow}
-\end{figure}
+%\begin{figure}[H]
+%	\centering
+%	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/flow}
+%	\caption{Notasi \textit{Flow}} 
+%	\label{flow}
+%\end{figure}
 
 \subsection{\textit{Data}}
 \label{sec:data}
@@ -130,13 +136,13 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 \end{figure}
 
 
-\subsection{\textit{Lanes} dan \textit{Pools}
+\subsection{\textit{Pools} dan \textit{Lanes}}
 \label{sec:poolslanes}
-
+\textit{Lanes} digunakan untuk memberikan kumpulan \textit{tasks} kepada yang bertanggung jawab untuk mengerjakannya. Sedangkan \textit{Pools} merupakan kumpulan dari \textit{Lanes}.
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=1]{Gambar/Bab-2/bpmn/swimlane}
-	\caption{Notasi \textit{Lanes & Pools}} 
+	\caption{Notasi \textit{Lanes dan Pools}} 
 	\label{lanespools}
 \end{figure}
 
@@ -151,8 +157,8 @@ Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fi
 \begin{itemize}
 	\item \textit{Execution Engine}, menyediakan beberapa fungsi seperti mengeksekusi proses, mendistribusikan \textit{task}, mengambil dan menyimpan data yang diperlukan. 
 	\item \textit{Process Modeling Tool}, \textit{tool} untuk membuat model proses.
-	\item \textit{Worklist Handler}, me
-	\item \textit{Administration & Monitoring Tool}
+	\item \textit{Worklist Handler}, \textit{tool} untuk mendistribusikan pekerjaan.
+	\item \textit{Administration dan Monitoring Tool} \textit{tools} untuk administrasi dan memonitor proses. 
 	\item \textit{Repository}
 	\item \textit{Execution Logs}
 \end{itemize}
@@ -165,11 +171,11 @@ Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fi
 
 
 
-\section{Camunda}
+\section{BPMS Camunda}
 Camunda adalah \textit{framework} BPMS berbasis Java yang mendukung \textit{workflow} BPMN dan otomatisasi proses bisnis. 
 
 \subsection{Arsitektur BPMS Camunda}
-Camunda memiliki komponen-komponen yang sama dengan BPMS. 
+Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.5]{Gambar/Bab-2/bpms/arsitektur-camunda}
@@ -177,17 +183,51 @@ Camunda memiliki komponen-komponen yang sama dengan BPMS.
 	\label{fig:arsitekturcamunda}
 \end{figure}
 
-
-\section{Email}
-
-
-
-
-
-
-
-		
+\begin{itemize}
+	\item \textit{Modeler}, \textit{tool} untuk membuat diagram BPMN yang dapat dieksekusi. Camunda Modeler menyediakan berbagai notasi yang diperlukan untuk membuat diagram BPMN. Terdapat pula beberapa pengaturan yang dapat dimasukkan ke dalam notasi.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{Gambar/Bab-2/bpms/camundaModeler}
+			\caption{Camunda Modeler} 
+			\label{fig:camundamodeler}
+		\end{figure}
 	
+	\item \textit{Tasklist}, tempat pengguna mengakses dan mengerjakan tugas. Tugas yang dikerjakan mengikuti alur model proses (BPMN) yang telah dibuat. 
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{Gambar/Bab-2/bpms/camundaTaskList}
+			\caption{Camunda Tasklist} 
+			\label{fig:camundatasklist}
+		\end{figure}
+	
+	
+
+	
+	
+	\item \textit{Cockpit}, memeriksa proses yang sedang berjalan maupun proses yang sudah selesai.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/Bab-2/bpms/camundaCockpit}
+	\caption{Camunda Cockpit} 
+	\label{fig:camundacockpit}
+\end{figure}
+	
+\item \textit{Admin}, memiliki tugas untuk mengatur, mengelompokkan, dan memberi izin kepada pengguna untuk melakukan tugas.
+	\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.4]{Gambar/Bab-2/bpms/camundaAdmin}
+	\caption{Camunda Admin} 
+	\label{fig:camundaadmin}
+\end{figure}
+
+	\item \textit{Custom Application}, aplikasi lain yang diintegrasikan dengan Camunda menggunakan Java atau REST API.
+	
+\end{itemize}
+
+
+\section{JavaMail}
+\label{javamail}
+JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol). 
 
  
 \subsection{Kutipan}

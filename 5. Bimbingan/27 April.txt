@@ -36,8 +36,22 @@ bab 4
 algoritma kirim email
 
 
+Rancangan email
+
+
 contoh kasus perlu berapa 3
 
 \
 
 http://localhost:1234/camunda/app/tasklist/default/#/?task=
+
+
+
+
+
+Pake assignment
+kalau belum diassign begitu diassign langsung kekirim email
+
+pake create harus udah ada assignee nya
+
+candidate user

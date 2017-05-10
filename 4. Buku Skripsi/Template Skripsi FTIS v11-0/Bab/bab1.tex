@@ -6,9 +6,8 @@
 \label{sec:label}
 
 \textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email. 
-Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh \textit{user}. Ketika ada suatu \textit{user task}, sistem email akan mengirimkan email ke user yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.
 
-
+Dalam skripsi ini, akan dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Ketika ada suatu \textit{user task}, sistem email akan mengirimkan email ke pengguna yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.
 
 
 
@@ -40,6 +39,11 @@ Berdasarkan rumusan masalah yang dipaparkan sebelumnya, tujuan dari penelitian i
 
 \section{Batasan Masalah}
 \label{sec:batasan}
+\begin{enumerate}
+	\item Pemodelan BPMN menggunakan versi 2.0 dan menggunakan editor Camunda Modeler versi 1.7.2.
+	\item Perangkat lunak BPMS Camunda yang digunakan merupakan versi 7.6.0 dan berjalan pada tomcat versi 8.0.24.
+	\item Semua uji kasus berada di lingkungan Camunda.
+\end{enumerate}
 
 
 
@@ -66,9 +70,9 @@ Metodologi yang digunakan dalam penelitian ini adalah sebagai berikut:
 \begin{enumerate}
 	\item Bab 1 Pendahuluan, berisi latar belakang masalah, rumusan masalah, tujuan penelitian, batasan masalah, metodologi penelitian, dan sistematika penulisan.
 	\item Bab 2 Dasar Teori, berisi dasar teori yang mencakup \textit{Business Process Management}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, dan sistem e-mail.
-	\item Bab 3 Analisis, Berisi analisis Camunda dan analisis BPMN dengan menggunakan contoh kasus.
-	\item Bab 4 Perancangan, Berisi rancangan algoritma yang akan dibuat.
-	\item Bab 5 Implementasi, dan Pengujian Berisi implementasi dari program yang dibuat dan pengujian aplikasi berdasarkan contoh kasus pada bab 3.
+	\item Bab 3 Analisis, Berisi analisis BPMN dengan menggunakan skenario, analisis event yang terkait dengan sistem email  dan mekanisme integrasi sistem email.
+	\item Bab 4 Perancangan, Berisi rancangan sistem dan rancangan partisipan dalam otomasi BPMS Camunda, .
+	\item Bab 5 Implementasi, dan Pengujian Berisi implementasi dari program yang dibuat dan pengujian aplikasi berdasarkan contoh kasus pada bab tiga.
 	\item Bab 6 Penutup, Berisi kesimpulan dan saran-saran untuk pengembangan selanjutnya.
 \end{enumerate}
 

@@ -8,7 +8,6 @@
       <bpmn:lane id="Lane_13wuug0" name="Pemohon">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_0a0r3mt</bpmn:flowNodeRef>
-        <bpmn:flowNodeRef>UserTask_15dx9zp</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>UserTask_1w7apo5</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>UserTask_18tusp0</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>UserTask_16s4q73</bpmn:flowNodeRef>
@@ -17,6 +16,7 @@
         <bpmn:flowNodeRef>ManualTask_0juzjny</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ManualTask_1kr0jb4</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>UserTask_0lel05c</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>UserTask_15dx9zp</bpmn:flowNodeRef>
       </bpmn:lane>
       <bpmn:lane id="Lane_04gpgmr" name="Sistem BPJS">
         <bpmn:flowNodeRef>ServiceTask_0xkgh2d</bpmn:flowNodeRef>
@@ -33,8 +33,6 @@
       </bpmn:lane>
     </bpmn:laneSet>
     <bpmn:sequenceFlow id="SequenceFlow_0x54vgw" sourceRef="StartEvent_1" targetRef="ManualTask_1kr0jb4" />
-    <bpmn:sequenceFlow id="SequenceFlow_0pe7aj4" sourceRef="ManualTask_1kr0jb4" targetRef="UserTask_15dx9zp" />
-    <bpmn:sequenceFlow id="SequenceFlow_1vur1c9" sourceRef="UserTask_15dx9zp" targetRef="UserTask_1w7apo5" />
     <bpmn:sequenceFlow id="SequenceFlow_1q9a1nj" sourceRef="UserTask_18tusp0" targetRef="ManualTask_1mbz2xg" />
     <bpmn:startEvent id="StartEvent_1" name="Membutuhkan BPJS">
       <bpmn:outgoing>SequenceFlow_0x54vgw</bpmn:outgoing>
@@ -63,14 +61,7 @@
       <bpmn:incoming>SequenceFlow_0y7mnva</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0y7mnva" sourceRef="ManualTask_0juzjny" targetRef="EndEvent_0a0r3mt" />
-    <bpmn:userTask id="UserTask_15dx9zp" name="Mengisi formulir pendaftaran BPJS" camunda:formKey="embedded:app:forms/pendaftaran-bpjs.html" camunda:assignee="john" camunda:candidateUsers="john, mary">
-      <bpmn:extensionElements>
-        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
-      </bpmn:extensionElements>
-      <bpmn:incoming>SequenceFlow_0pe7aj4</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_1vur1c9</bpmn:outgoing>
-    </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:assignee="john" camunda:candidateUsers="john, peter">
+    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:candidateUsers="john">
       <bpmn:extensionElements>
         <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
       </bpmn:extensionElements>
@@ -151,6 +142,15 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="SequenceFlow_1rb6uvq" sourceRef="ManualTask_1mbz2xg" targetRef="UserTask_1euizii" />
     <bpmn:sequenceFlow id="SequenceFlow_1w67uem" sourceRef="ManualTask_0gmkp2t" targetRef="UserTask_1aqe9p1" />
+    <bpmn:userTask id="UserTask_15dx9zp" name="Mengisi formulir pendaftaran BPJS" camunda:formKey="embedded:app:forms/pendaftaran-bpjs.html" camunda:assignee="john">
+      <bpmn:extensionElements>
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="create" />
+      </bpmn:extensionElements>
+      <bpmn:incoming>SequenceFlow_0pe7aj4</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_1vur1c9</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:sequenceFlow id="SequenceFlow_1vur1c9" sourceRef="UserTask_15dx9zp" targetRef="UserTask_1w7apo5" />
+    <bpmn:sequenceFlow id="SequenceFlow_0pe7aj4" sourceRef="ManualTask_1kr0jb4" targetRef="UserTask_15dx9zp" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="pendaftaran-bpjs">
@@ -168,20 +168,6 @@
         <di:waypoint xsi:type="dc:Point" x="291" y="34" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="190.5" y="24" width="90" height="20" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_0pe7aj4_di" bpmnElement="SequenceFlow_0pe7aj4">
-        <di:waypoint xsi:type="dc:Point" x="391" y="34" />
-        <di:waypoint xsi:type="dc:Point" x="432" y="34" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="333.5" y="24" width="90" height="20" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="SequenceFlow_1vur1c9_di" bpmnElement="SequenceFlow_1vur1c9">
-        <di:waypoint xsi:type="dc:Point" x="532" y="34" />
-        <di:waypoint xsi:type="dc:Point" x="567" y="34" />
-        <bpmndi:BPMNLabel>
-          <dc:Bounds x="470.5" y="24" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1q9a1nj_di" bpmnElement="SequenceFlow_1q9a1nj">
@@ -311,9 +297,6 @@
           <dc:Bounds x="1688.5" y="24" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="UserTask_15dx9zp_di" bpmnElement="UserTask_15dx9zp">
-        <dc:Bounds x="432" y="-6" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="UserTask_1w7apo5_di" bpmnElement="UserTask_1w7apo5">
         <dc:Bounds x="567" y="-6" width="100" height="80" />
       </bpmndi:BPMNShape>
@@ -369,6 +352,23 @@
         <di:waypoint xsi:type="dc:Point" x="1371" y="374" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1326" y="214" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="UserTask_15dx9zp_di" bpmnElement="UserTask_15dx9zp">
+        <dc:Bounds x="432" y="-6" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="SequenceFlow_1vur1c9_di" bpmnElement="SequenceFlow_1vur1c9">
+        <di:waypoint xsi:type="dc:Point" x="532" y="34" />
+        <di:waypoint xsi:type="dc:Point" x="567" y="34" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="470.5" y="24" width="90" height="20" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_0pe7aj4_di" bpmnElement="SequenceFlow_0pe7aj4">
+        <di:waypoint xsi:type="dc:Point" x="391" y="34" />
+        <di:waypoint xsi:type="dc:Point" x="432" y="34" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="333.5" y="24" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>

@@ -2,23 +2,18 @@
 \chapter{Dasar Teori}
 \label{chap:teori}
 
-\section{Skripsi}
-\label{sec:skripsi} 
 Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan sistem email
-
-
-
 
 \section{\textit{Business Process Management} (BPM)}
 \label{sec:bpm}
-\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen. Dari definisi proses bisnis, \textit{Business Process Management} dapat didefinisikan sebagai kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
+\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen\cite{dumas:13} . Dari definisi proses bisnis, \textit{Business Process Management} dapat didefinisikan sebagai kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
 
 \subsection{Komponen \textit{Business Process}}
 \label{sec:komponenBP}
 \textit{Business Process Management} memiliki komponen-komponen sebagai berikut :
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Gambar/Bab-2/1-bp-components}
+	\includegraphics[scale=0.7]{Gambar/Bab-2/1-bp-components}
 	\caption{Komponen BPM} 
 	\label{komponenbp}
 \end{figure}
@@ -40,7 +35,7 @@ Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan si
 Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Gambar/Bab-2/2-bpm-lifeCycle}
+	\includegraphics[scale=0.7]{Gambar/Bab-2/2-bpm-lifeCycle}
 	\caption{Siklus BPM} 
 	\label{siklusbpm}
 \end{figure}
@@ -58,7 +53,7 @@ Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak dia
 
 \section{\textit{Business Process Model Notation}}
 \label{sec:bpmn}
-Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis. Notasi-notasi tersebut terdiri dari :
+Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\cite{bpmn:15:camunda}. Notasi-notasi tersebut terdiri dari :
 
 \subsection{\textit{Event}}
 \label{sec:event}
@@ -159,12 +154,12 @@ Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fi
 	\item \textit{Process Modeling Tool}, \textit{tool} untuk membuat model proses.
 	\item \textit{Worklist Handler}, \textit{tool} untuk mendistribusikan pekerjaan.
 	\item \textit{Administration dan Monitoring Tool} \textit{tools} untuk administrasi dan memonitor proses. 
-	\item \textit{Repository}
-	\item \textit{Execution Logs}
+	%\item \textit{Repository}
+	%\item \textit{Execution Logs}
 \end{itemize}
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Gambar/Bab-2/bpms/bpms}
+	\includegraphics[scale=0.7]{Gambar/Bab-2/bpms/bpms}
 	\caption{Arsitektur BPMS} 
 	\label{fig:arsitekturbpms}
 \end{figure}
@@ -172,13 +167,15 @@ Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fi
 
 
 \section{BPMS Camunda}
-Camunda adalah \textit{framework} BPMS berbasis Java yang mendukung \textit{workflow} BPMN dan otomatisasi proses bisnis. 
+\label{bpmscamunda}
+Camunda adalah \textit{framework} BPMS berbasis Java yang mendukung \textit{workflow} BPMN dan otomatisasi proses bisnis\cite{bpmmanual:15:7.6}. 
 
 \subsection{Arsitektur BPMS Camunda}
+\label{arsitekturcamunda}
 Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 \begin{figure}[H]
 	\centering
-	\includegraphics[scale=0.5]{Gambar/Bab-2/bpms/arsitektur-camunda}
+	\includegraphics[scale=0.7]{Gambar/Bab-2/bpms/arsitektur-camunda}
 	\caption{Arsitektur BPMS Camunda} 
 	\label{fig:arsitekturcamunda}
 \end{figure}
@@ -199,10 +196,6 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 			\caption{Camunda Tasklist} 
 			\label{fig:camundatasklist}
 		\end{figure}
-	
-	
-
-	
 	
 	\item \textit{Cockpit}, memeriksa proses yang sedang berjalan maupun proses yang sudah selesai.
 	\begin{figure}[H]
@@ -225,72 +218,218 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 \end{itemize}
 
 
+\section{Pengoperasian Camunda}
+\label{operasicamunda}
+\subsection{Instalasi}
+Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted:15:camunda}, yaitu :
+\begin{itemize}
+	\item Java JDK 1.7+.
+	\item Apache Maven atau Maven yang sudah terpasang di Eclipse.
+	\item Web browser.
+	\item Camunda BPM Platform 
+	\item Camunda Modeler
+\end{itemize}
+
+
+\subsection{Mempersiapkan Proyek Java}
+\label{proyekjava}
+\begin{description}
+	\item Membuat Proyek Maven di Eclipse. 
+		\begin{enumerate}
+			\item Pilih File / New / Other / Maven / Maven Project kemudian pilih \textit{Next}.
+			\item Pilih Create a simple project (skip archetype selection) kemudian pilih \textit{next}.
+			\item Pilih Packaging : war, kemudian pilih Finish.
+		\end{enumerate}
+	\item Tambahkan \textit{Camunda Maven Dependencies} ke file pom.xml (lihat Lampiran ~\ref{lamp:pom}).
+	\item Tambahkan sebuah kelas Process Application. Nama kelas dapat diganti dengan nama proses yang dibuat. 
+	\begin{lstlisting}[language=java,basicstyle=\tiny,caption=Kelas Process Application]
+	package org.camunda.bpm.getstarted.loanapproval;
+
+import org.camunda.bpm.application.ProcessApplication;
+import org.camunda.bpm.application.impl.ServletProcessApplication;
+
+@ProcessApplication("Loan Approval App")
+public class LoanApprovalApplication extends ServletProcessApplication {
+  // empty implementation
+}
+	\end{lstlisting}
+	\item Tambahkan \textit{Deployment Descriptor} di META-INF/processes.xml.
+	
+	\begin{lstlisting}[language=xml,basicstyle=\tiny,caption=processes.xml]	
+	<?xml version="1.0" encoding="UTF-8" ?>
+
+<process-application
+    xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <process-archive name="loan-approval">
+    <process-engine>default</process-engine>
+    <properties>
+      <property name="isDeleteUponUndeploy">false</property>
+      <property name="isScanForProcessDefinitions">true</property>
+    </properties>
+  </process-archive>
+
+</process-application>
+	\end{lstlisting}
+	
+\end{description}
+
+\subsection{Memodelkan Proses}
+\label{modelproses}
+	\begin{enumerate}
+		\item Membuat file BPMN baru dengan File / New File / BPMN Diagram.
+		\item Memodelkan proses.
+				\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.7]{Gambar/Bab-2/bpmn/bpmn}
+			\caption{Contoh Model Proses} 
+			\label{fig:modelproses}
+		\end{figure}
+		\item Menambahkan Form HTML pada User Task.
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Task Form]
+		<form name="approveLoan">
+  <div class="form-group">
+    <label for="customerId">Customer ID</label>
+    <input class="form-control"
+           cam-variable-type="String"
+           cam-variable-name="customerId"
+           name="customerId"
+           readonly="true" />
+  </div>
+  <div class="form-group">
+    <label for="amount">Amount</label>
+    <input class="form-control"
+           cam-variable-type="Double"
+           cam-variable-name="amount"
+           name ="amount" />
+  </div>
+</form>
+\end{lstlisting}
+		\item Menambahkan Service Task.
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Implementasi Service Task]
+		package org.camunda.bpm.getstarted.loanapproval;
+
+import java.util.logging.Logger;
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class ProcessRequestDelegate implements JavaDelegate {
+
+  private final static Logger LOGGER = Logger.getLogger("LOAN-REQUESTS");
+
+  public void execute(DelegateExecution execution) throws Exception {
+    LOGGER.info("Processing request by '"+execution.getVariable("customerId")+"'...");
+  }
+
+}
+		\end{lstlisting}
+	\end{enumerate}
+	
+
+\subsection{Menjalankan Camunda}
+\label{menjalankancamunda}
+	\begin{enumerate}
+		\item Klik kanan pom.xml dan pilih Run As / Maven Install. Langkah ini akan menghasilkan file WAR di folder target.
+		\item \textit{Copy paste} file WAR ke CAMUNDA\_HOME / server / apache-tomcat / webapps folder.
+		\item Jalankan start-camunda.bat
+	\end{enumerate}
+	
+
+
+
 \section{JavaMail}
 \label{javamail}
-JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol). 
-
- 
-\subsection{Kutipan}
-\label{subs:kutipan} 
-Berikut contoh kutipan dari berbagai sumber, untuk keterangan lebih lengkap, silahkan membaca file referensi.bib yang disediakan juga di template ini.
-Contoh kutipan:
+JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. Untuk menggunakan JavaMail diperlukan beberapa kelas, yaitu :
 \begin{itemize}
-	\item Buku:~\cite{berg:08:compgeom} 
-	\item Bab dalam buku:~\cite{kreveld:04:GIS}
-	\item Artikel dari Jurnal:~\cite{buchin:13:median}
-	\item Artikel dari prosiding seminar/konferensi:~\cite{kreveld:11:median}
-	\item Skripsi/Thesis/Disertasi:~\cite{lionov:02:animasi}~\cite{wiratma:10:following}~\cite{wiratma:22:later}
-	\item Technical/Scientific Report:~\cite{kreveld:07:watertight}
-	\item RFC (Request For Comments):~\cite{RFC1654}
-	\item Technical Documentation/Technical Manual:~\cite{Z.500}~\cite{unicode:16:stdv9}~\cite{google:16:and7}
-	\item Paten:~\cite{webb:12:comm}
-	\item Tidak dipublikasikan:~\cite{wiratma:09:median}~\cite{lionov:11:cpoly}
-	\item Laman web:~\cite{erickson:03:cgmodel}  
-	\item Lain-lain:~\cite{agung:12:tango}
-\end{itemize}    
-  
-\subsection{Gambar}
-
-Pada hampir semua editor, penempatan gambar di dalam dokumen \LaTeX{} tidak dapat dilakukan melalui proses {\it drag and drop}.
-Perhatikan contoh pada file bab2.tex untuk melihat bagaimana cara menempatkan gambar.
-Beberapa hal yang harus diperhatikan pada saat menempatkan gambar:
-\begin{itemize}
-	\item Setiap gambar {\bf harus} diacu di dalam teks (gunakan {\it field} {\sc label})
-	\item {\it Field} {\sc caption} digunakan untuk teks pengantar pada gambar. Terdapat dua bagian yaitu yang ada di antara tanda $[$ dan $]$ dan yang ada di antara tanda $\{$ dan $\}$. Yang pertama akan muncul di Daftar Gambar, sedangkan yang kedua akan muncul di teks pengantar gambar. Untuk skripsi ini, samakan isi keduanya.
-	\item Jenis file yang dapat digunakan sebagai gambar cukup banyak, tetapi yang paling populer adalah tipe {\sc png} (lihat Gambar~\ref{fig:ularpng}), tipe {\sc jpg} (Gambar~\ref{fig:ularjpg}) dan tipe {\sc pdf} (Gambar~\ref{fig:ularpdf})
-	\item Besarnya gambar dapat diatur dengan {\it field} {\sc scale}.
-	\item Penempatan gambar diatur menggunakan {\it placement specifier} (di antara tanda  $[$ dan $]$ setelah deklarasi gambar.
-	Yang umum digunakan adalah {\bf H} untuk menempatkan gambar {\bf sesuai} penempatannya di file .tex atau  {\bf h} yang berarti "kira-kira" di sini. \\
-	Jika tidak menggunakan {\it placement specifier}, \LaTeX{} akan menempatkan gambar secara otomatis untuk menghindari bagian kosong pada dokumen anda.
-	Walaupun cara ini sangat mudah, hindarkan terjadinya penempatan dua gambar secara berurutan. 	
-	\begin{itemize}
-		\item Gambar~\ref{fig:ularpng} ditempatkan di bagian atas halaman, walaupun penempatannya dilakukan setelah penulisan 3 paragraf setelah penjelasan ini.
-		\item Gambar~\ref{fig:ularjpg} dengan skala 0.5 ditempatkan di antara dua buah paragraf. Perhatikan penulisannya di dalam file bab2.tex!
-		\item Gambar~\ref{fig:ularpdf} ditempatkan menggunakan {\it specifier} {\bf h}.
-	\end{itemize}
+	\item Kelas Properties, kelas untuk mengatur standar email yang akan digunakan, seperti SMTP, IMAP, POP3, dan lainnya.
+	\item Kelas MimeMessage, kelas untuk menulis email.
+	\item Kelas Transport, kelas untuk membuat koneksi ke email \textit{server} dan mengirim email.
 \end{itemize}
- 
-\kant[14-15]
-\begin{figure} 
-	\centering  
-	\includegraphics[scale=1]{ular-png}  
-	\caption[Gambar {\it Serpentes} dalam format png]{Gambar {\it Serpentes} dalam format png} 
-	\label{fig:ularpng} 
-\end{figure} 
 
-\kant[16]
-\begin{figure}[H]
-	\centering  
-	\includegraphics[scale=0.5]{ular-jpg}  
-	\caption[Ular kecil]{Ular kecil} 
-	\label{fig:ularjpg} 
-\end{figure} 
-\kant[17-19]
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=Contoh Kode Pengiriman Email]
+Properties props = new Properties();
+    props.put("mail.smtp.host", "my-mail-server");
+    Session session = Session.getInstance(props, null);
 
-\begin{figure}[h] 
-	\centering  
-	\includegraphics[scale=1]{ular-pdf}  
-	\caption[ {\it Serpentes} betina]{ {\it Serpentes} jantan} 
-	\label{fig:ularpdf} 
-\end{figure} 
- 
+    try {
+        MimeMessage msg = new MimeMessage(session);
+        msg.setFrom("me@example.com");
+        msg.setRecipients(Message.RecipientType.TO,
+                          "you@example.com");
+        msg.setSubject("JavaMail hello world example");
+        msg.setSentDate(new Date());
+        msg.setText("Hello, world!\n");
+        Transport.send(msg, "me@example.com", "my-password");
+    } catch (MessagingException mex) {
+        System.out.println("send failed, exception: " + mex);
+    }
+		
+\end{lstlisting}
+
+
+ %
+%\subsection{Kutipan}
+%\label{subs:kutipan} 
+%Berikut contoh kutipan dari berbagai sumber, untuk keterangan lebih lengkap, silahkan membaca file referensi.bib yang disediakan juga di template ini.
+%Contoh kutipan:
+%\begin{itemize}
+	%\item Buku:~\cite{berg:08:compgeom} 
+	%\item Bab dalam buku:~\cite{kreveld:04:GIS}
+	%\item Artikel dari Jurnal:~\cite{buchin:13:median}
+	%\item Artikel dari prosiding seminar/konferensi:~\cite{kreveld:11:median}
+	%\item Skripsi/Thesis/Disertasi:~\cite{lionov:02:animasi}~\cite{wiratma:10:following}~\cite{wiratma:22:later}
+	%\item Technical/Scientific Report:~\cite{kreveld:07:watertight}
+	%\item RFC (Request For Comments):~\cite{RFC1654}
+	%\item Technical Documentation/Technical Manual:~\cite{Z.500}~\cite{unicode:16:stdv9}~\cite{google:16:and7}
+	%\item Paten:~\cite{webb:12:comm}
+	%\item Tidak dipublikasikan:~\cite{wiratma:09:median}~\cite{lionov:11:cpoly}
+	%\item Laman web:~\cite{erickson:03:cgmodel}  
+	%\item Lain-lain:~\cite{agung:12:tango}
+%\end{itemize}    
+  %
+%\subsection{Gambar}
+%
+%Pada hampir semua editor, penempatan gambar di dalam dokumen \LaTeX{} tidak dapat dilakukan melalui proses {\it drag and drop}.
+%Perhatikan contoh pada file bab2.tex untuk melihat bagaimana cara menempatkan gambar.
+%Beberapa hal yang harus diperhatikan pada saat menempatkan gambar:
+%\begin{itemize}
+	%\item Setiap gambar {\bf harus} diacu di dalam teks (gunakan {\it field} {\sc label})
+	%\item {\it Field} {\sc caption} digunakan untuk teks pengantar pada gambar. Terdapat dua bagian yaitu yang ada di antara tanda $[$ dan $]$ dan yang ada di antara tanda $\{$ dan $\}$. Yang pertama akan muncul di Daftar Gambar, sedangkan yang kedua akan muncul di teks pengantar gambar. Untuk skripsi ini, samakan isi keduanya.
+	%\item Jenis file yang dapat digunakan sebagai gambar cukup banyak, tetapi yang paling populer adalah tipe {\sc png} (lihat Gambar~\ref{fig:ularpng}), tipe {\sc jpg} (Gambar~\ref{fig:ularjpg}) dan tipe {\sc pdf} (Gambar~\ref{fig:ularpdf})
+	%\item Besarnya gambar dapat diatur dengan {\it field} {\sc scale}.
+	%\item Penempatan gambar diatur menggunakan {\it placement specifier} (di antara tanda  $[$ dan $]$ setelah deklarasi gambar.
+	%Yang umum digunakan adalah {\bf H} untuk menempatkan gambar {\bf sesuai} penempatannya di file .tex atau  {\bf h} yang berarti "kira-kira" di sini. \\
+	%Jika tidak menggunakan {\it placement specifier}, \LaTeX{} akan menempatkan gambar secara otomatis untuk menghindari bagian kosong pada dokumen anda.
+	%Walaupun cara ini sangat mudah, hindarkan terjadinya penempatan dua gambar secara berurutan. 	
+	%\begin{itemize}
+		%\item Gambar~\ref{fig:ularpng} ditempatkan di bagian atas halaman, walaupun penempatannya dilakukan setelah penulisan 3 paragraf setelah penjelasan ini.
+		%\item Gambar~\ref{fig:ularjpg} dengan skala 0.5 ditempatkan di antara dua buah paragraf. Perhatikan penulisannya di dalam file bab2.tex!
+		%\item Gambar~\ref{fig:ularpdf} ditempatkan menggunakan {\it specifier} {\bf h}.
+	%\end{itemize}
+%\end{itemize}
+ %
+%\kant[14-15]
+%\begin{figure} 
+	%\centering  
+	%\includegraphics[scale=1]{ular-png}  
+	%\caption[Gambar {\it Serpentes} dalam format png]{Gambar {\it Serpentes} dalam format png} 
+	%\label{fig:ularpng} 
+%\end{figure} 
+%
+%\kant[16]
+%\begin{figure}[H]
+	%\centering  
+	%\includegraphics[scale=0.5]{ular-jpg}  
+	%\caption[Ular kecil]{Ular kecil} 
+	%\label{fig:ularjpg} 
+%\end{figure} 
+%\kant[17-19]
+%
+%\begin{figure}[h] 
+	%\centering  
+	%\includegraphics[scale=1]{ular-pdf}  
+	%\caption[ {\it Serpentes} betina]{ {\it Serpentes} jantan} 
+	%\label{fig:ularpdf} 
+%\end{figure} 
+ %

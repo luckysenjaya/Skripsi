@@ -10,8 +10,7 @@
 % "computer journal" (cj). Perubahan ini disebabkan karena penulisan 
 % nama penulis pada style sebelumnya (ieeetr) tidak sesuai dengan kaidah 
 % penulisan Bahasa Indonesia, tetapi sekaligus ingin mempertahankan penggunaan
-% angka untuk merujuk dan urutan item di referensi sesuai dengan kemunculan
-^ di teks skripsi.
+% angka untuk merujuk dan urutan item di referensi sesuai dengan kemunculan^ di teks skripsi.
 % Untuk menggunakan style "cj", anda membutuhkan file "compj.bst" yang sudah
 % disertakan di dalam Template Skripsi FTIS
 %
@@ -82,11 +81,12 @@
 %
 %	Contoh penulisan di file bib:
 
-@book{berg:08:compgeom,
-	author		= {Mark de Berg and Otfried Cheong and Marc J. van Kreveld and Mark Overmars},
-	title   	= {Computational Geometry: Algorithms and Applications},
-	edition		= {3rd},
-	year   		= {2008},
+@book{dumas:13,
+	author		= {Marlon Dumas and Marcello La Rosa and Jan Mendling and Hajo A. Reijers
+},
+	title   	= {Fundamentals of Business Process Management},
+	edition		= {},
+	year   		= {2013},
 	publisher	= {Springer-Verlag},
 	address		= {Berlin},
 }
@@ -117,16 +117,7 @@
 %
 %	Contoh penulisan di file bib:
 
-@incollection{kreveld:04:GIS,
-	author 		= {Marc J. van Kreveld},								
-	title 		= {Geographic Information Systems},						
-	editor 		= {Jacob E. Goodman and Joseph O'Rourke},				
-	booktitle 	= {Handbook of Discrete and Computational Geometry},
-	edition		= {2nd},
-	year 		= {2004},
-	publisher	= {Chapman \& Hall/CRC},
-	address		= {Boca Raton},
-}
+
 
 %	3. Artikel dari jurnal
 %	Artikel (atau paper) yang berasal dari jurnal ilmiah. 
@@ -144,14 +135,6 @@
 %
 %	Contoh penulisan di file bib:
 
-@article{buchin:13:median,
-	author		= {Kevin Buchin and Maike Buchin and Marc J. van Kreveld and Maarten L{\"{o}}ffler and Rodrigo I. Silveira and Carola Wenk and Lionov Wiratma},
-	title     	= {Median Trajectories},
-	journal   	= {Algorithmica},
-	volume    	= {66},
-	pages     	= {595--614},
-	year      	= {2013},
-}
 
 %	4. Artikel dari prosiding seminar/konferensi
 %	Artikel (atau paper) yang berasal dari prosiding seminar/konferensi ilmiah. 
@@ -173,16 +156,6 @@
 %
 %	Contoh penulisan di file bib:
 
-@inproceedings{kreveld:11:median,
-	author    	= {Marc J. van Kreveld and Lionov Wiratma},
-	title     	= {Median trajectories using well-visited regions and shortest paths},
-	pages     	= {241--250}, 	
-	booktitle 	= {Proceedings of the 19th ACM SIGSPATIAL International Conference on Advances in Geographic Information Systems},	
-	year      	= {2011},
-	month		= {1-4 November},
-	address		= {Chicago, USA},
-	publisher	= {ACM, New York}
-}
 
 %	5. Skripsi/Thesis/Disertasi
 %	Skripsi S1, Thesis S2 atau Disertasi S3. 
@@ -206,29 +179,7 @@
 %
 %	Contoh penulisan di file bib:
 
-@undergraduatethesis{lionov:02:animasi, 
-	author		= {Lionov},
-	title     	= {Animasi Algoritma Sweepline Untuk Membangun Diagram Voronoi},
-	year      	= {2002},
-	school     	= {Universitas Katolik Parahyangan},
-	address		= {Indonesia},
-}
 
-@masterthesis{wiratma:10:following, 
-	author		= {Lionov Wiratma},
-	title     	= {Following The Majority: a New Algorithm For Computing a Median Trajectory},
-	year      	= {2010},
-	school     	= {Utrecht University},
-	address		= {The Netherlands},
-}
-
-@phdthesis{wiratma:22:later, 
-	author		= {Lionov Wiratma},
-	title     	= {Coming Not Too Soon, Later, Delay, Someday, Hopefully},
-	year      	= {2022},
-	school     	= {Utrecht University},
-	address		= {The Netherlands},
-}
 
 %	6. Technical/Scientific Report
 %	Pada umumnya, Technicalreport adalah laporan hasil penelitian ilmiah yang tidak diterbitkan ke dalam prosiding ataupun jurnal. 
@@ -248,14 +199,7 @@
 %
 %	Contoh penulisan di file bib:
 
-@techreport{kreveld:07:watertight,
-	author 		= {Marc van kreveld and Thijs van Lankveld and Remco Veltkamp},
-	title 		= {Watertight Scenes from Urban LiDAR and Planar Surfaces},
-	number		= {UU-CS-2013-007},
-	year 		= {2013},
-	institution = {Utrecht University},
-	address 	= {The Netherlands},	
-}
+
 
 %	7. RFC (Request For Comments)
 %
@@ -275,13 +219,7 @@
 %
 %	Contoh penulisan di file bib:
 
-@rfc{RFC1654, 
-	author 		= {Yakov Rekhter and Tony Li},
-	title 		= {A Border Gateway Protocol 4 (BGP-4)},
-	number 		= {1654},
-	year 		= {1994}, 
-}
- 	
+
 
 %	8. Technical Documentation/Technical Manual
 %
@@ -302,29 +240,21 @@
 %	- Version 7.0 Nougat (2016) Android API Reference Manual. Google dan Open Handset Alliance. Mountain View, USA.
 %	Contoh penulisan di file bib:
 
-@manual{Z.500,
-	number 		= {ITU-T Z.500},
-	title 		= {Framework on formal methods in conformance testing},
-	year 		= {1997},
-	organization= {International Telecommunications Union},	
-	address 	= {Geneva, Switzerland},
+
+
+@manual{bpmmanual:15:7.6,
+	number 		= {Version 7.6},
+	title 		= {The Camunda BPM Manual},
+	year 		= {2015},
+	organization= {Camunda BPM},	
+	address 	= {Berlin, Germany},
 }
 
-@manual{unicode:16:stdv9,
-	number 		= {Version 9.0.0},
-	title 		= {The Unicode Standard},
-	year 		= {2016},
-	organization= {The Unicode Consortium},	
-	address 	= {Mountain View, USA},
-}
 
-@manual{google:16:and7,
-	number 		= {Version 7.0 Nougat},
-	title 		= {Android API Reference Manual},
-	year 		= {2016},
-	organization= {Google dan Open Handset Alliance},	
-	address 	= {Mountain View, USA},
-}
+
+
+
+BPMN Modeling Reference
 
 %	9. Paten
 %
@@ -441,11 +371,39 @@ $
 %
 %	Contoh penulisan di file bib:
 
-@misc{agung:12:tango,
-	author 			= {AGUNG},
-	title 			= {Menjajal Tango 12},
-	year 			= {2012},
-	howpublished	= {Majalah HAI no 02, Januari 2012},
+@misc{bpmngetstarted:15:camunda,
+	author 			= {Camunda},
+	title 			= {Get started with Camunda and BPMN 2.0},
+	year 			= {2015},
+	howpublished	= "\url{
+	https://docs.camunda.org/get-started/bpmn20/}",
+	note			= {},
+}
+
+@misc{bpmn:15:camunda,
+	author 			= {Camunda},
+	title 			= {BPMN Modeling Reference},
+	year 			= {2015},
+	howpublished	= "\url{
+	https://camunda.org/bpmn/reference/}",
+	note			= {},
+}
+
+@misc{javamail,
+	author 			= {Oracle},
+	title 			= {JavaMail},
+	year 			= {},
+	howpublished	= "\url{
+	http://www.oracle.com/technetwork/java/javamail/index.html/}",
+	note			= {},
+}
+
+@misc{smtpgoogle,
+	author 			= {Google},
+	title 			= {Use SMTP settings to send mail from a printer, scanner, or app},
+	year 			= {},
+	howpublished	= "\url{
+	https://support.google.com/a/answer/176600?hl=en}",
 	note			= {},
 }
 %_____________________________________________________________________________

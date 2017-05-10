@@ -23,7 +23,8 @@
 
 4. Perancangan
 	4.1 Algoritma Pengiriman Email
-	4.2 Perancangan Library
+	4.2 Format Email
+	4.3 Perancangan Library
 	
 5. Implementasi dan Pengujian 
 	5.1 Implementasi Kode Program

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectWizardArchetypePage">
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="issueManagementUrl">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="MavenProjectWizardLocationPage">
+		<list key="location">
+			<item value="D:\KULIAH\kuliah\Skripsi\6. Camunda\Demo\2. PengajuanProposalGroup"/>
+			<item value="D:\KULIAH\kuliah\Skripsi\6. Camunda\Demo\2. Cuti"/>
+			<item value="D:\KULIAH\kuliah\Skripsi\6. Camunda\Demo\1. Tugas"/>
+			<item value="C:\Users\Luke\Desktop"/>
+			<item value="D:\KULIAH\kuliah\Skripsi\6. Camunda\Demo\1. BPJS\workspace\pendaftaran-bpjs\src\main\java\org\camunda\bpm\getstarted\pendaftaranbpjs\PendaftaranBPJS.java"/>
+			<item value="C:\Users\Roy Vito JR\Desktop\workspace"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+	</section>
+	<section name="Maven2ProjectWizardArchifactPage">
+		<list key="groupId">
+		</list>
+		<list key="package">
+		</list>
+		<list key="artifactId">
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="MavenProjectWizardArtifactPage">
+		<list key="groupId">
+			<item value="skripsi.demo.pengajuanproposalgroup"/>
+			<item value="skripsi.demo.permohonancuti"/>
+			<item value="skripsi.demo.pengajuanproposal"/>
+			<item value="coba"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="pengajuanproposalgroup"/>
+			<item value="permohonancuti"/>
+			<item value="pengajuanproposal"/>
+			<item value="coba"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+</section>

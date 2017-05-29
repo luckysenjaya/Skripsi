@@ -1,16 +1,26 @@
 \chapter{Implementasi dan Pengujian}
 \label{chap:implementasipengujian}
 Pada bab ini akan diimplementasikan kode program untuk propagasi email dan pengujian dua skenario yang ada pada Bab ~\ref{chap:analisis}.
+
+\section{Lingkungan Implementasi}
+\label{sec:lingkunganimplementasi}
+Implementasi dilakukan pada lingkungan :
+\begin{enumerate}
+	\item Eclipse 4.5 Mars
+	\item BPMN versi 2.0 dan Camunda Modeler versi 1.7.2.
+	\item BPMS Camunda versi 7.6.0 dan berjalan pada tomcat versi 8.0.24.
+	
+\end{enumerate}
 \section{Implementasi Kode Program}
 \label{sec:kodeprogram}
 
+
 \subsection{Implementasi Algoritma Pengiriman Email}
 \label{implementasialgo}
-Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email.
+Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode secara keseluruhan dapat dilihat pada Lampiran~\ref{lamp:tasklistener}
 \begin{itemize}
 	\item Konfigurasi email admin.
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TaskAssignmentListener.java]
-
   private static final String HOST = "smtp.gmail.com";
   private static final String USER = "camundasys@gmail.com";
   private static final String PWD = "epW3S4KN";
@@ -263,3 +273,6 @@ Proses pengujian :
 			\label{fig:marydapatemail}
 		\end{figure}
 \end{itemize}
+
+\section{Hasil Pengujian}
+Pengujian sudah berhasil untuk semua skenario. Pada skenario 1, John dan Peter masing-masing mendapatkan email ketika \textit{task} siap dikerjakan. Pada skenario 2, Setiap karyawan (John dan Mary) mendapatkan email untuk membuat proposal. Peter juga mendapat email setelah John atau Mary mengunggah proposal.

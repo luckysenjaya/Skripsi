@@ -1,0 +1,18 @@
+<html>
+<head></head>
+
+<body>
+  	<p>Download Proposal</p>
+  	<a cam-file-download="proposal">Download</a>
+  	<table>
+<form>
+    <p>Apakah Proposal layak?</p>
+    <input cam-variable-name="valid"
+             cam-variable-type="Boolean"
+             type="checkbox"
+             name="valid"
+             class="form-control" />
+    
+</form> 
+</body>
+</html>

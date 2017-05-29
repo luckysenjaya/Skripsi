@@ -5,8 +5,10 @@ Pada bab enam ini akan dijelaskan mengenai kesimpulan dan saran yang didapat dar
 \label{sec:kesimpulan}
 Berdasarkan hasil pengembangan propagasi sistem email dengan Camunda, didapatkan beberapa kesimpulan sebagai berikut :
 \begin{enumerate}
-	\item \textit{Workflow} Camunda dapat dikembangkan dengan pola komunikasi saat ini, yaitu propagasi email.
-	\item Propagasi email dapat dilakukan pada seluruh \textit{event}, tetapi pada skripsi ini dibatasi pada \textit{user assignment}.
+	\item \textit{Workflow} dapat dimodelkan sebagai BPMN sehingga dapat divisualisasikan oleh BPMS. 
+	\item \textit{Event-event} dapat dipropagasi via email sehingga aktor dapat mengetahui apabila ada \textit{task} yang harus dikerjakan. Dengan demikian akan meningkatkan efektifitas dan efisiensi proses bisnis.
+	\item \textit Propagasi email dapat dilakukan dengan cara menyisipkan \textit{Task Listener} di event yang akan dipropagasi. Selain itu dibutuhkan peran admin untuk mendaftarkan alamat email aktor.
+	\item \textit Pengujian telah dilakukan dengan dua skenario dan dapat berjalan dengan baik.
 	
 
 \end{enumerate}
@@ -15,6 +17,6 @@ Berdasarkan hasil pengembangan propagasi sistem email dengan Camunda, didapatkan
 \label{sec:saran}
 Berdasarkan kesimpulan yang didapat, ada beberapa saran untuk penelitian dan pengembangan lebih lanjut, antara lain :
 \begin{enumerate}
-	\item Penambahan propagasi email ke seluruh event yang ada. Misalnya setelah \textit{task} selesai dilakukan, ada pencatatan melalui mekanisme propagasi email. 
-	\item Menambah variasi skenairo.
+	\item Mekanisme propagasi email dapat dibuat dalam bentuk \textit{library} sehingga tidak perlu membuka kode dan cukup memasukkan alamat email dan password.
+	\item Aspek integrasi bisa ditambahkan dengan \textit{external tasks}, yaitu sistem di luar Camunda dengan memanfaatkan \textit{web service}.
 \end{enumerate}

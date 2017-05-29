@@ -11,13 +11,6 @@ Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan si
 \subsection{Komponen \textit{Business Process}}
 \label{sec:komponenBP}
 \textit{Business Process Management} memiliki komponen-komponen sebagai berikut :
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{Gambar/Bab-2/1-bp-components}
-	\caption{Komponen BPM} 
-	\label{komponenbp}
-\end{figure}
-
 \begin{description}
 	\item{\textit{Event}} \hfill \\\textit{Event} adalah kejadian yang terjadi saat proses bisnis berjalan. 
 	\item{\textit{Activity}} \hfill \\\textit{Activity} adalah kumpulan kegiatan yang dapat dikerjakan. Ketika suatu \textit{Activity} berupa sebuah kegiatan yang sederhana, \textit{activity} disebut dengan \textit{task}. 
@@ -26,6 +19,15 @@ Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan si
 	\item{\textit{Object}} \hfill \\ \textit{Object} dapat berupa objek fisik (peralatan, bahan baku, produk, dokumen) maupun non fisik (dokumen elektronik, basis data elektronik).
 	\item{\textit{Positive/Negative Outcome}} \hfill \\ Hasil dari bisnis proses dapat menghasilkan nilai bagi konsumen (positif) atau tidak menghasilkan nilai (negatif).
 \end{description}
+Komponen-komponen penyusun proses bisnis dapat dilihat pada Gambar ~\ref{komponenbp}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Gambar/Bab-2/1-bp-components}
+	\caption{Komponen BPM} 
+	\label{komponenbp}
+\end{figure}
+
+
 
 
 
@@ -33,12 +35,6 @@ Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan si
 \subsection{Siklus \textit{Business Process Management}}
 \label{sec:siklusBPM}
 Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
-\begin{figure}[H]
-	\centering
-	\includegraphics[scale=0.7]{Gambar/Bab-2/2-bpm-lifeCycle}
-	\caption{Siklus BPM} 
-	\label{siklusbpm}
-\end{figure}
 
 \begin{description}
 	\item{\textit{Process Identification}} \hfill \\ Pada fase ini, suatu masalah bisnis ditemukan, kemudian proses-proses yang berhubungan dengan masalah bisnis tersebut diidentifikasi, dibatasi, dan dihubungkan satu sama lain. Proses ini terbagi menjadi dua tahap, yaitu \textit{designation} dan \textit{evaluation}. Tahap \textit{designation} bertujuan untuk mengenali proses-proses yang ada dan hubungan antar proses tersebut. Sedangkan tahap \textit{evaluation} memprioritaskan proses-proses yang menghasilkan nilai dan mempertimbangkan proses yang memiliki risiko atau tidak menghasilkan nilai. Fase ini menghasilkan arsitektur dari proses bisnis yang merepresentasikan proses bisnis dan relasi-relasinya.   
@@ -48,12 +44,18 @@ Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak dia
 	\item{\textit{Process Implementation}} \hfill \\ Pada fase ini, model proses diimplementasikan untuk diekseskusi menggunakan \textit{Business Process Management System}.
 	\item{\textit{Process Monitoring and Controlling}} \hfill \\ Setelah proses bisnis berjalan pada BPMS, berbagai data yang relevan dikumpulkan dan dianalisa untuk menentukan kualitas dari proses. Apabila terdapat masalah baru yang ditemukan, maka proses diulangi.
 \end{description}
-
+Siklus BPM dapat dilihat pada Gambar ~\ref{siklusbpm}.
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale=0.7]{Gambar/Bab-2/2-bpm-lifeCycle}
+	\caption{Siklus BPM} 
+	\label{siklusbpm}
+\end{figure}
 
 
 \section{\textit{Business Process Model Notation}}
 \label{sec:bpmn}
-Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\cite{bpmn:15:camunda}. Notasi-notasi tersebut terdiri dari :
+Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\cite{bpmn:15:camunda}. Notasi-notasi tersebut terdiri dari \textit{Event}, \textit{Activity}, \textit{Gateway}, \textit{Data}, \textit{Artifact}, \textit{Pools}, dan \textit{Lanes}.
 
 \subsection{\textit{Event}}
 \label{sec:event}
@@ -147,7 +149,7 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 \section{\textit{Business Process Management System (BPMS)}}
 \textit{Business Process Management System (BPMS)} adalah sistem yang mengkoordinasikan otomatisasi proses bisnis. Tujuan dari BPMS adalah menyelesaikan proses pada waktu yang ditentukan dan menggunakan sumber daya yang tepat. 
 
-\subsection{Arsitektur BPMS}
+Arsitektur BPMS
 Komponen-komponen BPMS beserta hubungannya yang ditunjukkan pada Gambar ~\ref{fig:arsitekturbpms} terdiri dari :
 \begin{itemize}
 	\item \textit{Execution Engine}, menyediakan beberapa fungsi seperti mengeksekusi proses, mendistribusikan \textit{task}, mengambil dan menyimpan data yang diperlukan. 
@@ -218,9 +220,9 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 \end{itemize}
 
 
-\section{Pengoperasian Camunda}
+\subsection{Pengoperasian Camunda}
 \label{operasicamunda}
-\subsection{Instalasi}
+\subsubsection{Instalasi}
 Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted:15:camunda}, yaitu :
 \begin{itemize}
 	\item Java JDK 1.7+.
@@ -231,7 +233,7 @@ Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted
 \end{itemize}
 
 
-\subsection{Mempersiapkan Proyek Java}
+\subsubsection{Mempersiapkan Proyek Java}
 \label{proyekjava}
 \begin{description}
 	\item Membuat Proyek Maven di Eclipse. 
@@ -275,14 +277,14 @@ public class LoanApprovalApplication extends ServletProcessApplication {
 	
 \end{description}
 
-\subsection{Memodelkan Proses}
+\subsubsection{Memodelkan Proses}
 \label{modelproses}
 	\begin{enumerate}
 		\item Membuat file BPMN baru dengan File / New File / BPMN Diagram.
 		\item Memodelkan proses.
 				\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.7]{Gambar/Bab-2/bpmn/bpmn}
+			\includegraphics[scale=0.5]{Gambar/Bab-2/bpmn/bpmn}
 			\caption{Contoh Model Proses} 
 			\label{fig:modelproses}
 		\end{figure}
@@ -327,7 +329,7 @@ public class ProcessRequestDelegate implements JavaDelegate {
 	\end{enumerate}
 	
 
-\subsection{Menjalankan Camunda}
+\subsubsection{Menjalankan Camunda}
 \label{menjalankancamunda}
 	\begin{enumerate}
 		\item Klik kanan pom.xml dan pilih Run As / Maven Install. Langkah ini akan menghasilkan file WAR di folder target.

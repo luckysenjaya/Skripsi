@@ -1,0 +1,11 @@
+<html>
+<head>
+<body>
+	<form method="post" name="proposal">
+		<input type="file"
+       cam-variable-name="proposal"
+       cam-variable-type="File"
+       cam-max-filesize="10000000"/>
+	</form>
+</body>
+</html>

@@ -1,0 +1,14 @@
+<html>
+<head>
+<body>
+<form>
+    <p>Apakah dokumen dan persyaratan lengkap?</p>
+    <input cam-variable-name="valid"
+             cam-variable-type="Boolean"
+             type="checkbox"
+             name="valid"
+             class="form-control" />
+    
+</form> 
+</body>
+</html>

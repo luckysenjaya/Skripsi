@@ -1,0 +1,38 @@
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('uangDaftar');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.uangDaftar = camForm.variableManager.variableValue('uangDaftar');
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      
+    });
+  	</script>
+  	<table>
+
+    <tr>
+      <td>Uang Daftar:</td>
+      <td>{{ uangDaftar }}</td>
+    </tr>
+
+    <tr>
+      <td>Nomor:</td>
+      <td>{{nomor}}</td>
+    </tr>
+    </table>
+</form> 
+</body>
+</html>
+
+
+

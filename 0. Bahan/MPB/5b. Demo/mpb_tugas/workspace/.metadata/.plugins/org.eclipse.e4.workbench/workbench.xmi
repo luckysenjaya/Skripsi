@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="ASCII"?>
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_D0wjQCrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_D0wjQSrYEeeItoHY4Q0X_g" bindingContexts="_D0xyuSrYEeeItoHY4Q0X_g">
-  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TaskAssignmentListener.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.bpmn&quot; tooltip=&quot;pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;nomor-pembayaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ringkasan-jadwal.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;cetak-kartu.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitJadwal.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitNomor.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pemohon.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PendaftaranBPJS.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;pendaftaran-bpjs/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;verifikasi-pendaftaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/verifikasi-pendaftaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/verifikasi-pendaftaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ringkasan-pembayaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-pembayaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/ringkasan-pembayaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pilih-jadwal.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/pilih-jadwal.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/pilih-jadwal.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
+  <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; tooltip=&quot;pendaftaran-bpjs/pom.xml&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/pom.xml&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TaskAssignmentListener.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.bpmn&quot; tooltip=&quot;pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;nomor-pembayaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ringkasan-jadwal.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;cetak-kartu.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitJadwal.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitNomor.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pemohon.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PendaftaranBPJS.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;verifikasi-pendaftaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/verifikasi-pendaftaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/verifikasi-pendaftaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ringkasan-pembayaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-pembayaran.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/ringkasan-pembayaran.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;file factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pilih-jadwal.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/pilih-jadwal.html&quot;>&#xD;&#xA;&lt;persistable path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/pilih-jadwal.html&quot;/>&#xD;&#xA;&lt;/file>&#xD;&#xA;&lt;/mruList>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
   <tags>ModelMigrationProcessor.001</tags>
   <children xsi:type="basic:TrimmedWindow" xmi:id="_D0wjQSrYEeeItoHY4Q0X_g" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="_D0wjQirYEeeItoHY4Q0X_g" label="%trimmedwindow.label.eclipseSDK" x="-6" y="0" width="1378" height="780">
@@ -11,6 +11,7 @@
     <persistedState key="isRestored" value="true"/>
     <persistedState key="show_in_time" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;show_in_time>&#xD;&#xA;&lt;id IMemento.internal.id=&quot;org.eclipse.ui.navigator.ProjectExplorer&quot;/>&#xD;&#xA;&lt;/show_in_time>"/>
     <tags>topLevel</tags>
+    <tags>shellMinimized</tags>
     <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjQirYEeeItoHY4Q0X_g" selectedElement="_D0wjQyrYEeeItoHY4Q0X_g" horizontal="true">
       <children xsi:type="advanced:PerspectiveStack" xmi:id="_D0wjQyrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.ide.perspectivestack" containerData="7500" selectedElement="_D0wjRCrYEeeItoHY4Q0X_g">
         <children xsi:type="advanced:Perspective" xmi:id="_D0wjRCrYEeeItoHY4Q0X_g" elementId="org.eclipse.jdt.ui.JavaPerspective" selectedElement="_D0wjRSrYEeeItoHY4Q0X_g" label="Java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/eview16/jperspective.gif">
@@ -77,7 +78,7 @@
           <tags>persp.actionSet:adt.actionSet.lint</tags>
           <tags>persp.actionSet:adt.actionSet.refactorings</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjRSrYEeeItoHY4Q0X_g" selectedElement="_D0wjUSrYEeeItoHY4Q0X_g" horizontal="true">
-            <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjRirYEeeItoHY4Q0X_g" containerData="2444" selectedElement="_D0wjRyrYEeeItoHY4Q0X_g">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjRirYEeeItoHY4Q0X_g" containerData="2933" selectedElement="_D0wjRyrYEeeItoHY4Q0X_g">
               <children xsi:type="basic:PartStack" xmi:id="_D0wjRyrYEeeItoHY4Q0X_g" elementId="left" containerData="6000" selectedElement="_D0wjSCrYEeeItoHY4Q0X_g">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.primaryNavigationStack</tags>
@@ -95,7 +96,7 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_D0wjUCrYEeeItoHY4Q0X_g" elementId="org.eclipse.egit.ui.RepositoriesView" toBeRendered="false" ref="_D0xLFCrYEeeItoHY4Q0X_g"/>
               </children>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjUSrYEeeItoHY4Q0X_g" containerData="7556" selectedElement="_D0wjUirYEeeItoHY4Q0X_g">
+            <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjUSrYEeeItoHY4Q0X_g" containerData="7067" selectedElement="_D0wjUirYEeeItoHY4Q0X_g">
               <children xsi:type="basic:PartSashContainer" xmi:id="_D0wjUirYEeeItoHY4Q0X_g" containerData="7004" selectedElement="_D0wjUyrYEeeItoHY4Q0X_g" horizontal="true">
                 <children xsi:type="advanced:Placeholder" xmi:id="_D0wjUyrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.editorss" containerData="9000" ref="_D0xKXSrYEeeItoHY4Q0X_g">
                   <tags>MinimizedByZoom</tags>
@@ -163,14 +164,8 @@
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
         <tags>active</tags>
-        <children xsi:type="basic:Part" xmi:id="_D0xKXyrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pendaftaran-bpjs/pom.xml" iconURI="platform:/plugin/org.eclipse.m2e.editor/icons/editor-pom.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; partName=&quot;pendaftaran-bpjs/pom.xml&quot; title=&quot;pendaftaran-bpjs/pom.xml&quot; tooltip=&quot;pendaftaran-bpjs/pom.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/pom.xml&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.m2e.editor.MavenPomEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
         <children xsi:type="basic:Part" xmi:id="_D0xKYCrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="TaskAssignmentListener.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.png" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TaskAssignmentListener.java&quot; partName=&quot;TaskAssignmentListener.java&quot; title=&quot;TaskAssignmentListener.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1918&quot; selectionTopPixel=&quot;986&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;TaskAssignmentListener.java&quot; partName=&quot;TaskAssignmentListener.java&quot; title=&quot;TaskAssignmentListener.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/TaskAssignmentListener.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1810&quot; selectionTopPixel=&quot;408&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -193,144 +188,11 @@
             <tags>popup:#OverviewRulerContext</tags>
           </menus>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKZCrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PembangkitJadwal.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitJadwal.java&quot; partName=&quot;PembangkitJadwal.java&quot; title=&quot;PembangkitJadwal.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitJadwal.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;382&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_7cd8MDB1Eee1b9t3XkEZlQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pendaftaran-bpjs/pom.xml" iconURI="platform:/plugin/org.eclipse.m2e.editor/icons/editor-pom.gif" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.m2e.editor.MavenPomEditor&quot; name=&quot;pom.xml&quot; partName=&quot;pendaftaran-bpjs/pom.xml&quot; title=&quot;pendaftaran-bpjs/pom.xml&quot; tooltip=&quot;pendaftaran-bpjs/pom.xml&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/pom.xml&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>org.eclipse.m2e.editor.MavenPomEditor</tags>
           <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKZSrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PendaftaranBPJS.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PendaftaranBPJS.java&quot; partName=&quot;PendaftaranBPJS.java&quot; title=&quot;PendaftaranBPJS.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PendaftaranBPJS.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKZirYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Pemohon.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;Pemohon.java&quot; partName=&quot;Pemohon.java&quot; title=&quot;Pemohon.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/Pemohon.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKZyrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="PembangkitNomor.java" iconURI="platform:/plugin/org.eclipse.jdt.ui/icons/full/obj16/jcu_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot; name=&quot;PembangkitNomor.java&quot; partName=&quot;PembangkitNomor.java&quot; title=&quot;PembangkitNomor.java&quot; tooltip=&quot;pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/java/org/camunda/bpm/getstarted/pendaftaranbpjs/PembangkitNomor.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKaCrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pendaftaran-bpjs.html" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.html&quot; partName=&quot;pendaftaran-bpjs.html&quot; title=&quot;pendaftaran-bpjs.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/pendaftaran-bpjs.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;819&quot; selectionTopPixel=&quot;856&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.DefaultTextEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKaSrYEeeItoHY4Q0X_g" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKairYEeeItoHY4Q0X_g" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKayrYEeeItoHY4Q0X_g" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKbCrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="D:\KULIAH\kuliah\Skripsi\0. Bahan\MPB\5b. Demo\mpb_tugas\workspace\pendaftaran-bpjs\src\main\webapp\forms\nomor-pembayaran.html" iconURI="platform:/plugin/org.eclipse.ui.browser/icons/obj16/internal_browser.gif" closeable="true">
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.browser.editor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKbSrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="cetak-kartu.html" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;cetak-kartu.html&quot; partName=&quot;cetak-kartu.html&quot; title=&quot;cetak-kartu.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/cetak-kartu.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.DefaultTextEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKbirYEeeItoHY4Q0X_g" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKbyrYEeeItoHY4Q0X_g" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKcCrYEeeItoHY4Q0X_g" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKcSrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ringkasan-jadwal.html" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;ringkasan-jadwal.html&quot; partName=&quot;ringkasan-jadwal.html&quot; title=&quot;ringkasan-jadwal.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/ringkasan-jadwal.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;116&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.DefaultTextEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKcirYEeeItoHY4Q0X_g" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKcyrYEeeItoHY4Q0X_g" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKdCrYEeeItoHY4Q0X_g" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKdSrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="nomor-pembayaran.html" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;nomor-pembayaran.html&quot; partName=&quot;nomor-pembayaran.html&quot; title=&quot;nomor-pembayaran.html&quot; tooltip=&quot;pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/webapp/forms/nomor-pembayaran.html&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;546&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.DefaultTextEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKdirYEeeItoHY4Q0X_g" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKdyrYEeeItoHY4Q0X_g" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKeCrYEeeItoHY4Q0X_g" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_D0xKeSrYEeeItoHY4Q0X_g" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="pendaftaran-bpjs.bpmn" iconURI="platform:/plugin/org.eclipse.ui.editors/icons/full/obj16/file_obj.gif" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.ui.DefaultTextEditor&quot; name=&quot;pendaftaran-bpjs.bpmn&quot; partName=&quot;pendaftaran-bpjs.bpmn&quot; title=&quot;pendaftaran-bpjs.bpmn&quot; tooltip=&quot;pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/pendaftaran-bpjs/src/main/resources/pendaftaran-bpjs.bpmn&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.ui.DefaultTextEditor</tags>
-          <tags>removeOnHide</tags>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKeirYEeeItoHY4Q0X_g" elementId="#TextEditorContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextEditorContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.EditorContext</tags>
-            <tags>popup:#AbstractTextEditorContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKeyrYEeeItoHY4Q0X_g" elementId="#TextRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#TextRulerContext</tags>
-            <tags>popup:org.eclipse.ui.DefaultTextEditor.RulerContext</tags>
-            <tags>popup:#AbstractTextEditorRulerContext</tags>
-          </menus>
-          <menus xsi:type="menu:PopupMenu" xmi:id="_D0xKfCrYEeeItoHY4Q0X_g" elementId="#OverviewRulerContext">
-            <tags>menuContribution:popup</tags>
-            <tags>popup:#OverviewRulerContext</tags>
-          </menus>
         </children>
       </children>
     </sharedElements>
@@ -374,7 +236,7 @@
       <toolbar xmi:id="_D0xK1CrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.navigator.ProjectExplorer" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_D0xK1SrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide/icons/full/eview16/problems_view.png" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors (3 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;634&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;634&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_D0xK1irYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.views.ProblemView">
@@ -556,7 +418,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_D0xLIirYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5XMKoCr3EeeKnvmm73HikA" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_D0zoCirYEeeItoHY4Q0X_g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gFj1cDB1Eee1b9t3XkEZlQ" elementId="print" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" enabled="false" command="_D0zoCirYEeeItoHY4Q0X_g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_D0xLMCrYEeeItoHY4Q0X_g" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -589,7 +451,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_D0xLfCrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_5XWitCr3EeeKnvmm73HikA" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_D0znhCrYEeeItoHY4Q0X_g"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_gFztEDB1Eee1b9t3XkEZlQ" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_D0znhCrYEeeItoHY4Q0X_g"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_D0xLhyrYEeeItoHY4Q0X_g" elementId="org.eclipse.ui.DefaultTextEditor" visible="false">
         <tags>Draggable</tags>

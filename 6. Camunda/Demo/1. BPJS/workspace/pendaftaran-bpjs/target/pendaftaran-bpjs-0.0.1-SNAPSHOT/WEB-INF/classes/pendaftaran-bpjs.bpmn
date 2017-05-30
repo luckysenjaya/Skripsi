@@ -63,7 +63,7 @@
     <bpmn:sequenceFlow id="SequenceFlow_0y7mnva" sourceRef="ManualTask_0juzjny" targetRef="EndEvent_0a0r3mt" />
     <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:candidateUsers="john">
       <bpmn:extensionElements>
-        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
+        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="create" />
       </bpmn:extensionElements>
       <bpmn:incoming>SequenceFlow_1vur1c9</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0djwa0b</bpmn:outgoing>

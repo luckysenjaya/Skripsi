@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn">
+<bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.7.2">
   <bpmn:collaboration id="Collaboration_0i1zriw">
     <bpmn:participant id="Participant_12tn82r" name="Pengajuan Proposal" processRef="Pengajuan_Proposal" />
   </bpmn:collaboration>
   <bpmn:process id="Pengajuan_Proposal" name="" isExecutable="true">
     <bpmn:laneSet>
-      <bpmn:lane id="Lane_04rhxwh" name="John">
+      <bpmn:lane id="Lane_04rhxwh" name="Karyawan">
         <bpmn:flowNodeRef>StartEvent_1e2ogc0</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>UserTask_1t1elk7</bpmn:flowNodeRef>
       </bpmn:lane>
-      <bpmn:lane id="Lane_1jltfxk" name="Peter">
+      <bpmn:lane id="Lane_1jltfxk" name="Manager">
         <bpmn:flowNodeRef>UserTask_1jevo7p</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>ExclusiveGateway_1ocelhl</bpmn:flowNodeRef>
         <bpmn:flowNodeRef>EndEvent_1qs7vnw</bpmn:flowNodeRef>

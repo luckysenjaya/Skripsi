@@ -4,9 +4,9 @@
 
 Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan sistem email
 
-\section{\textit{Business Process Management} (BPM)}
-\label{sec:bpm}
-\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen\cite{dumas:13} . Dari definisi proses bisnis, \textit{Business Process Management} dapat didefinisikan sebagai kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
+\section{\textit{Business Process} (BP)}
+\label{sec:bp}
+\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen\cite{dumas:13} .
 
 \subsection{Komponen \textit{Business Process}}
 \label{sec:komponenBP}
@@ -31,7 +31,9 @@ Komponen-komponen penyusun proses bisnis dapat dilihat pada Gambar ~\ref{kompone
 
 
 
-
+\section{\textit{Business Process Management}(BPM)}
+\label{sec:bpm}
+\textit{Business Process Management} merupakan kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
 \subsection{Siklus \textit{Business Process Management}}
 \label{sec:siklusBPM}
 Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
@@ -53,7 +55,7 @@ Siklus BPM dapat dilihat pada Gambar ~\ref{siklusbpm}.
 \end{figure}
 
 
-\section{\textit{Business Process Model Notation}}
+\section{\textit{Business Process Model and Notation}}
 \label{sec:bpmn}
 Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\cite{bpmn:15:camunda}. Notasi-notasi tersebut terdiri dari \textit{Event}, \textit{Activity}, \textit{Gateway}, \textit{Data}, \textit{Artifact}, \textit{Pools}, dan \textit{Lanes}.
 
@@ -69,12 +71,13 @@ Event merupakan kejadian yang terjadi pada proses bisnis yang dilambangkan denga
 
 \subsection{\textit{Activity}}
 \label{sec:activity}
-\textit{Activity} merupakan kumpulan kegiatan yang dapat dikerjakan. Sebuah \textit{task} merupakan bagian dari \textit{Activity} yang tidak dapat dipecah lagi. Beberapa contoh \textit{Task} adalah :
+\textit{Activity} merupakan kumpulan kegiatan yang dapat dikerjakan. Sebuah \textit{task} merupakan bagian dari \textit{Activity} yang tidak dapat dipecah lagi. Bebera jenis dari \textit{Task} adalah :
 	\begin{enumerate}
-		\item{\textit{User Task}}, yaitu pekerjaan yang perlu dilakukan oleh manusia melalui sistem.
-		\item{\textit{Manual Task}}, yaitu pekerjaan yang dilakukan manusia tanpa melalui sistem.
-		\item{\textit{Service Task}}, yaitu pekerjaan yang dilakukan oleh sistem dengan memangggil kode Java. 
+		\item{\textit{User Task}}, yaitu pekerjaan yang perlu dilakukan oleh manusia melalui sistem. Contohnya adalah mengisi formulir pada halaman web, mengganti password.
+		\item{\textit{Manual Task}}, yaitu pekerjaan yang dilakukan manusia tanpa melalui sistem. Contohnya adalah mengirim barang, mengirim surat.
+		\item{\textit{Service Task}}, yaitu pekerjaan yang dilakukan oleh sistem dengan mengeksekusi kode. Contohnya adalah notifikasi dari sistem, membangkitkan nomor token. 
 	\end{enumerate}
+	
 	
 \begin{figure}[H]
 	\centering
@@ -220,129 +223,20 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 \end{itemize}
 
 
-\subsection{Pengoperasian Camunda}
-\label{operasicamunda}
-\subsubsection{Instalasi}
-Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted:15:camunda}, yaitu :
-\begin{itemize}
-	\item Java JDK 1.7+.
-	\item Apache Maven atau Maven yang sudah terpasang di Eclipse.
-	\item Web browser.
-	\item Camunda BPM Platform 
-	\item Camunda Modeler
-\end{itemize}
 
 
-\subsubsection{Mempersiapkan Proyek Java}
-\label{proyekjava}
-\begin{description}
-	\item Membuat Proyek Maven di Eclipse. 
-		\begin{enumerate}
-			\item Pilih File / New / Other / Maven / Maven Project kemudian pilih \textit{Next}.
-			\item Pilih Create a simple project (skip archetype selection) kemudian pilih \textit{next}.
-			\item Pilih Packaging : war, kemudian pilih Finish.
-		\end{enumerate}
-	\item Tambahkan \textit{Camunda Maven Dependencies} ke file pom.xml (lihat Lampiran ~\ref{lamp:pom}).
-	\item Tambahkan sebuah kelas Process Application. Nama kelas dapat diganti dengan nama proses yang dibuat. 
-	\begin{lstlisting}[language=java,basicstyle=\tiny,caption=Kelas Process Application]
-	package org.camunda.bpm.getstarted.loanapproval;
-
-import org.camunda.bpm.application.ProcessApplication;
-import org.camunda.bpm.application.impl.ServletProcessApplication;
-
-@ProcessApplication("Loan Approval App")
-public class LoanApprovalApplication extends ServletProcessApplication {
-  // empty implementation
-}
-	\end{lstlisting}
-	\item Tambahkan \textit{Deployment Descriptor} di META-INF/processes.xml.
-	
-	\begin{lstlisting}[language=xml,basicstyle=\tiny,caption=processes.xml]	
-	<?xml version="1.0" encoding="UTF-8" ?>
-
-<process-application
-    xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
-    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-
-  <process-archive name="loan-approval">
-    <process-engine>default</process-engine>
-    <properties>
-      <property name="isDeleteUponUndeploy">false</property>
-      <property name="isScanForProcessDefinitions">true</property>
-    </properties>
-  </process-archive>
-
-</process-application>
-	\end{lstlisting}
-	
-\end{description}
-
-\subsubsection{Memodelkan Proses}
-\label{modelproses}
-	\begin{enumerate}
-		\item Membuat file BPMN baru dengan File / New File / BPMN Diagram.
-		\item Memodelkan proses.
-				\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-2/bpmn/bpmn}
-			\caption{Contoh Model Proses} 
-			\label{fig:modelproses}
-		\end{figure}
-		\item Menambahkan Form HTML pada User Task.
-		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Task Form]
-		<form name="approveLoan">
-  <div class="form-group">
-    <label for="customerId">Customer ID</label>
-    <input class="form-control"
-           cam-variable-type="String"
-           cam-variable-name="customerId"
-           name="customerId"
-           readonly="true" />
-  </div>
-  <div class="form-group">
-    <label for="amount">Amount</label>
-    <input class="form-control"
-           cam-variable-type="Double"
-           cam-variable-name="amount"
-           name ="amount" />
-  </div>
-</form>
-\end{lstlisting}
-		\item Menambahkan Service Task.
-		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Implementasi Service Task]
-		package org.camunda.bpm.getstarted.loanapproval;
-
-import java.util.logging.Logger;
-import org.camunda.bpm.engine.delegate.DelegateExecution;
-import org.camunda.bpm.engine.delegate.JavaDelegate;
-
-public class ProcessRequestDelegate implements JavaDelegate {
-
-  private final static Logger LOGGER = Logger.getLogger("LOAN-REQUESTS");
-
-  public void execute(DelegateExecution execution) throws Exception {
-    LOGGER.info("Processing request by '"+execution.getVariable("customerId")+"'...");
-  }
-
-}
-		\end{lstlisting}
-	\end{enumerate}
-	
-
-\subsubsection{Menjalankan Camunda}
-\label{menjalankancamunda}
-	\begin{enumerate}
-		\item Klik kanan pom.xml dan pilih Run As / Maven Install. Langkah ini akan menghasilkan file WAR di folder target.
-		\item \textit{Copy paste} file WAR ke CAMUNDA\_HOME / server / apache-tomcat / webapps folder.
-		\item Jalankan start-camunda.bat
-	\end{enumerate}
 	
 
 
 
 \section{JavaMail}
 \label{javamail}
-JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. Untuk menggunakan JavaMail diperlukan beberapa kelas, yaitu :
+JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. JavaMail dibuat dalam lingkungan Java EE.  
+\subsection{Java EE}
+Java Platform, Enterprise Edition (Java EE) adalah lingkungan komputasi untuk pengembangan perangkat lunak 
+
+
+Untuk menggunakan JavaMail diperlukan beberapa kelas, yaitu :
 \begin{itemize}
 	\item Kelas Properties, kelas untuk mengatur standar email yang akan digunakan, seperti SMTP, IMAP, POP3, dan lainnya.
 	\item Kelas MimeMessage, kelas untuk menulis email.

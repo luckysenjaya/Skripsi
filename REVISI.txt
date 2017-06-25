@@ -1,0 +1,32 @@
+1.Tambahkan 1 bab hasil studi
+Kasus sederhana + kompleks
+Analisis : masalah & Solusinya
+
+2.Bab 3 -> Bab 4 : Analisis & Perancangan
+-masalah
+-usulan solusi
+-jelaskan juga library
+
+3. Bab 2 + J2EE, servermail, API
+4. Eksperimen munculkan waktu uji 
+5. Tambahkan event listener complete untuk kasus proposal
+6. abstrak : masalah, solusi, hasil eksperimen, kesimpulan
+
+8. Rumusan masalah : + konsep & cara kerja. 
+   Batasan : studi kasus pengujian; sistematika disesuaikan
+
+
+11. tambah kesimpulan hasil eksperimen
+12. saran : statistik follow up atas efektifitas proses bisnis.
+
+
+
+
+
+
+
+
+7. Latar belakang : perjelas agar awam paham
+9. Bab 2 tambahkan lebih detail contoh2 task
+10. Batasan implementasi bisa tambahkan batasan email gmail
+

@@ -6,12 +6,12 @@ misal jelasin html service task user task
 
 3.1 BPMN
 3.1.1 Masalah Workflow
-3.1.2 Penurunan ke BPMN
-3.1.3 Modeler
+3.1.2 Penurunan ke BPMN (BPMN tanpa modeler)
+3.1.3 Modeler (menjelaskan fitur)
 
 3.2 BPMS Camunda
 3.2.1 Instalasi Camunda
-3.2.2 Menghubungkan BPMN dan Camunda
+3.2.2 Menghubungkan BPMN dan Camunda (task, 
 3.2.3 Menjalankan Camunda
 
 

@@ -41,7 +41,20 @@ Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{
 %Pada Gambar ~\ref{fig:mengunggahproposalgroup}, terdapat atribut \textit{Candidate Groups}. Atribut ini melambangkan bahwa \textit{task} ini dapat dikerjakan oleh salah satu anggota dari grup \textit{accounting} atau grup \textit{sales}.
 
 \subsubsection{Proses Pendaftaran BPJS}
-
+\begin{enumerate}
+	\item Pemohon mengisi formulir pendaftaran BPJS di situs BPJS (termasuk jenis keanggotaan).
+	\item Pemohon mengupload semua dokumen persyaratan di situs BPJS.
+	\item Sistem BPJS membangkitkan nomor pembayaran uang pendaftaran/ iuran pertama (nomor pembayaran selanjutnya menjadi nomor keanggotaan/ kartu BPJS).
+  \item Pemohon melihat nomor pembayaran dan besarnya uang pendaftaran/ iuran pertama.
+  \item Pemohon membayar uang pendaftaran/ iuran pertama melalui bank sesuai nomor pembayaran (paling lambat 3 hari setelah pendaftaran, jika lebih maka pendaftaran hangus).
+  \item Pemohon memilih jadwal verifikasi dokumen asli yang tersedia.
+  \item Sistem BPJS membangkitkan jadwal kedatangan dan nomor antrian.
+  \item Pemohon mencetak jadwal kedatangan dan nomor antriannya.
+  \item Pemohon datang ke kantor BPJS membawa dokumen asli (sesuai jadwal, jika tidak maka pendaftaran hangus). 
+  \item Petugas BPJS memverifikasi pendaftaran, dan attachment dokumen persyaratan dan keasliannya. Jika valid dan lengkap, proses dilanjutkan ke langkah 11, jika tidak lengkap maupun tidak valid, maka kembali ke langkah 1.
+	\item 11. Sitem BPJS membangkitkan barcode untuk kartu BPJS.
+  \item Petugas BPJS mencetak kartu BPJS dan meyerahkannya ke Pemohon.
+\end{enumerate}
 
 
 \section{BPMS Camunda}

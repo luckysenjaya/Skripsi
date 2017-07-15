@@ -24,6 +24,36 @@ Setiap bisnis memiliki alur kerja maupun proses yang perlu dilewati. Proses ters
 	%\item Assignee, yaitu aktor yang akan mengerjakan \textit{task}
 	%\item Form Key, yaitu tautan ke file HTML yang berupa tampilan untuk mengunggah proposal.
 %\end{itemize}
+\subsection{Modeler}
+\label{modeler}
+Camunda Modeler merupakan \textit{tool} untuk membuat diagram BPMN. \textit{File} yang dihasilkan dari \textit{tool} ini dapat dieksekusi menggunakan BPMS Camunda. Berikut ini adalah tampilan utama dari Camunda Modeler :
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-3/Modeler/1Awal}
+			\caption{Tampilan Muka Camunda Modeler} 
+			\label{fig:camundaModelerAwal}
+		\end{figure}
+		
+Terdapat tiga bagian utama pada Camunda Modeler, yaitu :
+\begin{enumerate}
+	\item Bagian kiri merupakan kumpulan \textit{tool} dan notasi untuk membuat diagram BPMN.
+	%\begin{figure}[H]
+		%	\centering
+			%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/2Notasi}
+			%\caption{Tampilan Tools Camunda Modeler} 
+			%\label{fig:camundaModelerTools}
+		%\end{figure}
+	\item Bagian kanan merupakan pengaturan untuk tiap \textit{event}, \textit{task}, maupun notasi lainnya. 
+	%\begin{figure}[H]
+		%\centering
+		%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/3Properties}
+		%\caption{Tampilan Pengaturan Camunda Modeler} 
+		%\label{fig:camundaModelerProperties}
+	%\end{figure}
+	\item Bagian tengah merupakan tempat membuat diagram BPMN.
+\end{enumerate}		
+
 
 \subsection{Masalah Proses Bisnis}
 \label{masalah}
@@ -52,9 +82,21 @@ Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{
   \item Pemohon mencetak jadwal kedatangan dan nomor antriannya.
   \item Pemohon datang ke kantor BPJS membawa dokumen asli (sesuai jadwal, jika tidak maka pendaftaran hangus). 
   \item Petugas BPJS memverifikasi pendaftaran, dan attachment dokumen persyaratan dan keasliannya. Jika valid dan lengkap, proses dilanjutkan ke langkah 11, jika tidak lengkap maupun tidak valid, maka kembali ke langkah 1.
-	\item 11. Sitem BPJS membangkitkan barcode untuk kartu BPJS.
+	\item Sistem BPJS membangkitkan barcode untuk kartu BPJS.
   \item Petugas BPJS mencetak kartu BPJS dan meyerahkannya ke Pemohon.
 \end{enumerate}
+Workflow dari proses bisnis ini adalah sebagai berikut :
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-4}
+			\caption{Pendaftaran BPJS} 
+			\label{fig:mengunggahproposalgroup}
+		\end{figure}
+
+
+
+
 
 
 \section{BPMS Camunda}
@@ -114,8 +156,25 @@ public class LoanApprovalApplication extends ServletProcessApplication {
 	
 \end{description}
 
+\subsection{Menghubungkan BPMN dan BPMS Camunda}
+\label{hubungkanbpmnbpms}
+Untuk menhubungkan BPMN dan BPMS Camunda, akan digunakan kedua contoh kasus yang telah dibahas sebelumnya. 
+
+\subsubsection{Kasus 1 : Pengajuan Proposal}
+	
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-3}
+			\caption{Mengunggah Proposal} 
+			\label{fig:mengunggahproposalgroup}
+		\end{figure}
+		
+		
+
+
+
 \subsubsection{Memodelkan Proses}
-\label{modelproses}
+
 	\begin{enumerate}
 		\item Membuat file BPMN baru dengan File / New File / BPMN Diagram.
 		\item Memodelkan proses.

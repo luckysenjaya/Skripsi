@@ -32,5 +32,14 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
+	<classpathentry exported="true" kind="lib" path="C:/Users/Luke/.m2/repository/org/camunda/bpm/camunda-engine/7.6.0/camunda-engine-7.6.0.jar">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+			<attribute name="maven.groupId" value="org.camunda.bpm"/>
+			<attribute name="maven.artifactId" value="camunda-engine"/>
+			<attribute name="maven.version" value="7.6.0"/>
+			<attribute name="maven.scope" value="provided"/>
+		</attributes>
+	</classpathentry>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

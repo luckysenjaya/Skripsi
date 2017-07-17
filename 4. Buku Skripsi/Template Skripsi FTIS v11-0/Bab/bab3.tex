@@ -1,74 +1,19 @@
 \chapter{Hasil Studi}
-\label{chap:studi}
+\label{chap:hasilstudi}
 Bab ini berisi hasil studi terhadap \textit{Business Process Model and Notation} dan \textit{Business Process Management System} Camunda. 
 
 \section{Hasil Studi BPMN}
-\label{sec:studibpmn}
+\label{sec:hasilstudi_bpmn}
 Setiap bisnis memiliki alur kerja maupun proses yang perlu dilewati. Proses tersebut dapat digambarkan dalam bentuk \textit{Business Process Model and Notation}. BPMN merupakan sebuah standar untuk menggambarkan langkah-langkah pada suatu proses bisnis. Dengan BPMN, suatu proses bisnis yang kompleks dapat digambarkan menjadi lebih sederhana sehingga lebih mudah dimengerti. BPMN memiliki berbagai notasi seperti \textit{event, task, gateway, data, artifact, lanes}, dan \textit{pool}.  
 
-
-%\textit{Business Process Model and Notation}
-%\subsection{Skenario Proposal Bisnis}
-%\label{skenario1}
-%John mempunyai ide proposal bisnis untuk manajernya, Peter. John menulis dan mengunggah proposal melalui sistem Camunda. Sebelum proposal disetujui, Peter harus memeriksa apakah proposalnya layak atau tidak. Jika proposalnya tidak layak, John harus memperbaiki dan mengunggahnya kembali. \textit{Workflow} dari skenario ini sebagai berikut :
-		%\begin{figure}[H]
-			%\centering
-			%\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus1-2}
-			%\caption{Mengunggah Proposal} 
-			%\label{fig:mengunggahproposal}
-		%\end{figure}
-		%
-%Pada Gambar ~\ref{fig:mengunggahproposal}, terdapat beberapa atribut yang memiliki nilai, yaitu :
-%\begin{itemize}
-	%\item Id, yaitu id dari \textit{task} yang dipilih
-	%\item Assignee, yaitu aktor yang akan mengerjakan \textit{task}
-	%\item Form Key, yaitu tautan ke file HTML yang berupa tampilan untuk mengunggah proposal.
-%\end{itemize}
-\subsection{Modeler}
-\label{modeler}
-Camunda Modeler merupakan \textit{tool} untuk membuat diagram BPMN. \textit{File} yang dihasilkan dari \textit{tool} ini dapat dieksekusi menggunakan BPMS Camunda. Berikut ini adalah tampilan utama dari Camunda Modeler :
-
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-3/Modeler/1Awal}
-			\caption{Tampilan Muka Camunda Modeler} 
-			\label{fig:camundaModelerAwal}
-		\end{figure}
-		
-Terdapat tiga bagian utama pada Camunda Modeler, yaitu :
-\begin{enumerate}
-	\item Bagian kiri merupakan kumpulan \textit{tool} dan notasi untuk membuat diagram BPMN.
-	%\begin{figure}[H]
-		%	\centering
-			%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/2Notasi}
-			%\caption{Tampilan Tools Camunda Modeler} 
-			%\label{fig:camundaModelerTools}
-		%\end{figure}
-	\item Bagian kanan merupakan pengaturan untuk tiap \textit{event}, \textit{task}, maupun notasi lainnya. 
-	%\begin{figure}[H]
-		%\centering
-		%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/3Properties}
-		%\caption{Tampilan Pengaturan Camunda Modeler} 
-		%\label{fig:camundaModelerProperties}
-	%\end{figure}
-	\item Bagian tengah merupakan tempat membuat diagram BPMN.
-\end{enumerate}		
-
-
+	
 \subsection{Masalah Proses Bisnis}
-\label{masalah}
+\label{hasilstudi_bpmn_masalah}
 Berikut ini berbagai masalah proses bisnis yang akan dimodelkan pada \textit{workflow} :
 
 \subsubsection{Pengajuan Proposal}
 Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{sales}, dan \textit{management}. Divisi \textit{accounting} dan \textit{sales} dapat mengajukan proposal bisnis ke divisi \textit{management}. Divisi \textit{management} harus memeriksa apakah proposalnya layak atau tidak. Jika proposalnya tidak layak, pembuat proposal harus memperbaiki dan mengunggahnya kembali. Workflow dari skenario ini sebagai berikut :
 
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-3}
-			\caption{Mengunggah Proposal} 
-			\label{fig:mengunggahproposalgroup}
-		\end{figure}
-%Pada Gambar ~\ref{fig:mengunggahproposalgroup}, terdapat atribut \textit{Candidate Groups}. Atribut ini melambangkan bahwa \textit{task} ini dapat dikerjakan oleh salah satu anggota dari grup \textit{accounting} atau grup \textit{sales}.
 
 \subsubsection{Proses Pendaftaran BPJS}
 \begin{enumerate}
@@ -87,21 +32,112 @@ Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{
 \end{enumerate}
 Workflow dari proses bisnis ini adalah sebagai berikut :
 		
+		
+
+
+\subsection{Memodelkan Workflow}
+
+\subsubsection{Pengajuan Proposal}
+Pada kasus Pengajuan Proposal, terdapat beberapa elemen, yaitu :
+\begin{enumerate}
+	\item Satu \textit{pool}, yaitu Pengajuan Proposal
+	\item Dua \textit{lane}, yaitu lane untuk Pegawai dan Manajemen
+	\item Dua \textit{event}, yaitu \textit{start event} (Ide Proposal) dan \textit{end event} Proposal Diterima
+	\item Dua \textit{user task}, yaitu Mengunggah Proposal oleh pegawai dan Memeriksa Proposal oleh manajemen
+	\item Satu \textit{decision point}, yaitu penentuan apakah proposal layak atauk tidak
+\end{enumerate}
+
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-3}
+			\caption{Mengunggah Proposal} 
+			\label{fig:pengajuanproposal_mengunggahproposal}
+	\end{figure}
+	
+\begin{description}
+	\item \textit{User task} Mengunggah Proposal \\
+  \textit{Task} ini dapat dilakukan oleh pegawai (divisi \textit{sales} dan \textit{accounting}). Maka \textit{Candidate Groups} diisi dengan \textit{sales} dan \textit{accounting}.
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-4}
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/1group}
+			\caption{Mengunggah Proposal} 
+			\label{fig:pengajuanproposalmengunggahproposal_group}
+	\end{figure}
+	
+	
+	\item \textit{User task} Memeriksa Proposal
+	
+	\item \textit{Task} ini dilakukan oleh Manajemen. Maka \textit{Candidate Groups} diisi dengan \textit{management}.
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/3group2}
+			\caption{Memeriksa Proposal} 
+			\label{fig:pengajuanproposal_memeriksaproposal_group}
+	\end{figure}
+
+\end{description}
+
+
+\subsubsection{Pendaftaran BPJS}
+Pada kasus Pendaftaran BPJS, terdapat beberapa elemen, yaitu :
+\begin{enumerate}
+	\item Satu \textit{pool}, yaitu Pendaftaran BPJS
+	\item Empat \textit{lane}, yaitu lane untuk Pemohon (diwakilkan oleh John), Sistem BPJS, Petugas BPJS (diwakilkan oleh Mary) dan Petugas Bank (diwakilkan oleh Peter)
+	\item Dua \textit{event}, yaitu \textit{start event} Membutuhkan BPJS dan \textit{end event} Pendaftaran Selesai
+	\item Empat \textit{manual task} Pemohon, yaitu : 
+			\begin{enumerate}
+				\item Membuka situs BPJS
+				\item Membayar uang pendaftaran sesuai nomor pembayaran
+				\item Pergi ke kantor BPJS
+				\item Menerima Kartu BPJS
+			\end{enumerate}
+	\item Tiga \textit{service task} Sistem BPJS, yaitu :
+			\begin{enumerate}
+				\item Membangkitkan nomor pembayaran dan uang pendaftaran
+				\item Membangkitkan jadwal kedatangan dan nomor antrian
+				\item Membangkitkan barcode untuk kartu BPJS
+			\end{enumerate}
+	\item Lima \textit{User task} Pemohon, yaitu :
+			\begin{enumerate}
+				\item Mengisi formulir pendaftaran BPJS
+				\item Mengupload semua dokumen persyaratan
+				\item Melihat nomor pembayaran dan besar uang pendaftaran 
+				\item Memilih jadwal verifikasi dokumen
+				\item Mencetak jadwal kedatangan dan nomor antrian
+			\end{enumerate}
+	\item Dua \textit{User task} Petugas BPJS, yaitu :
+			\begin{enumerate}
+				\item Memverifikasi pendaftaran dan \textit{attachment} dokumen persyaratan dan keaslian
+				\item Mencetak kartu BPJS dan menyerahkannya
+			\end{enumerate}
+	\item Satu \textit{User task} Petugas Bank, yaitu menerima pembayaran
+	\item Satu \textit{decision point}, yaitu penentuan apakah persyaratan pendaftaran lengkap dan valid
+\end{enumerate}
+
+
+		
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4 ,angle=90]{Gambar/Bab-3/Kasus2-4}
 			\caption{Pendaftaran BPJS} 
-			\label{fig:mengunggahproposalgroup}
-		\end{figure}
+			\label{fig:pendaftaranbpjs}
+	\end{figure}
+
+Untuk setiap \textit{user task}, ditentukan pemiliknya \textit{task} masing-masing. Pemohon diwakilkan oleh John, Petugas BPJS diwakilkan oleh Mary, dan Petugas Bank diwakilkan oleh Peter. Sehingga atribut assignee di setiap \textit{user task} akan diisi dengan john, mary, atau peter. Contohnya adalah \textit{task} Mengisi formulir pendaftaran BPJS yang dimiliki oleh John memiliki atribut \textit{assignee} john. 
+
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus2/1assigneejohn}
+			\caption{Atribut \textit{assignee} dari Mengisi formulir pendaftaran BPJS} 
+			\label{fig:pendaftaranbpjs_assigneejohn}
+	\end{figure}
 
 
-
-
-
-
-\section{BPMS Camunda}
+\section{Menyiapkan BPMS Camunda}
+\label{hasilstudi_menyiapkanbpms}
+Bagian ini akan menjelaskan cara instalasi Camunda, menghungkan \textit{form} HTML maupun \textit{script} Java dengan BPMN, dan menjalankan otomasi proses bisnis menggunakan BPMS Camunda.
 \subsection{Instalasi Camunda}
-\label{instalasicamunda}
+\label{hasilstudi_bpms_instalasicamunda}
 Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted:15:camunda}, yaitu :
 \begin{itemize}
 	\item Java JDK 1.7+.
@@ -113,7 +149,6 @@ Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted
 
 
 \subsubsection{Mempersiapkan Proyek Java}
-\label{proyekjava}
 \begin{description}
 	\item Membuat Proyek Maven di Eclipse. 
 		\begin{enumerate}
@@ -122,7 +157,7 @@ Untuk menjalankan Camunda, diperlukan beberapa \textit{tool}\cite{bpmngetstarted
 			\item Pilih Packaging : war, kemudian pilih Finish.
 		\end{enumerate}
 	\item Tambahkan \textit{Camunda Maven Dependencies} ke file pom.xml (lihat Lampiran ~\ref{lamp:pom}).
-	\item Tambahkan sebuah kelas Process Application. Nama kelas dapat diganti dengan nama proses yang dibuat. 
+	\item Tambahkan sebuah kelas Process Application pada direktori src/main/java. Nama kelas dapat diganti dengan nama proses yang dibuat. 
 	\begin{lstlisting}[language=java,basicstyle=\tiny,caption=Kelas Process Application]
 	package org.camunda.bpm.getstarted.loanapproval;
 
@@ -154,75 +189,112 @@ public class LoanApprovalApplication extends ServletProcessApplication {
 </process-application>
 	\end{lstlisting}
 	
+	
 \end{description}
 
-\subsection{Menghubungkan BPMN dan BPMS Camunda}
-\label{hubungkanbpmnbpms}
-Untuk menhubungkan BPMN dan BPMS Camunda, akan digunakan kedua contoh kasus yang telah dibahas sebelumnya. 
+\subsection{Kasus 1 - Pengajuan Proposal}
+\label{hasilstudi_bpms_kasus1}
+Untuk menjalankan proses bisnis pengajuan proposal menggunakan BPMS Camunda, langkah-langkah yang perlu dilakukan adalah :
 
-\subsubsection{Kasus 1 : Pengajuan Proposal}
+\begin{enumerate}
+	\item Menambah Form HTML untuk setiap \textit{user task} dan menghubungkannya dengan BPMN. File HTML yang dibuat disimpan di direktori src/main/webapp/forms. Proses bisnis ini memiliki dua \textit{user task}, yaitu mengunggah proposal dan memeriksa proposal. 
+	
+\begin{enumerate}
+	\item \textit{User task} Mengunggah Proposal
+	Task ini merupakan \textit{user task} sehingga membutuhkan suatu \textit{form} HTML untuk mengunggah proposal. Pada \textit{form} MengunggahProposal, isi dari variabel cam-variable-name adalah proposal yang akan digunakan pada \textit{form} tempat proposal diunduh.
+
+	
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MengunggahProposal.html]
+		<html>
+		<head></head>
+		<body>
+			<form method="post" name="upload-dokumen">
+				<input type="file"
+					 cam-variable-name="proposal" 
+					 cam-variable-type="File"
+					 cam-max-filesize="10000000"/>
+			</form>
+		</body>
+		</html>
+	\end{lstlisting}
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/2form}
+			\caption{Mengunggah Proposal} 
+			\label{fig:pengajuanproposal_mengunggahproposalform}
+	\end{figure}
+
+
+\item Task ini merupakan \textit{user task} sehingga membutuhkan suatu \textit{form} HTML untuk memeriksa proposal. Isi dari variabel cam-file-download adalah "proposal" (sama dengan cam-variable-name pada \textit{form} mengunggah proposal, sehingga file yang diunduh sama dengan file yang diunggah. Kemudian terdapat \textit{checkbox} untuk menentukan apakah proposal sudah layak atau belum. \textit{Checkbox} ini memiliki cam-variable-name dengan nama "valid" yang nantinya akan digunakan pada \textit{gateway}.
+
+	
+	\begin{lstlisting}[language=xml,basicstyle=\tiny,caption=MemeriksaProposal.html]
+		<html>
+		<head></head>
+		<body>
+		<form role="form" name="form">
+				<a cam-file-download="proposal">Download Dokumen</a>
+				<p>Apakah Proposal layak?</p>
+				<input cam-variable-name="valid"
+								 cam-variable-type="Boolean"
+								 type="checkbox"
+								 name="valid"
+								 class="form-control" />		
+		</form> 
+		</body>
+		</html>
+	\end{lstlisting}
 	
 	\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-3}
-			\caption{Mengunggah Proposal} 
-			\label{fig:mengunggahproposalgroup}
-		\end{figure}
-		
-		
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/4form2}
+			\caption{Memeriksa Proposal} 
+			\label{fig:pengajuanproposal_memeriksaproposalhtml}
+	\end{figure}
 
+\end{enumerate}
 
-
-\subsubsection{Memodelkan Proses}
-
-	\begin{enumerate}
-		\item Membuat file BPMN baru dengan File / New File / BPMN Diagram.
-		\item Memodelkan proses.
-				\begin{figure}[H]
+\item Mengatur \textit{Gateway}, untuk mengatur keluaran dari \textit{gateway} pengaturan dapat dilakukan pada modeler dengan menggunakan cam-variable-name = valid pada checkbox di form MemeriksaProposal. Apabila proposal layak, maka \textit{expression} yang digunakan adalah \$(valid). Jika proposal tidak layak, \textit{expression} yang digunakan adalah \$(!valid).
+		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-2/bpmn/bpmn}
-			\caption{Contoh Model Proses} 
-			\label{fig:modelproses}
-		\end{figure}
-		\item Menambahkan Form HTML pada User Task.
-		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Task Form]
-		<form name="approveLoan">
-  <div class="form-group">
-    <label for="customerId">Customer ID</label>
-    <input class="form-control"
-           cam-variable-type="String"
-           cam-variable-name="customerId"
-           name="customerId"
-           readonly="true" />
-  </div>
-  <div class="form-group">
-    <label for="amount">Amount</label>
-    <input class="form-control"
-           cam-variable-type="Double"
-           cam-variable-name="amount"
-           name ="amount" />
-  </div>
-</form>
-\end{lstlisting}
-		\item Menambahkan Service Task.
-		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Contoh Implementasi Service Task]
-		package org.camunda.bpm.getstarted.loanapproval;
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/5layakgambar}
+			\caption{Proposal Layak} 
+			\label{fig:pengajuanproposal_layakgambar}
+	\end{figure}
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/6layakkode}
+			\caption{Ekspresi Proposal Layak} 
+			\label{fig:pengajuanproposal_layakkode}
+	\end{figure}
+	
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/7tidaklayakgambar}
+			\caption{Proposal tidak Layak} 
+			\label{fig:pengajuanproposal_tidaklayakgambar}
+	\end{figure}
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/8tidaklayakkode}
+			\caption{Ekspresi Proposal tidak Layak} 
+			\label{fig:pengajuanproposal_tidaklayakkode}
+	\end{figure}
+	
+	
+	\item Menyimpan file BPMN ke direktori src/main/resources pada proyek pengajuan proposal
+\end{enumerate}
 
-import java.util.logging.Logger;
-import org.camunda.bpm.engine.delegate.DelegateExecution;
-import org.camunda.bpm.engine.delegate.JavaDelegate;
 
-public class ProcessRequestDelegate implements JavaDelegate {
+		
+		
+		
+		
 
-  private final static Logger LOGGER = Logger.getLogger("LOAN-REQUESTS");
 
-  public void execute(DelegateExecution execution) throws Exception {
-    LOGGER.info("Processing request by '"+execution.getVariable("customerId")+"'...");
-  }
 
-}
-		\end{lstlisting}
-	\end{enumerate}
+
 	
 
 \subsubsection{Menjalankan Camunda}

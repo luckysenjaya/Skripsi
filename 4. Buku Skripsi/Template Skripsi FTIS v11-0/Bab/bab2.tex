@@ -194,6 +194,26 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 			\label{fig:camundamodeler}
 		\end{figure}
 	
+		Terdapat tiga bagian utama pada Camunda Modeler, yaitu :
+\begin{enumerate}
+	\item Bagian kiri merupakan kumpulan \textit{tool} dan notasi untuk membuat diagram BPMN.
+	%\begin{figure}[H]
+		%	\centering
+			%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/2Notasi}
+			%\caption{Tampilan Tools Camunda Modeler} 
+			%\label{fig:camundaModelerTools}
+		%\end{figure}
+	\item Bagian kanan merupakan pengaturan untuk tiap \textit{event}, \textit{task}, maupun notasi lainnya. 
+	%\begin{figure}[H]
+		%\centering
+		%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/3Properties}
+		%\caption{Tampilan Pengaturan Camunda Modeler} 
+		%\label{fig:camundaModelerProperties}
+	%\end{figure}
+	\item Bagian tengah merupakan tempat membuat diagram BPMN.
+\end{enumerate}		
+		
+	
 	\item \textit{Tasklist}, tempat pengguna mengakses dan mengerjakan tugas. Tugas yang dikerjakan mengikuti alur model proses (BPMN) yang telah dibuat. 
 		\begin{figure}[H]
 			\centering
@@ -221,6 +241,83 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 	\item \textit{Custom Application}, aplikasi lain yang diintegrasikan dengan Camunda menggunakan Java atau REST API.
 	
 \end{itemize}
+
+\section{Forms SDK}
+\label{formssdk}
+Camunda menggunakan Forms SDK untuk mengimplementasikan \textit{user task} menggunakan aplikasi berbasis HTML5 / JavaScript. 
+
+\subsection{\textit{Controls}}
+\label{formssdk_controls}
+Forms SDK menyediakan instruksi untuk mengakses variabel proses pada \textit{form} HTML. Terdapat dua tipe instruksi yaitu cam-variable-name yang digunakan untuk memberi nama proses / \textit{task} / variabel dan cam-variable-type yang digunakan untuk mementukan tipe dari variabel. Elemen HTML yang didukung adalah :
+\begin{enumerate}
+	\item \textit{Text Inputs}, untuk memasukkan satu baris teks dan dapat diisi dengan berbagai tipe data seperti String, Integer, Long, Short, dan Double. Kodenya sebagai berikut:
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Text Input]
+			<input type="text" cam-variable-name="CUSTOMER_ID" cam-variable-type="String" />
+		\end{lstlisting}
+		
+	\item \textit{Text Areas}, untuk memasukkan teks dan dapat diisi dengan berbagai tipe data seperti String, Integer, Long, Short, dan Double. Kodenya sebagai berikut:
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Text Areas]
+			<textarea cam-variable-name="CUSTOMER_ADDRESS" cam-variable-type="String"></textarea>
+		\end{lstlisting}
+			
+	\item \textit{Date Inputs}, untuk memasukkan tanggal dengan format yyyy-MM-dd'T'HH:mm:ss (contoh:2017-05-30T11:00:00). Kodenya sebagai berikut:
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Date Inputs]
+			<input type="text"
+       cam-variable-name="CONTRACT_START_DATE"
+       cam-variable-type="Date" />
+		\end{lstlisting}		
+
+
+	\item \textit{Boolean Inputs}, terdiri dari tiga tipe, yaitu Checkbox, Select Box, dan Text Inputs (pengguna harus menulis \textit{true} atau \textit{false}. Kodenya sebagai berikut :
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Boolean Inputs]
+
+	<input type="checkbox"cam-variable-name="IS_VIP_CUSTOMER"cam-variable-type="Boolean" /> 
+	
+	<select cam-variable-name="APPROVED" cam-variable-type="Boolean">
+		<option value="true">Yes</option>
+		<option value="false">No</option>
+	</select>
+	
+	<input type="text"cam-variable-name="IS_VIP_CUSTOMER"cam-variable-type="Boolean" />
+	\end{lstlisting}
+	
+	
+	\item \textit{Selects}, untuk memilih salah satu pilihan. Kodenya sebagai berikut :
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Selects]
+	<select cam-variable-name="foo"
+        cam-variable-type="String">
+  <option>bar</option>
+  <option>zar</option>
+</select>
+\end{lstlisting}
+
+	\item \textit{Hidden Input Fields}, untuk menyembunyikan \textit{form}. Kodenya sebagai berikut :
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Hidden Input Fields]
+	<input type="hidden"
+       cam-variable-name="CUSTOMER_ID"
+       cam-variable-type="String"
+       value="testuser" />
+	\end{lstlisting}
+	
+	\item \textit{Upload} dan \textit{Download}, untuk mengunggah maupun mengunduh file. Kode untuk mengunggah file sebagai berikut :
+		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Upload]
+	<input type="file"
+       cam-variable-name="INVOICE_DOCUMENT"
+       cam-variable-type="File"
+       cam-max-filesize="10000000" />
+	\end{lstlisting}
+Sedangkan kode untuk mengunduh file sebagai berikut :
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Download]
+<a cam-file-download="INVOICE_DOCUMENT"></a>
+\end{lstlisting}
+
+Nama variabel pada cam-variable-name harus sama dengan nama variabel pada cam-file-download.
+
+	\end{enumerate}
+
+
+
+
 
 
 

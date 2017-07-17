@@ -24,7 +24,7 @@
       <bpmn:conditionExpression xsi:type="bpmn:tFormalExpression">${valid}</bpmn:conditionExpression>
     </bpmn:sequenceFlow>
     <bpmn:sequenceFlow id="SequenceFlow_1pgufjt" sourceRef="StartEvent_1e2ogc0" targetRef="UserTask_1t1elk7" />
-    <bpmn:userTask id="UserTask_1t1elk7" name="Mengunggah Proposal" camunda:formKey="embedded:app:forms/MengunggahDokumen.html" camunda:candidateGroups="accounting, sales">
+    <bpmn:userTask id="UserTask_1t1elk7" name="Mengunggah Proposal" camunda:formKey="embedded:app:forms/MengunggahProposal.html" camunda:candidateGroups="accounting, sales">
       <bpmn:extensionElements>
         <camunda:taskListener class="pengajuanproposal.TaskAssignmentListener" event="create" />
       </bpmn:extensionElements>
@@ -32,7 +32,7 @@
       <bpmn:incoming>SequenceFlow_1g8qooa</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_06jd1mw</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1jevo7p" name="Memeriksa Proposal" camunda:formKey="embedded:app:forms/MemeriksaDokumen.html" camunda:candidateGroups="management">
+    <bpmn:userTask id="UserTask_1jevo7p" name="Memeriksa Proposal" camunda:formKey="embedded:app:forms/MemeriksaProposal.html" camunda:candidateGroups="management">
       <bpmn:extensionElements>
         <camunda:taskListener class="pengajuanproposal.TaskAssignmentListener" event="create" />
       </bpmn:extensionElements>

@@ -197,22 +197,45 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 		Terdapat tiga bagian utama pada Camunda Modeler, yaitu :
 \begin{enumerate}
 	\item Bagian kiri merupakan kumpulan \textit{tool} dan notasi untuk membuat diagram BPMN.
-	%\begin{figure}[H]
-		%	\centering
-			%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/2Notasi}
-			%\caption{Tampilan Tools Camunda Modeler} 
-			%\label{fig:camundaModelerTools}
-		%\end{figure}
-	\item Bagian kanan merupakan pengaturan untuk tiap \textit{event}, \textit{task}, maupun notasi lainnya. 
-	%\begin{figure}[H]
-		%\centering
-		%\includegraphics[scale=0.75]{Gambar/Bab-3/Modeler/3Properties}
-		%\caption{Tampilan Pengaturan Camunda Modeler} 
-		%\label{fig:camundaModelerProperties}
-	%\end{figure}
 	\item Bagian tengah merupakan tempat membuat diagram BPMN.
-\end{enumerate}		
-		
+	\item Bagian kanan merupakan pengaturan untuk tiap \textit{event}, \textit{task}, maupun notasi lainnya. Berikut ini adalah penjelasan untuk beberapa kolom pengaturan \textit{user task} :
+	\begin{enumerate}
+		\item Tab General
+			\begin{itemize}
+				\item Id, yaitu id dari \textit{task}
+				\item Name, yaitu nama dari \textit{task}
+				\item Assignee, yaitu nama pemilik \textit{task}
+				\item Candidate Users, yaitu kandidat pemilik dari \textit{task}
+				\item Candidate Group, yaitu kandidat grup dari \textit{task}
+				\item Due Date, yaitu pengaturan batas waktu
+				\item Follow Up Date, yaitu pengaturan waktu \textit{follow up}
+			\end{itemize}
+			\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{Gambar/Bab-3/Modeler/3Properties}
+				\caption{Tampilan Pengaturan Camunda Modeler} 
+				\label{fig:camundaModelerPropertiesGeneral}
+			\end{figure}
+		\item Tab Forms, tempat untuk mengisi lokasi halaman web yang diacu oleh \textit{user task}
+		\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{Gambar/Bab-3/Modeler/4}
+				\caption{Tampilan Pengaturan Camunda Modeler} 
+				\label{fig:camundaModelerPropertiesForms}
+		\end{figure}
+		\item Listener, terbagi menjadi dua, yaitu \textit{Execution Listener} dan \textit{Task Listener}. Listener berfungsi untuk menjalankan perintah ketika ada suatu \textit{event} yang terjadi. Misalnya \textit{Task Listener} dengan event \textit{create} akan dijalankan ketika \textit{task} dibuat.
+		\begin{figure}[H]
+				\centering
+				\includegraphics[scale=0.5]{Gambar/Bab-3/Modeler/5}
+				\caption{Tampilan Pengaturan Camunda Modeler} 
+				\label{fig:camundaModelerPropertiesListener}
+		\end{figure}
+	\end{enumerate}		
+
+
+
+
+\end{enumerate}
 	
 	\item \textit{Tasklist}, tempat pengguna mengakses dan mengerjakan tugas. Tugas yang dikerjakan mengikuti alur model proses (BPMN) yang telah dibuat. 
 		\begin{figure}[H]
@@ -244,11 +267,7 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 
 \section{Forms SDK}
 \label{formssdk}
-Camunda menggunakan Forms SDK untuk mengimplementasikan \textit{user task} menggunakan aplikasi berbasis HTML5 / JavaScript. 
-
-\subsection{\textit{Controls}}
-\label{formssdk_controls}
-Forms SDK menyediakan instruksi untuk mengakses variabel proses pada \textit{form} HTML. Terdapat dua tipe instruksi yaitu cam-variable-name yang digunakan untuk memberi nama proses / \textit{task} / variabel dan cam-variable-type yang digunakan untuk mementukan tipe dari variabel. Elemen HTML yang didukung adalah :
+Camunda menggunakan Forms SDK untuk mengimplementasikan \textit{user task} menggunakan aplikasi berbasis HTML5 / JavaScript. Forms SDK menyediakan instruksi untuk mengakses variabel proses pada \textit{form} HTML. Terdapat dua tipe instruksi yaitu cam-variable-name yang digunakan untuk memberi nama proses / \textit{task} / variabel dan cam-variable-type yang digunakan untuk mementukan tipe dari variabel. Elemen HTML yang didukung adalah :
 \begin{enumerate}
 	\item \textit{Text Inputs}, untuk memasukkan satu baris teks dan dapat diisi dengan berbagai tipe data seperti String, Integer, Long, Short, dan Double. Kodenya sebagai berikut:
 		\begin{lstlisting}[language=html,basicstyle=\tiny,caption=Text Input]
@@ -315,31 +334,30 @@ Nama variabel pada cam-variable-name harus sama dengan nama variabel pada cam-fi
 
 	\end{enumerate}
 
+\section{Email}
+\label{email}
 
+\subsection{Mail Server}
+\label{servermail}
+\textit{Mail server} adalah mekanisme pengiriman email yang menyediakan berbagai standar sehingga email bisa dikirim dari satu domain ke domain lainnya. \textit{Mail server} dapat dikategorikan menjadi dua, yaitu :
+\begin{enumerate}
+	\item \textit{Mail server} yang menuju ke dalam, yaitu  server SMTP \textit{Simple Mail Transfer Protocol}. Protokol SMTP digunakan untuk mengirim email dari sebuah klien ke alamat yang dituju.
+	\item \textit{Mail server} yang menuju ke luar, yaitu server POP3 \textit{Post Office Protocol} dan server IMAP \textit{Internet Message Access Protocol}.
 
+\end{enumerate}
 
-
-
-
-
-	
-
-
-
-\section{JavaMail}
+\subsection{JavaMail}
 \label{javamail}
-JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. JavaMail dibuat dalam lingkungan Java EE.  
-\subsection{Java EE}
-Java Platform, Enterprise Edition (Java EE) adalah lingkungan komputasi untuk pengembangan perangkat lunak 
+JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. JavaMail dibuat dalam lingkungan Java Enterprise Edition (Java EE) yang merupakan lingkungan komputasi untuk pengembangan perangkat lunak skala besar dan menggunakan jaringan yang aman.
 
 
 Untuk menggunakan JavaMail diperlukan beberapa kelas, yaitu :
 \begin{itemize}
-	\item Kelas Properties, kelas untuk mengatur standar email yang akan digunakan, seperti SMTP, IMAP, POP3, dan lainnya.
-	\item Kelas MimeMessage, kelas untuk menulis email.
+	\item Kelas Session, kelas untuk mengumpulkan atribut email yang akan digunakan. Kelas Session mengambil berbagai atribut dari kelas Properties, seperti informasi server email yang akan digunakan.
+	\item Kelas MimeMessage, kelas untuk menulis email. Kelas ini menyediakan berbagai atribut untuk menulis email. Di antaranya adalah alamat email asal, alamat email penerima, subjek, isi email, dll.
 	\item Kelas Transport, kelas untuk membuat koneksi ke email \textit{server} dan mengirim email.
 \end{itemize}
-
+Di bawah ini adalah contoh kode pengiriman email menggunakan JavaMail API : 
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=Contoh Kode Pengiriman Email]
 Properties props = new Properties();
     props.put("mail.smtp.host", "my-mail-server");

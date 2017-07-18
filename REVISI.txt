@@ -1,3 +1,18 @@
+3. Bab 2 + J2EE, servermail, API, 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1.Tambahkan 1 bab hasil studi
 Kasus sederhana + kompleks
 Analisis : masalah & Solusinya
@@ -6,29 +21,21 @@ Analisis : masalah & Solusinya
 -masalah
 -usulan solusi
 -jelaskan juga library
-
-3. Bab 2 + J2EE, servermail, API
 4. Eksperimen munculkan waktu uji 
 5. Tambahkan event listener complete untuk kasus proposal
 6. abstrak : masalah, solusi, hasil eksperimen, kesimpulan
 
+7. Latar belakang : perjelas agar awam paham
 8. Rumusan masalah : + konsep & cara kerja. 
    Batasan : studi kasus pengujian; sistematika disesuaikan
-
-
+9. Bab 2 tambahkan lebih detail contoh2 task
+10. Batasan implementasi bisa tambahkan batasan email gmail
 11. tambah kesimpulan hasil eksperimen
 12. saran : statistik follow up atas efektifitas proses bisnis.
 
 
 
 
-
-
-
-
-7. Latar belakang : perjelas agar awam paham
-9. Bab 2 tambahkan lebih detail contoh2 task
-10. Batasan implementasi bisa tambahkan batasan email gmail
 
 Bab 3 Hasil Studi
 
@@ -37,14 +44,17 @@ misal jelasin html service task user task
 
 
 3.1 BPMN
-3.1.1 Masalah Workflow
-3.1.2 Penurunan ke BPMN (BPMN tanpa modeler)
-3.1.3 Modeler (menjelaskan fitur)
+3.1.1 Masalah 
+3.1.2 Workflow
+
+
 
 3.2 BPMS Camunda
 3.2.1 Instalasi Camunda
-3.2.2 Menghubungkan BPMN dan Camunda (task, 
-3.2.3 Menjalankan Camunda
+3.2.2 Menambah form HTML
+3.2.3 Menambah Java Service Task
+3.2.4 Menambah elemen lain
+3.2.5 Menjalankan Camunda
 
 
 
@@ -59,3 +69,12 @@ Bab 4 Analisis dan Perancangan
 4.3 Perancangan Sistem
 4.1.1 Email
 4.1.2 Algoritma email
+
+
+
+
+
+
+
+
+

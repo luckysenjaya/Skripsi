@@ -1,5 +1,6 @@
 package org.camunda.bpm.getstarted.pendaftaranbpjs;
 
+import java.util.Random;
 import java.util.logging.Logger;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
@@ -10,41 +11,22 @@ public class PembangkitJadwal implements JavaDelegate{
 	public final static Logger LOGGER = Logger.getLogger("pembangkit-jadwal");
 	public String jadwalKedatangan(Object hari){
 		
-		return "77 Juli 7777";
+		return hari+"";
 	}
 	
-	public String nomorAntrian(){
-		return "1";
+	public int nomorAntrian(){
+		Random rand = new Random();
+		int nomor = rand.nextInt(10);
+		return nomor;
 	}
 	
 	public void execute(DelegateExecution execution) throws Exception {
 		execution.getVariable("jadwalHari");
 		String jadwal = this.jadwalKedatangan(execution.getVariable("jadwalHari"));
-		String nomor = this.nomorAntrian();
-		
-		
-		
-		
-		
-	   
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		int nomor = this.nomorAntrian();
+
 		execution.setVariable("jadwal", jadwal);
 		execution.setVariable("nomor", nomor);
-		
-		//execution.setVariable("uangDaftar", uangDaftar);
-		//execution.setVariable("nomor", nomor);
-		//pemohon.setKelas("Kelas 1");
-		//pemohon.setNamaKlinik("Klinik Suka Sehat");
-		LOGGER.info("memproses '"+execution.getVariable("jadwalHari")+"' a");// '"+pemohon.getNama() + "' dengan id ");
+
 	}
 }

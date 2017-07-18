@@ -12,7 +12,7 @@ Setiap bisnis memiliki alur kerja maupun proses yang perlu dilewati. Proses ters
 Berikut ini berbagai masalah proses bisnis yang akan dimodelkan pada \textit{workflow} :
 
 \subsubsection{Pengajuan Proposal}
-Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{sales}, dan \textit{management}. Divisi \textit{accounting} dan \textit{sales} dapat mengajukan proposal bisnis ke divisi \textit{management}. Divisi \textit{management} harus memeriksa apakah proposalnya layak atau tidak. Jika proposalnya tidak layak, pembuat proposal harus memperbaiki dan mengunggahnya kembali. Workflow dari skenario ini sebagai berikut :
+Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{sales}, dan \textit{management}. Divisi \textit{accounting} dan \textit{sales} dapat mengajukan proposal bisnis ke divisi \textit{management}. Divisi \textit{management} harus memeriksa apakah proposalnya layak atau tidak. Jika proposalnya tidak layak, pembuat proposal harus memperbaiki dan mengunggahnya kembali. Apabila proposalnya layak, pegawai dapat melihat setelah status proposal tersebut. Workflow dari skenario ini sebagai berikut :
 
 
 \subsubsection{Proses Pendaftaran BPJS}
@@ -21,7 +21,7 @@ Pegawai di perusahaan X memiliki tiga divisi yaitu \textit{accounting}, \textit{
 	\item Pemohon mengupload semua dokumen persyaratan di situs BPJS.
 	\item Sistem BPJS membangkitkan nomor pembayaran uang pendaftaran/ iuran pertama (nomor pembayaran selanjutnya menjadi nomor keanggotaan/ kartu BPJS).
   \item Pemohon melihat nomor pembayaran dan besarnya uang pendaftaran/ iuran pertama.
-  \item Pemohon membayar uang pendaftaran/ iuran pertama melalui bank sesuai nomor pembayaran (paling lambat 3 hari setelah pendaftaran, jika lebih maka pendaftaran hangus).
+  \item Pemohon membayar uang pendaftaran/iuran pertama melalui bank sesuai nomor pembayaran.
   \item Pemohon memilih jadwal verifikasi dokumen asli yang tersedia.
   \item Sistem BPJS membangkitkan jadwal kedatangan dan nomor antrian.
   \item Pemohon mencetak jadwal kedatangan dan nomor antriannya.
@@ -36,14 +36,15 @@ Workflow dari proses bisnis ini adalah sebagai berikut :
 
 
 \subsection{Memodelkan Workflow}
-
+\label{hasilstudi_workflow}
 \subsubsection{Pengajuan Proposal}
+\label{workflow_kasus1}
 Pada kasus Pengajuan Proposal, terdapat beberapa elemen, yaitu :
 \begin{enumerate}
 	\item Satu \textit{pool}, yaitu Pengajuan Proposal
 	\item Dua \textit{lane}, yaitu lane untuk Pegawai dan Manajemen
 	\item Dua \textit{event}, yaitu \textit{start event} (Ide Proposal) dan \textit{end event} Proposal Diterima
-	\item Dua \textit{user task}, yaitu Mengunggah Proposal oleh pegawai dan Memeriksa Proposal oleh manajemen
+	\item Tiga \textit{user task}, yaitu Mengunggah Proposal oleh pegawai, Memeriksa Proposal oleh manajemen, dan Melihat Status Proposal oleh pegawai.
 	\item Satu \textit{decision point}, yaitu penentuan apakah proposal layak atauk tidak
 \end{enumerate}
 
@@ -51,11 +52,11 @@ Pada kasus Pengajuan Proposal, terdapat beberapa elemen, yaitu :
 			\centering
 			\includegraphics[scale=0.5]{Gambar/Bab-3/Kasus2-3}
 			\caption{Mengunggah Proposal} 
-			\label{fig:pengajuanproposal_mengunggahproposal}
+			\label{fig:workflow_mengunggahproposal}
 	\end{figure}
 	
 \begin{description}
-	\item \textit{User task} Mengunggah Proposal \\
+	\item \textit{User task} Mengunggah Proposal dan Melihat Status Proposal\\
   \textit{Task} ini dapat dilakukan oleh pegawai (divisi \textit{sales} dan \textit{accounting}). Maka \textit{Candidate Groups} diisi dengan \textit{sales} dan \textit{accounting}.
 		\begin{figure}[H]
 			\centering
@@ -67,18 +68,21 @@ Pada kasus Pengajuan Proposal, terdapat beberapa elemen, yaitu :
 	
 	\item \textit{User task} Memeriksa Proposal
 	
-	\item \textit{Task} ini dilakukan oleh Manajemen. Maka \textit{Candidate Groups} diisi dengan \textit{management}.
+	 \textit{Task} ini dilakukan oleh Manajemen. Maka \textit{Candidate Groups} diisi dengan \textit{management}.
 		\begin{figure}[H]
 			\centering
 			\includegraphics[scale=1]{Gambar/Bab-3/Kasus1/3group2}
 			\caption{Memeriksa Proposal} 
 			\label{fig:pengajuanproposal_memeriksaproposal_group}
 	\end{figure}
+	
+
 
 \end{description}
 
 
 \subsubsection{Pendaftaran BPJS}
+\label{workflow_kasus2}
 Pada kasus Pendaftaran BPJS, terdapat beberapa elemen, yaitu :
 \begin{enumerate}
 	\item Satu \textit{pool}, yaitu Pendaftaran BPJS
@@ -110,7 +114,7 @@ Pada kasus Pendaftaran BPJS, terdapat beberapa elemen, yaitu :
 				\item Memverifikasi pendaftaran dan \textit{attachment} dokumen persyaratan dan keaslian
 				\item Mencetak kartu BPJS dan menyerahkannya
 			\end{enumerate}
-	\item Satu \textit{User task} Petugas Bank, yaitu menerima pembayaran
+	\item Satu \textit{Manual task} Petugas Bank, yaitu menerima pembayaran
 	\item Satu \textit{decision point}, yaitu penentuan apakah persyaratan pendaftaran lengkap dan valid
 \end{enumerate}
 
@@ -120,7 +124,7 @@ Pada kasus Pendaftaran BPJS, terdapat beberapa elemen, yaitu :
 			\centering
 			\includegraphics[scale=0.4 ,angle=90]{Gambar/Bab-3/Kasus2-4}
 			\caption{Pendaftaran BPJS} 
-			\label{fig:pendaftaranbpjs}
+			\label{fig:workflow_pendaftaranbpjs}
 	\end{figure}
 
 Untuk setiap \textit{user task}, ditentukan pemiliknya \textit{task} masing-masing. Pemohon diwakilkan oleh John, Petugas BPJS diwakilkan oleh Mary, dan Petugas Bank diwakilkan oleh Peter. Sehingga atribut assignee di setiap \textit{user task} akan diisi dengan john, mary, atau peter. Contohnya adalah \textit{task} Mengisi formulir pendaftaran BPJS yang dimiliki oleh John memiliki atribut \textit{assignee} john. 
@@ -194,7 +198,7 @@ public class LoanApprovalApplication extends ServletProcessApplication {
 
 \subsection{Kasus 1 - Pengajuan Proposal}
 \label{hasilstudi_bpms_kasus1}
-Untuk menjalankan proses bisnis pengajuan proposal menggunakan BPMS Camunda, langkah-langkah yang perlu dilakukan adalah :
+Untuk menyiapkan proses bisnis pengajuan proposal sehingga dapat dijalankan oleh BPMS Camunda, langkah-langkah yang perlu dilakukan adalah :
 
 \begin{enumerate}
 	\item Menambah Form HTML untuk setiap \textit{user task} dan menghubungkannya dengan BPMN. File HTML yang dibuat disimpan di direktori src/main/webapp/forms. Proses bisnis ini memiliki dua \textit{user task}, yaitu mengunggah proposal dan memeriksa proposal. 
@@ -226,7 +230,7 @@ Untuk menjalankan proses bisnis pengajuan proposal menggunakan BPMS Camunda, lan
 	\end{figure}
 
 
-\item Task ini merupakan \textit{user task} sehingga membutuhkan suatu \textit{form} HTML untuk memeriksa proposal. Isi dari variabel cam-file-download adalah "proposal" (sama dengan cam-variable-name pada \textit{form} mengunggah proposal, sehingga file yang diunduh sama dengan file yang diunggah. Kemudian terdapat \textit{checkbox} untuk menentukan apakah proposal sudah layak atau belum. \textit{Checkbox} ini memiliki cam-variable-name dengan nama "valid" yang nantinya akan digunakan pada \textit{gateway}.
+\item \textit{User task} Memeriksa Proposal Task ini merupakan \textit{user task} sehingga membutuhkan suatu \textit{form} HTML untuk memeriksa proposal. Isi dari variabel cam-file-download adalah "proposal" (sama dengan cam-variable-name pada \textit{form} mengunggah proposal, sehingga file yang diunduh sama dengan file yang diunggah. Kemudian terdapat \textit{checkbox} untuk menentukan apakah proposal sudah layak atau belum. \textit{Checkbox} ini memiliki cam-variable-name dengan nama "valid" yang nantinya akan digunakan pada \textit{gateway}.
 
 	
 	\begin{lstlisting}[language=xml,basicstyle=\tiny,caption=MemeriksaProposal.html]
@@ -252,6 +256,23 @@ Untuk menjalankan proses bisnis pengajuan proposal menggunakan BPMS Camunda, lan
 			\caption{Memeriksa Proposal} 
 			\label{fig:pengajuanproposal_memeriksaproposalhtml}
 	\end{figure}
+
+\item \textit{User Task} Melihat Status Proposal, pegawai dapat melihat status proposalnya apabila sudah diterima. Berikut adalah kodenya :
+	\begin{lstlisting}[language=xml,basicstyle=\tiny,caption=MemeriksaProposal.html]
+<html>
+	<head></head>
+	<body>
+	<h> Proposal sudah diterima </h>
+	
+	<form role="form" name="form">
+  	<a cam-file-download="proposal">Lihat Proposal</a>
+  	</form>
+	
+
+
+</html>
+
+	\end{lstlisting}
 
 \end{enumerate}
 
@@ -287,20 +308,204 @@ Untuk menjalankan proses bisnis pengajuan proposal menggunakan BPMS Camunda, lan
 \end{enumerate}
 
 
-		
-		
-		
-		
+\subsection{Kasus 2 - Pendaftaran BPJS}
+\label{hasilstudi_bpms_kasus2}
 
+Untuk menyiapkan proses bisnis pendaftaran BPJS sehingga dapat dijalankan oleh BPMS Camunda, langkah-langkah yang perlu dilakukan sedikit berbeda dengan proses bisnis pengajuan proposal, yaitu:
 
+\begin{enumerate}
+	\item Menambah Form HTML untuk setiap \textit{user task} dan menghubungkannya dengan BPMN. File HTML yang dibuat disimpan di direktori src/main/webapp/forms. 
+	\item Menambah implementasi \textit{Service Task} menggunakan kode Java dan menghubungkannya dengan BPMN.
+	\item Mengatur keluaran \textit{gateway}. 
+	\item Menyimpan file BPMN ke direktori src/main/resources pada proyek pendaftaran BPJS.
+\end{enumerate}
 
-
+Bagian yang membedakan kasus ini dan kasus pengajuan proposal adalah sebagai berikut :
+\begin{enumerate}
+	\item Pengiriman dan penerimaan variabel dari satu form HTML ke form HTML lainnya. Contohnya adalah pemohon mendaftar BPJS pada form pendaftaran-bpjs.html kemudian variabel nama diambil di verifikasi-pendaftaran.html. Isi dari variabel cam-variable-name didaftarkan ke variabelManager (kumpulan variabel) dan diambil dengan fungsi fetchVariable('nama') pada form ringkasan-jadwal.html. Isi dari variabel nama ditempatkan menggunakan \$scope.nama dan <td>{{ nama }} menggunakan <table>.  Berikut adalah potongan kodenya :
 	
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=pilih-jadwal.html]
+	<form name="pendaftaranBPJS" role="form">
+		<div class="control-group">
+		<label class="control-label" for="nama">Nama</label>
+	    <div class="controls">
+	      <input id="nama"
+	             class="form-control"
+	             cam-variable-name = "nama"
+	             cam-variable-type = "String"
+	             type="text"
+	             required>
+	    </div>	
+	</form>
+	\end{lstlisting}
+	
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=ringkasan-jadwal.html]
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nama');
+	});
+	camForm.on('variables-restored', function() {
+		\$scope.nama = camForm.variableManager.variableValue('nama');
+		});
+  	</script>
+		
+	<table>
+    <tr>
+      <td>Nama:</td>
+      <td>{{ nama }}</td> <!-- Lokasi variabel nama ditampilkan -->
+    </tr>
+	</table>
+	\end{lstlisting}
+	
+			
+	\item Tiga \textit{Service Task}, yaitu PembangkitBarcode, PembangkitJadwal, dan PembangkitNomor beserta pengiriman dan penerimaan variabel dari \textit{Service Task} ke form HTML maupun sebaliknya. Kelas PembangkitJadwal mengambil data jadwal yang dimasukkan pemohon pada form pilih-jadwal.html menggunakan perintah getVariable("jadwalHari"). Kelas ini juga membangkitkan nomor antrian secara acak. Variabel jadwal dan nomor antrian dikirimkan ke variableManager menggunakan perintah setVariable(). Berikut adalah potongan kode dari PembangkitJadwal.java
+		
+	\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitJadwal.java]
+		public int nomorAntrian(){
+			Random rand = new Random();
+			int nomor = rand.nextInt(10);
+			return nomor;
+		}
+	
+	public void execute(DelegateExecution execution) throws Exception {
+		execution.getVariable("jadwalHari");
+		String jadwal = this.jadwalKedatangan(execution.getVariable("jadwalHari"));
+		int nomor = this.nomorAntrian();
 
-\subsubsection{Menjalankan Camunda}
-\label{menjalankancamunda}
+		execution.setVariable("jadwal", jadwal);
+		execution.setVariable("nomor", nomor);
+	}
+	\end{lstlisting}
+	
+	\begin{lstlisting}[language=html,basicstyle=\tiny,caption=pilih-jadwal.html]
+		<form>
+		<select 
+			cam-variable-name="jadwalHari"
+			cam-variable-type="String"
+	        cam-choices="jadwalHariPilihan"
+	        >
+		  		<option value="senin">Senin</option>
+		  		<option value="selasa">Selasa</option>
+		  		<option value="rabu">Rabu</option>
+		  		<option value="kamis">Kamis</option>
+		  		<option value="jumat">Jumat</option>
+		</select>
+	</form>
+	\end{lstlisting}
+	Untuk menambahkan kode Java ke BPMN, pilih \textit{implementation} Java Class pada modeler dan isi lokasi dari kelas Java tersebut. Contohnya sebagai berikut :
+	
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/Kasus2/2servicetask}
+			\caption{Menghubungkan \textit{Service Task} dengan kode Java} 
+			\label{fig:pendaftaranBPJS_servicetask}
+	\end{figure}
+	
+\end{enumerate}
+
+
+
+
+
+\section{Menjalankan Camunda}
+\label{hasilstudi_menjalankancamunda}
 	\begin{enumerate}
 		\item Klik kanan pom.xml dan pilih Run As / Maven Install. Langkah ini akan menghasilkan file WAR di folder target.
 		\item \textit{Copy paste} file WAR ke CAMUNDA\_HOME / server / apache-tomcat / webapps folder.
 		\item Jalankan start-camunda.bat
 	\end{enumerate}
+	
+	
+\subsection{Otomasi Kasus 1 - Pengajuan Proposal}
+\label{menjalankancamunda_kasus1}	
+Berikut adalah hasil otomasi kasus Pengajuan Proposal
+\begin{enumerate}
+	\item John, sebagai bagian dari divisi sales mengunggah proposal
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus1/1}
+			\caption{Mengunggah Proposal} 
+			\label{fig:otomasi_kasus1_1}
+	\end{figure}
+	\item Peter, sebagai bagian dari divisi manajemen memeriksa dan menyetujui proposal
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus1/2}
+			\caption{Memeriksa Proposal} 
+			\label{fig:otomasi_kasus1_2}
+	\end{figure}
+		\item John, sebagai bagian dari divisi sales melihat proposal telah disetujui
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus1/3}
+			\caption{Melihat Status Proposal} 
+			\label{fig:otomasi_kasus1_3}
+	\end{figure}
+		
+\end{enumerate}
+		
+		
+\subsection{Otomasi Kasus 2 - Pendaftaran BPJS}
+\label{menjalankancamunda_kasus2}
+Berikut adalah hasil otomasi kasus Pendaftaran BPJS
+\begin{enumerate}
+	\item John mengisi data diri untuk mendaftar BPJS
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{Gambar/Bab-3/BPMS/Kasus2/1}
+			\caption{Mendaftar BPJS} 
+			\label{fig:otomasi_kasus2_1}
+	\end{figure}
+	
+	\item John mengunggah semua dokumen persyaratan BPJS
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/2}
+			\caption{Mengunggah Dokumen} 
+			\label{fig:otomasi_kasus2_2}
+	\end{figure}
+	
+	\item John melihat nomor pembayaran dan besar uang pendaftaran BPJS
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/3}
+			\caption{Melihat Nomor dan Biaya Pendaftaran} 
+			\label{fig:otomasi_kasus2_3}
+	\end{figure}
+	
+	\item John memilih hari untuk verifikasi dokumen
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/4}
+			\caption{Memilih Hari} 
+			\label{fig:otomasi_kasus2_4}
+	\end{figure}
+	
+	\item John Mencetak Jadwal Kedatangan dan Nomor Antrian
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/5}
+			\caption{Mencetak Jadwal} 
+			\label{fig:otomasi_kasus2_5}
+	\end{figure}
+	
+	\item Mary Memverifikasi pendaftaran BPJS
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/6}
+			\caption{Verifikasi Pendaftaran BPJS} 
+			\label{fig:otomasi_kasus2_6}
+	\end{figure}
+	
+	\item Mary Mencetak Kartu BPJS dan Menyerahkannya ke John
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.6]{Gambar/Bab-3/BPMS/Kasus2/7}
+			\caption{Mencetak Kartu BPJS} 
+			\label{fig:otomasi_kasus2_7}
+	\end{figure}
+	
+\end{enumerate}
+
+	

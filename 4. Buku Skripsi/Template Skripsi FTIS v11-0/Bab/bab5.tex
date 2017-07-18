@@ -1,6 +1,6 @@
 \chapter{Implementasi dan Pengujian}
 \label{chap:implementasipengujian}
-Pada bab ini akan diimplementasikan kode program untuk propagasi email dan pengujian dua skenario yang ada pada Bab ~\ref{chap:analisis}.
+Pada bab ini akan diimplementasikan kode program untuk propagasi email dan pengujian dua skenario yang ada pada Bab ~\ref{chap:hasilstudi}.
 
 \section{Lingkungan Implementasi}
 \label{sec:lingkunganimplementasi}
@@ -11,11 +11,8 @@ Implementasi dilakukan pada lingkungan :
 	\item BPMS Camunda versi 7.6.0 dan berjalan pada tomcat versi 8.0.24.
 	
 \end{enumerate}
-\section{Implementasi Kode Program}
-\label{sec:kodeprogram}
 
-
-\subsection{Implementasi Algoritma Pengiriman Email}
+\section{Implementasi Algoritma Pengiriman Email}
 \label{implementasialgo}
 Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode secara keseluruhan dapat dilihat pada Lampiran~\ref{lamp:tasklistener}
 \begin{itemize}
@@ -86,10 +83,14 @@ Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode sec
                message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));
                message.setSubject("Task " + delegateTask.getName());
                
-               String emailBody = user.getFirstName() +",<br>";
-          emailBody += "Tolong Selesaikan Task " +taskName + " di bawah ini.<br>";
-          emailBody += "http://localhost:1234/camunda/app/tasklist/default/#/?task="+taskId;
+String name = user.getFirstName();
+          String emailBody ="";
+          emailBody += "Dear "+name+",<br>";
+          emailBody += "Anda mendapatkan task " +taskName + " untuk dikerjakan.<br>";
+          emailBody += "Segera akses http://localhost:1234/camunda/app/tasklist/default/#/?task="+taskId +" untuk menjalankannya.<br>";
+          emailBody += "Terima kasih.";
           message.setContent(emailBody, "text/html");
+
 \end{lstlisting}
 
 	\item Kode untuk mengirimkan email.
@@ -102,177 +103,242 @@ Transport transport = session.getTransport("smtp");
 \end{lstlisting}
 	
 \end{itemize}
-
-\subsection{Implementasi Skenario}
-\label{implementasiskenario}
-
-\subsubsection{Pengajuan Proposal Bisnis dan Pengajuan Proposal Bisnis dari Grup}
-Kode ini adalah kode file HTML untuk Skenario~\ref{skenario1} dan Skenario~\ref{skenario2}. Terdapat dua form HTML yaitu MengunggahDokumen.html dan MemeriksaDokumen.html. 
-\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MengunggahDokumen.html]
-<html>
-<head>
-<body>
-	<form method="post" name="upload-dokumen">
-		<input type="file"
-       cam-variable-name="proposal"
-       cam-variable-type="File"
-       cam-max-filesize="10000000"/>
-	</form>
-</body>
-</html>
-
-\end{lstlisting}
-
-\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MemeriksaDokumen.html]
+Implementasi algoritma pengiriman email (TaskAssignmentListener.java) dikaitkan dengan setiap \textit{user task} pada BPMN menggunakan \textit{event create}. Contohnya adalah sebagai berikut :
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/taskListener}
+			\caption{Task Listener pada BPMN} 
+			\label{fig:pengujian_taskListener}
+	\end{figure}
 
 
-<html>
-<head></head>
 
-<body>
-<form role="form" name="form">
-  	<a cam-file-download="proposal">Download Dokumen</a>
-    <p>Apakah Proposal layak?</p>
-    <input cam-variable-name="valid"
-             cam-variable-type="Boolean"
-             type="checkbox"
-             name="valid"
-             class="form-control" />  
-</form> 
-</body>
-</html>
-
-\end{lstlisting}
 
 \section{Pengujian}
 \label{sec:pengujian}
+Pengujian dilakukan pada skenario yang ada pada subbab \ref{hasilstudi_bpmn_masalah} Masalah Proses Bisnis. Ada dua skenario yang diuji, yaitu Pengajuan Proposal dan Pendaftaran BPJS. Kriteria yang diuji adalah berhasil atau tidaknya pengiriman email dan lama pengiriman email.
 
-\subsection{Pengujian Skenario 1}
-label{ujiskenario1}
-Pada Skenario ~\ref{skenario1}, ditambahkan form HTML dan Task Listener untuk mengirimkan email.
+\subsection{Pengujian Kasus Pengajuan Proposal}
+\label{pengujian_kasus1}
+Workflow Pengajuan Proposal dapat dilihat pada subbab \ref{hasilstudi_workflow}
+\begin{enumerate}
+	\item Memulai proses Pengajuan Proposal pada 2:18 PM
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/bpmn1}
-			\caption{Mengunggah Proposal} 
-			\label{fig:mengunggah proposal}
-		\end{figure}
-		
-Proses pengujian :
-\begin{itemize}
-	\item John mengunggah dokumen proposal
-				\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji1-1}
-			\caption{Mengunggah Proposal} 
-			\label{fig:unggahProposal}
-		\end{figure}
-	\item Peter mendapatkan email dari sistem Camunda yang memberitahukan \textit{task} terbaru
-	\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji1-2}
-			\caption{Menerima Email} 
-			\label{fig:menerimaEmail}
-		\end{figure}
-	\item Tautan email membawa Peter ke \textit{task} yang harus dikerjakan.
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji1-3}
-			\caption{Tasklist Peter} 
-			\label{fig:tasklistPeter}
-		\end{figure}
-	\end{itemize}
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus1/1}
+			\caption{Memulai Proses Pengajuan Proposal} 
+			\label{fig:pengujian_kasus1_1}
+	\end{figure}
 	
-		
-		
-\subsection{Pengujian Skenario 2}
-\label{ujiskenario2}
-Pada Skenario ~\ref{skenario2}, ditambahkan form HTML dan Task Listener untuk mengirimkan email. Perbedaan dengan Skenario ~\ref{skenario1} adalah \textit{task} didelegasikan ke grup \textit{accounting}, \textit{sales}, dan \textit{management}. John adalah bagian dari divisi \textit{sales}, Mary adalah bagian dari divisi \textit{accounting}, sedangkan Peter adalah bagian dari divisi {\textit{management}.
+		\item John dan Mary menerima email untuk mengunggah proposal pada 2:18 PM
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/bpmn2}
-			\caption{Mengunggah Proposal Group} 
-			\label{fig:mengunggah proposal Group}
-		\end{figure}
-		
-Proses pengujian :
-\begin{itemize}
-	\item Admin memulai proses
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus1/2}
+			\caption{Email Mengunggah Proposal} 
+			\label{fig:pengujian_kasus1_2}
+	\end{figure}
+	
 		\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.4]{Gambar/Bab-5/uji2-1}
-			\caption{John Mengunggah Proposal} 
-			\label{fig:johnUnggahProposal}
-		\end{figure}
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus1/3}
+			\caption{Email Mengunggah Proposal} 
+			\label{fig:pengujian_kasus1_3}
+	\end{figure}
+	
+		\item John mengklaim \textit{task} dan mengunggah proposal pada 2:21 PM 
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus1/4}
+			\caption{Mengunggah Proposal} 
+			\label{fig:pengujian_kasus1_4}
+	\end{figure}
+	
+		\item Peter menerima email untuk memeriksa proposal pada 2:21 PM
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus1/5}
+			\caption{Email Memeriksa Proposal} 
+			\label{fig:pengujian_kasus1_5}
+	\end{figure}
+	
+		\item Peter memeriksa proposal pada 2:23 PM
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus1/6}
+			\caption{Peter Memeriksa Proposal} 
+			\label{fig:pengujian_kasus1_6}
+	\end{figure}
+	
+		\item John menerima email untuk melihat status proposal pada 2:23 PM
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus1/7}
+			\caption{Email Melihat Status Proposal} 
+			\label{fig:pengujian_kasus1_7}
+	\end{figure}
+	
+		\item John melihat status proposal pada 2:24 PM
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus1/8}
+			\caption{John Melihat Status Proposal} 
+			\label{fig:pengujian_kasus1_8}
+	\end{figure}
 
-	\item John dan Mary mendapatkan email untuk mengerjakan \textit{task}.
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-2}
-			\caption{Mary Mendapat Email} 
-			\label{fig:marydapatemail}
-		\end{figure}
-		
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-3}
-			\caption{John Mendapat Email} 
-			\label{fig:johndapatemail}
-		\end{figure}
 
-	\item John dan Mary dapat mengklaim \textit{task}. Apabila John mengklaim \textit{task}, maka Mary tidak bisa mengklaim \textit{task}.
+\end{enumerate}
+
+
+
+\subsection{Pengujian Kasus Pendaftaran BPJS}
+\label{pengujian_kasus2}
+Workflow Kasus Pendaftaran BPJS dapat dilihat pada subbab \ref{hasilstudi_workflow}
+\begin{enumerate}
+	\item Proses Pendaftaran BPJS dimulai pukul 2:40 PM.
 			\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-4}
-			\caption{John Mengunggah Proposal} 
-			\label{fig:johnUnggahProposal}
-		\end{figure}
-		
-\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-5}
-			\caption{Mary Mengunggah Proposal} 
-			\label{fig:maryUnggahProposal}
-		\end{figure}
-		
-	\item Mary mengklaim task dan mengerjakan \textit{task}
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-6}
-			\caption{Mary mengklaim Task} 
-			\label{fig:maryklaimtask}
-		\end{figure}
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/1}
+			\caption{Memulai Proses Pendaftaran BPJS} 
+			\label{fig:pengujian_kasus2_1}
+	\end{figure}
 	
-	\item Peter mendapatkan email untuk mengerjakan \textit{task}.
-		\begin{figure}[H]
+
+	\item John menerima email untuk mengisi formulir pendaftaran BPJS pada pukul 2:40PM.
+			\begin{figure}[H]
 			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-7}
-			\caption{Mary mengklaim Task} 
-			\label{fig:maryklaimtask}
-		\end{figure}
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/2}
+			\caption{Email Mengisi Formulir Pendaftaran BPJS} 
+			\label{fig:pengujian_kasus2_2}
+	\end{figure}
+	
+
+	\item John mengisi formulir pendaftaran BPJS pukul 2:41 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/3}
+			\caption{Mengisi Formulir Pendaftaran BPJS} 
+			\label{fig:pengujian_kasus2_3}
+	\end{figure}
+	
+
+	\item John menerima email untuk mengunggah semua dokumen persyaratan pada pukul 2:42 PM.
+			\begin{figure}[H]
+			\centering 
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/4}
+			\caption{Email Mengunggah Dokumen Persyaratan} 
+			\label{fig:pengujian_kasus2_4}
+	\end{figure}
+	
+
+	\item John mengunggah semua dokumen persyaratan pada pukul 2:43 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/5}
+			\caption{Mengunggah Dokumen Persyaratan} 
+			\label{fig:pengujian_kasus2_5}
+	\end{figure}
+	
+
+	\item John menerima email untuk melihat nomor pembayaran dan besar uang pendaftaran pada pukul 2:43 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/6}
+			\caption{Email Nomor Pembayaran dan Uang Pendaftaran} 
+			\label{fig:pengujian_kasus2_6}
+	\end{figure}
+	
+
+	\item John melihat nomor pembayaran dan besar uang pendaftaran pada pukul 2:44 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/7}
+			\caption{Melihat Nomor Pembayaran dan Uang Pendaftaran} 
+			\label{fig:pengujian_kasus2_7}
+	\end{figure}
+	
+
+	\item John menerima email untuk memilih jadwal verifikasi dokumen pada pukul 2:43 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/8}
+			\caption{Email Memilih Jadwal Verifikasi Dokumen} 
+			\label{fig:pengujian_kasus2_8}
+	\end{figure}
+	
+
+	\item John memilih jadwal verifikasi dokumen pada pukul 2:44 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/9}
+			\caption{Memilih Jadwal Verifikasi Dokumen} 
+			\label{fig:pengujian_kasus2_9}
+	\end{figure}
+	
+
+	\item John menerima email untuk mencetak jadwal dan nomor antrian pada pukul 2:44 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/10}
+			\caption{Email Mencetak Jadwal} 
+			\label{fig:pengujian_kasus2_10}
+	\end{figure}
+	
+
+	\item John mencetak jadwal dan nomor antrian pada pukul 2:46 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/11}
+			\caption{Mencetak Jadwal dan Nomor Antrian} 
+			\label{fig:pengujian_kasus2_11}
+	\end{figure}
+	
+
+	\item Mary, sebagai petugas BPJS menerima email untuk memverifikasi pendaftaran pada pukul 2:46 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/12}
+			\caption{Email Verifikasi Pendaftaran} 
+			\label{fig:pengujian_kasus2_12}
+	\end{figure}
+	
+
+	\item Mary memverifikasi pendaftaran dan semua persyaratan pada pukul 2:47 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/13}
+			\caption{Memverifikasi Pendaftaran dan Semua Persyaratan} 
+			\label{fig:pengujian_kasus2_13}
+	\end{figure}
+	
+
+	\item Mary menerima email untuk mencetak kartu BPJS pada pukul 2:47 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/14}
+			\caption{Email Mencetak Kartu BPJS} 
+			\label{fig:pengujian_kasus2_14}
+	\end{figure}
+	
+
+	\item Mary mencetak kartu BPJS pada pukul 2:48 PM
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.5]{Gambar/Bab-5/kasus2/15}
+			\caption{Mencetak Kartu BPJS} 
+			\label{fig:pengujian_kasus2_15}
+	\end{figure}
+\end{enumerate}
+
+
+
+
+
 		
-	\item Peter mengklaim task dan menolak proposal
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-8}
-			\caption{Peter mengklaim Task} 
-			\label{fig:peterklaimtask}
-		\end{figure}
-	
-	\item John dan Mary mendapatkan email sistem Camunda yang memberitahukan \textit{task} terbaru
-		\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-9}
-			\caption{John mendapatkan Email} 
-			\label{fig:johndapatemail}
-		\end{figure}
-	
-	\begin{figure}[H]
-			\centering
-			\includegraphics[scale=0.5]{Gambar/Bab-5/uji2-10}
-			\caption{Mary mendapatkan Email} 
-			\label{fig:marydapatemail}
-		\end{figure}
-\end{itemize}
 
 \section{Hasil Pengujian}
-Pengujian sudah berhasil untuk semua skenario. Pada skenario 1, John dan Peter masing-masing mendapatkan email ketika \textit{task} siap dikerjakan. Pada skenario 2, Setiap karyawan (John dan Mary) mendapatkan email untuk membuat proposal. Peter juga mendapat email setelah John atau Mary mengunggah proposal.
+\label{hasilpengujian}
+Berdasarkan pengujian dua kasus yang telah dilakukan (Pengajuan Proposal dan Pendaftaran BPJS), hasilnya adalah :
+\begin{enumerate}
+	\item Seluruh \textit{user task} mengirimkan email ke pemilik \textit{task}.
+	\item Email langsung dikirim ke pemilik \textit{task} setelah \textit{task} siap dikerjakan. Dapat dilihat dari waktu \textit{task} sebelumnya selesai dan waktu email diterima oleh pemilik \textit{task} yang akan dikerjakan.
+\end{enumerate}

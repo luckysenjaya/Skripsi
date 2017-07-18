@@ -1,0 +1,581 @@
+\chapter{Kode Skenario}
+\label{lamp:kodeskenario}
+
+\section{Kasus 1 - Pengajuan Proposal}
+\label{sec:kodekasus1}
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PengajuanProposal.java]
+package pengajuanproposal;
+
+import org.camunda.bpm.application.ProcessApplication;
+import org.camunda.bpm.application.impl.ServletProcessApplication;
+
+@ProcessApplication("PengajuanProposal App")
+public class PengajuanProposal extends ServletProcessApplication{
+
+}
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MengunggahProposal.html]
+<html>
+<head>
+<body>
+	<form method="post" name="upload-dokumen">
+		<input type="file"
+       cam-variable-name="proposal"
+       cam-variable-type="File"
+       cam-max-filesize="10000000"/>
+	</form>
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MemeriksaProposal.html]
+<html>
+<head></head>
+
+<body>
+<form role="form" name="form">
+  	<a cam-file-download="proposal">Download Dokumen</a>
+
+
+    <p>Apakah Proposal layak?</p>
+    <input cam-variable-name="valid"
+             cam-variable-type="Boolean"
+             type="checkbox"
+             name="valid"
+             class="form-control" />
+    
+</form> 
+</body>
+</html>
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=MelihatStatusProposal.html]
+<html>
+	<head></head>
+	<body>
+	<h> Proposal sudah diterima </h>
+	
+	<form role="form" name="form">
+  	<a cam-file-download="proposal">Lihat Proposal</a>
+  	</form>
+	
+
+
+</html>
+\end{lstlisting}
+
+
+
+\section{Kasus 2 - Pendaftaran BPJS}
+\label{sec:kode_kasus2}
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PendaftaranBPJS.java]
+package pengajuanproposal;
+
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import org.camunda.bpm.application.ProcessApplication;
+import org.camunda.bpm.application.impl.ServletProcessApplication;
+
+@ProcessApplication("PendaftaranBPJS App")
+public class PendaftaranBPJS extends ServletProcessApplication {
+	
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitBarcode.java]
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import java.util.Random;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class PembangkitBarcode implements JavaDelegate{
+
+	public int getBarcode(){
+		Random rand = new Random();
+		int nomor = rand.nextInt(10000000)+100000;
+		return nomor;
+	}
+	
+	public void execute(DelegateExecution execution) throws Exception {
+		String barcode = ""+this.getBarcode();
+		execution.setVariable("barcode", barcode);
+	}
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitJadwal.java]
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import java.util.Random;
+import java.util.logging.Logger;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+import org.camunda.bpm.engine.runtime.ProcessInstance;
+
+public class PembangkitJadwal implements JavaDelegate{
+	public final static Logger LOGGER = Logger.getLogger("pembangkit-jadwal");
+	public String jadwalKedatangan(Object hari){
+		
+		return hari+"";
+	}
+	
+	public int nomorAntrian(){
+		Random rand = new Random();
+		int nomor = rand.nextInt(10);
+		return nomor;
+	}
+	
+	public void execute(DelegateExecution execution) throws Exception {
+		execution.getVariable("jadwalHari");
+		String jadwal = this.jadwalKedatangan(execution.getVariable("jadwalHari"));
+		int nomor = this.nomorAntrian();
+
+		execution.setVariable("jadwal", jadwal);
+		execution.setVariable("nomor", nomor);
+
+	}
+}
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitNomor.java]
+package org.camunda.bpm.getstarted.pendaftaranbpjs;
+
+import java.util.Random;
+
+import java.util.logging.Logger;
+
+import org.camunda.bpm.engine.delegate.DelegateExecution;
+import org.camunda.bpm.engine.delegate.JavaDelegate;
+
+public class PembangkitNomor implements JavaDelegate{
+	public final static Logger LOGGER = Logger.getLogger("pendaftaran-bpjs");
+	int nomor;
+	int uangDaftar;
+	
+	public int nomorPembayaran(){
+		
+		Random rand = new Random();
+		nomor = rand.nextInt(10)+1;
+		
+		return nomor;
+	}
+	
+	public int uangPendaftaran(){
+		uangDaftar = 50000;
+		return uangDaftar;
+	}
+
+	public void execute(DelegateExecution execution) throws Exception {
+
+		
+		this.nomorPembayaran();
+		this.uangPendaftaran();
+		execution.setVariable("uangDaftar", uangDaftar);
+		execution.setVariable("nomor", nomor);
+	
+	}
+
+}
+
+\end{lstlisting}
+
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=pendaftaran-bpjs.html]
+<html>
+<head><title>Pendaftaran BPJS</title></head>
+<body>
+	<form name="pendaftaranBPJS" role="form">
+	  <h3>Pendaftaran BPJS</h3>
+	  
+	  <div class="control-group">
+		<label class="control-label" for="nama">Nama</label>
+	    <div class="controls">
+	      <input id="nama"
+	             class="form-control"
+	             cam-variable-name = "nama"
+	             cam-variable-type = "String"
+	             type="text"
+	             required>
+	    </div>	
+		<label class="control-label" for="tanggalLahir">Tanggal Lahir</label>
+	    <div class="controls">
+	      <input id="tanggalLahir"
+	             class="form-control"
+	             cam-variable-name = "tanggalLahir"
+	             cam-variable-type = "String"
+	             type="text"
+	             required>
+	    </div>		
+		<label class="control-label" for="nik">NIK</label>
+	    <div class="controls">
+	      <input id="nik"
+	             class="form-control"
+	             cam-variable-name = "nik"
+	             cam-variable-type = "String"
+	             type="text"
+	             required>
+	    </div>		
+		<label class="control-label" for="kelas">Kelas</label>
+	    <div class="controls">
+	      <input id="kelas"
+	             class="form-control"
+	             cam-variable-name = "kelas"
+	             cam-variable-type = "String"
+	             type="text"
+	             required>
+	    </div>
+	    
+
+	</form>
+
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=upload-dokumen.html]
+<html>
+<head></head>
+
+<body>
+	<form method="post" name="upload-dokumen">
+		<input type="file"
+       cam-variable-name="INVOICE_DOCUMENT"
+       cam-variable-type="File"
+       cam-max-filesize="10000000" />
+	</form>
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=pilih-jadwal.html]
+<html>
+
+<head></head>
+
+<body>
+	<p>Halaman pilih jadwal verifikasi dokumen.</p>
+	<form>
+		<select 
+			cam-variable-name="jadwalHari"
+			cam-variable-type="String"
+	        cam-choices="jadwalHariPilihan"
+	        >
+		  		<option value="senin">Senin</option>
+		  		<option value="selasa">Selasa</option>
+		  		<option value="rabu">Rabu</option>
+		  		<option value="kamis">Kamis</option>
+		  		<option value="jumat">Jumat</option>
+		</select>
+	</form>
+
+
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=nomor-pembayaran.html]
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('uangDaftar');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.uangDaftar = camForm.variableManager.variableValue('uangDaftar');
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      
+    });
+  	</script>
+  	<table>
+
+    <tr>
+      <td>Uang Daftar:</td>
+      <td>{{ uangDaftar }}</td>
+    </tr>
+
+    <tr>
+      <td>Nomor:</td>
+      <td>{{nomor}}</td>
+    </tr>
+    </table>
+</form> 
+</body>
+</html>
+
+
+
+
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=ringkasan-jadwal.html]
+<html>
+
+<head></head>
+<script>
+	function printDiv(divName){
+		var printContents = document.getElementById(divName).innerHTML;
+		var originalContents = document.body.innerHTML;
+		
+		document.body.innerHTML = printContents;
+		
+		window.print();
+		
+		document.body.innerHTML = originalContents;
+		window.close();
+	
+	
+	}
+
+
+</script>
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nomor');
+	      camForm.variableManager.fetchVariable('jadwal');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      $scope.jadwal = camForm.variableManager.variableValue('jadwal');
+	      
+    });
+  	</script>
+  <div id ="printableArea">
+  	<table>
+
+    <tr>
+      <td>Nomor :</td>
+      <td>{{ nomor }}</td>
+    </tr>
+
+    <tr>
+      <td>jadwal :</td>
+      <td>{{jadwal}}</td>
+    </tr>
+    
+    </table>
+    </div>
+</form> 
+ <input type ="button" onclick = "printDiv('printableArea')" value = "Cetak Jadwal"/>
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=ringkasa-pembayaran.html]
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nomor');
+	      camForm.variableManager.fetchVariable('uangDaftar');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+	      $scope.nomor = camForm.variableManager.variableValue('nomor');
+	      $scope.uangDaftar = camForm.variableManager.variableValue('uangDaftar');
+	      
+    });
+  	</script>
+  	<table>
+
+    <tr>
+      <td>Nomor :</td>
+      <td>{{ nomor }}</td>
+    </tr>
+
+    <tr>
+      <td>Uang Daftar:</td>
+      <td>{{uangDaftar}}</td>
+    </tr>
+    </table>
+</form> 
+
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=verifikasi-pendaftaran.html]
+<html>
+
+<head></head>
+
+
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nama');
+	      camForm.variableManager.fetchVariable('tanggalLahir');
+	      camForm.variableManager.fetchVariable('nik');
+	      camForm.variableManager.fetchVariable('kelas');
+	      camForm.variableManager.fetchVariable('jadwal');
+	      camForm.variableManager.fetchVariable('nomor');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+		$scope.nama = camForm.variableManager.variableValue('nama');
+	    $scope.tanggalLahir = camForm.variableManager.variableValue('tanggalLahir');
+	    $scope.nik = camForm.variableManager.variableValue('nik');
+	    $scope.kelas = camForm.variableManager.variableValue('kelas');
+	    $scope.nomor = camForm.variableManager.variableValue('nomor');
+	    $scope.jadwal = camForm.variableManager.variableValue('jadwal');
+	      
+    });
+  	</script>
+  	<p>Download Dokumen Persyaratan</p>
+  	<a cam-file-download="INVOICE_DOCUMENT">Download</a>
+  	<table>
+  	
+  	
+
+    <tr>
+      <td>Nama:</td>
+      <td>{{ nama }}</td>
+    </tr>
+    
+    <tr>
+      <td>Tanggal Lahir:</td>
+      <td>{{ tanggalLahir }}</td>
+    </tr>
+    
+    <tr>
+      <td>Nik:</td>
+      <td>{{ nik }}</td>
+    </tr>
+    
+    <tr>
+      <td>Kelas:</td>
+      <td>{{ kelas }}</td>
+    </tr>
+    
+    <tr>
+      <td>Nomor:</td>
+      <td>{{ nomor }}</td>
+    </tr>
+
+    <tr>
+      <td>jadwal:</td>
+      <td>{{jadwal}}</td>
+    </tr>
+    </table>
+    
+    <p>Apakah dokumen dan persyaratan lengkap?</p>
+    <input cam-variable-name="valid"
+             cam-variable-type="Boolean"
+             type="checkbox"
+             name="valid"
+             class="form-control" />
+    
+</form> 
+</body>
+</html>
+\end{lstlisting}
+
+\begin{lstlisting}[language=html,basicstyle=\tiny,caption=cetak-kartu.html]
+<html>
+
+<head></head>
+<script>
+	function printDiv(divName){
+		var printContents = document.getElementById(divName).innerHTML;
+		var originalContents = document.body.innerHTML;
+		
+		document.body.innerHTML = printContents;
+		
+		window.print();
+		
+		document.body.innerHTML = originalContents;
+		window.close();
+	
+	
+	}
+
+
+</script>
+	
+<body>
+<form role="form" name="form">
+	<script cam-script type="text/form-script">
+    	camForm.on('form-loaded', function() {
+	      camForm.variableManager.fetchVariable('nama');
+	      camForm.variableManager.fetchVariable('tanggalLahir');
+	      camForm.variableManager.fetchVariable('nik');
+	      camForm.variableManager.fetchVariable('kelas');
+	      camForm.variableManager.fetchVariable('barcode');
+	      
+    });
+    	camForm.on('variables-restored', function() {
+			$scope.nama = camForm.variableManager.variableValue('nama');
+	    $scope.tanggalLahir = camForm.variableManager.variableValue('tanggalLahir');
+	    $scope.nik = camForm.variableManager.variableValue('nik');
+	    $scope.kelas = camForm.variableManager.variableValue('kelas');
+	    $scope.barcode = camForm.variableManager.variableValue('barcode');
+	      
+    });
+  	</script>
+  	<div id ="printableArea">
+  	<table>
+  	
+
+
+    <tr>
+      <td>Nama:</td>
+      <td>{{ nama }}</td>
+    </tr>
+    
+    <tr>
+      <td>Tanggal Lahir:</td>
+      <td>{{ tanggalLahir }}</td>
+    </tr>
+    
+    <tr>
+      <td>Nik:</td>
+      <td>{{ nik }}</td>
+    </tr>
+    
+    <tr>
+      <td>Kelas:</td>
+      <td>{{ kelas }}</td>
+    </tr>
+    
+    <tr>
+      <td>Barcode:</td>
+      <td>{{ barcode }}</td>
+    </tr>
+
+    </table>
+    
+
+</form> 
+</div>
+    <input type ="button" onclick = "printDiv('printableArea')" value = "Cetak Kartu"/>
+</body>
+</html>
+\end{lstlisting}

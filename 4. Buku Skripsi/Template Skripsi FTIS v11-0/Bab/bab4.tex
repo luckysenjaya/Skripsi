@@ -1,7 +1,8 @@
 \chapter{Analisis dan Perancangan}
-\label{chap:analisisdanperancangan}
+\label{chap:analisisdanperancangan_hasilStudi}
 
 \section{Analisis Hasil Studi}
+\label{sec:analisisdanperancangan_hasilStudi}
 Berdasarkan hasil studi di bab sebelumnya, beberapa hal yang perlu dianalisis adalah \textit{event} apa yang diintegrasikan dengan sistem email dan bagaimana mekanisme integrasi sistem email
 \subsection{\textit{Event} yang Terkait dengan Integrasi Sistem Email}
 \label{sec:eventUserTask}
@@ -32,11 +33,8 @@ Untuk mengintegrasikan \textit{user tasks} dengan email, \textit{event type} yan
 Apabila menggunakan \textit{event create}, \textit{task} harus memiliki pemiliknya masing-masing ketika BPMN dibuat atau memiliki \textit{candidate user/group}. Bila pemilik \textit{task} belum ditentukan, email tidak akan terkirim, karena \textit{event create} sudah selesai dipanggil sebelum \textit{task} memiliki pemilik. Pengiriman email untuk \textit{task} yang belum memiliki aktor dapat menggunakan \textit{event create}. Sedangkan pada \textit{event assignment}, pengiriman email dilakukan setelah \textit{task} didelegasikan ke masing-masing user.
 
 
-
-
-
-\subsection{Analisis Kebutuhan}
-\label{analisiskebutuhan}
+\section{Analisis Kebutuhan}
+\label{analisisdanperancangan_analisiskebutuhan}
 Berdasarkan analisis di bagian sebelumnya, maka untuk mempropagasi email diperlukan beberapa persyaratan, yaitu :
 \begin{enumerate}
 	\item Model proses menggunakan BPMN yang sudah dilengkapi form HTML untuk \textit{user task}, implementasi untuk \textit{service task} dan atribut lain yang diperlukan.
@@ -46,8 +44,55 @@ Berdasarkan analisis di bagian sebelumnya, maka untuk mempropagasi email diperlu
 	\item Business Process Management System (BPMS), yaitu tools untuk mengotomasi jalannya proses.
 \end{enumerate}
 
-\subsection{Email}
-\label{email}
+
+Selain itu, dibutuhkan partisipan yang memiliki perannya masing-masing. Seorang Desainer bertugas merancang BPMN, seorang admin bertugas mengatur jalannya otomasi proses bisnis, sedangkan aktor bertugas mengerjakan \textit{tasks}
+
+\begin{enumerate}
+\item Tugas Desainer 
+Berdasarkan perancangan sistem di atas, seorang desainer model proses memiliki beberapa tugas, yaitu :
+\begin{enumerate}
+	\item Merancang model proses.
+	\item Menambahkan form HTML pada \textit{user task}, \textit{implementasi service task}, \textit{task listener} untuk propagasi email, dan berbagai atribut lainnnya sesuai kebutuhan.
+	\item Mendelegasikan task kepada user/group yang akan mengerjakan.
+\end{enumerate}
+
+\item Tugas Admin
+\begin{enumerate}
+	\item Membuat alamat email yang merepresentasikan sistem.
+	\item Menambahkan \textit{username}, \textit{password}, dan \textit{host} email pada kode task listener yang berhubungan dengan propagasi email.
+	\item Menambahkan user/group yang akan mengerjakan \textit{tasks} pada Camunda Admin.
+	\item Menjalankan dan memulai proses.
+\end{enumerate}
+
+\item Tugas Aktor
+	\begin{enumerate}
+	\item Memberitahu alamat email kepada admin.
+	\item Mengerjakan \textit{task}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\section{Perancangan Sistem}
+\label{sec:analisisdanperancangan_perancangansistem}
+
+
+\subsection{Perancangan Aktor}
+\label{perancangansistem_perancanganaktor}
+Untuk pengujian skenario, ada beberapa aktor yang dibuat, yaitu :
+\begin{enumerate}
+	\item John, dengan alamat email johncamunda@gmail.com dan bagian dari grup \textit{sales}.
+	\item Mary, dengan alamat email marycamunda@yahoo.com dan bagian dari grup \textit{accounting}.
+	\item Peter, dengan alamat email petercamunda@gmail.com dan bagian dari grup \textit{management}.
+\end{enumerate}
+
+
+
+
+
+\subsection{Perancangan Email}
+\label{perancangansistem_perancanganemail}
+
 Alamat email yang digunakan untuk merepresentasikan sistem berbasis Gmail SMTP. Gmail SMTP yang akan digunakan memiliki konfigurasi sebagai berikut \cite{smtpgoogle} :
 \begin{itemize}
 	\item Alamat server = smtp.gmail.com.
@@ -64,7 +109,7 @@ Email yang akan dikirimkan ke aktor memiliki format :
 \end{enumerate} 
 
 \subsection{Algoritma Pengiriman Email}
-\label{sec:algoritma}
+\label{sec:perancangansistem_algoritma}
 
 Berikut adalah algoritma untuk mengirimkan email.
 \begin{enumerate}
@@ -75,41 +120,22 @@ Berikut adalah algoritma untuk mengirimkan email.
 	\item Mengirim email.
 \end{enumerate}
 
+\subsection{\textit{Task Event Listener}}
+\label{sec:perancangansistem_taskeventlistener}
+\textit{Task Event Listener} bereaksi ke \textit{Task Event} seperti \textit{Created, Assigned, dan Completed}. Implementasi \textit{Task Listener} berupa kode Java dapat dilihat di bawah ini :
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitJadwal.java]
+public class TaskAssignmentListener implements TaskListener{
+	public void notify(DelegateTask delegateTask) {
+	
+	}
+}
+\end{lstlisting}
 
-\section{Peran Partisipan}
-\label{peranpartisipan}
-Setiap partisipan memiliki perannya masing-masing. Desainer bertugas merancang BPMN, admin bertugas mengatur jalannya otomasi proses bisnis, sedangkan aktor bertugas mengerjakan \textit{tasks}
-\subsection{Tugas Desainer}
-\label{tugasdesainer}
-Berdasarkan perancangan sistem di atas, seorang desainer model proses memiliki beberapa tugas, yaitu :
-\begin{enumerate}
-	\item Merancang model proses.
-	\item Menambahkan form HTML pada \textit{user task}, \textit{implementasi service task}, \textit{task listener} untuk propagasi email, dan berbagai atribut lainnnya sesuai kebutuhan.
-	\item Mendelegasikan task kepada user/group yang akan mengerjakan.
-\end{enumerate}
-
-\subsection{Tugas Admin}	
-\label{tugasadmin}
-\begin{enumerate}
-	\item Membuat alamat email yang merepresentasikan sistem.
-	\item Menambahkan \textit{username}, \textit{password}, dan \textit{host} email pada kode task listener yang berhubungan dengan propagasi email.
-	\item Menambahkan user/group yang akan mengerjakan \textit{tasks} pada Camunda Admin.
-	\item Menjalankan dan memulai proses.
-\end{enumerate}
-
-\subsection{Tugas Aktor}
-\label{tugasaktor}
-	\begin{enumerate}
-	\item Memberitahu alamat email kepada admin.
-	\item Mengerjakan \textit{task}.
-\end{enumerate}
-
-
-\subsection{Perancangan Aktor}
-\label{perancanganaktor}
-Untuk pengujian skenario, ada beberapa aktor yang dibuat, yaitu :
-\begin{enumerate}
-	\item John, dengan alamat email johncamunda@gmail.com dan bagian dari grup \textit{sales}.
-	\item Mary, dengan alamat email marycamunda@gmail.com dan bagian dari grup \textit{accounting}.
-	\item Peter, dengan alamat email petercamunda@gmail.com dan bagian dari grup \textit{management}.
-\end{enumerate}
+Parameter delegateTask dapat mengambil maupun menyimpan informasi \textit{task} yang sedang berjalan. Beberapa informasi yang dapat diambil maupun disimpan adalah sebagai berikut :
+\begin{itemize}
+	\item getAssignee(), mendapatkan pemilik \textit{task} dan setAssignee untuk menentukan pemilik \textit{task}
+	\item getId(), mendapatkan id dari \textit{task}
+	\item getName(), mendapatkan nama \textit{task} dan setName untuk menentukan nama\textit{task}
+	\item getCandidates(), mendapatkan \textit{candidate users/groups} dan addCandidateGroup() / addCandidateUser() untuk menentukan \textit{candidate users/groups}
+	
+\end{itemize}

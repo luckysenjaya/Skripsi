@@ -8,7 +8,7 @@ Berdasarkan hasil pengembangan propagasi sistem email dengan Camunda, didapatkan
 	\item \textit{Workflow} dapat dimodelkan sebagai BPMN yang dapat divisualisasikan oleh BPMS. 
 	\item \textit{Event-event} dapat dipropagasi via email sehingga aktor dapat mengetahui apabila ada \textit{task} yang harus dikerjakan. Dengan demikian akan meningkatkan efektifitas dan efisiensi proses bisnis.
 	\item \textit Propagasi email dapat dilakukan dengan cara menyisipkan \textit{Task Listener} di event yang akan dipropagasi. Selain itu dibutuhkan peran admin untuk mendaftarkan alamat email aktor.
-	\item \textit Pengujian telah dilakukan dengan dua skenario dan dapat berjalan dengan baik.
+	\item \textit Pengujian telah dilakukan dengan dua skenario yaitu Pengajuan Proposal dan Pendaftaran BPJS. Berdasarkan subbab\ref{hasilpengujian} Hasil Pengujian, didapati bahwa setiap \textit{user task} yang disisipkan \textit{TaskAssignmentListener.java} dapat mengirim email ke pemilik \textit{user task} masing-masing segera setelah \textit{task} siap untuk dikerjakan.
 	
 
 \end{enumerate}
@@ -17,6 +17,6 @@ Berdasarkan hasil pengembangan propagasi sistem email dengan Camunda, didapatkan
 \label{sec:saran}
 Berdasarkan kesimpulan yang didapat, ada beberapa saran untuk penelitian dan pengembangan lebih lanjut, antara lain :
 \begin{enumerate}
-	\item Mekanisme propagasi email dapat dibuat dalam bentuk \textit{library} sehingga tidak perlu membuka kode dan cukup memasukkan alamat email dan password.
+	\item Menambahkan statistik efektifitas proses bisnis.
 	\item Aspek integrasi bisa ditambahkan dengan \textit{external tasks}, yaitu sistem di luar Camunda dengan memanfaatkan \textit{web service}.
 \end{enumerate}

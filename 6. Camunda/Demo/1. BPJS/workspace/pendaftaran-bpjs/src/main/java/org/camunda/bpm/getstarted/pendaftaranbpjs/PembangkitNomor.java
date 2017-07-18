@@ -1,6 +1,7 @@
 package org.camunda.bpm.getstarted.pendaftaranbpjs;
 
 import java.util.Random;
+
 import java.util.logging.Logger;
 
 import org.camunda.bpm.engine.delegate.DelegateExecution;
@@ -10,26 +11,28 @@ public class PembangkitNomor implements JavaDelegate{
 	public final static Logger LOGGER = Logger.getLogger("pendaftaran-bpjs");
 	int nomor;
 	int uangDaftar;
+	
 	public int nomorPembayaran(){
 		
 		Random rand = new Random();
-		nomor = rand.nextInt();
+		nomor = rand.nextInt(10)+1;
 		
 		return nomor;
 	}
 	
 	public int uangPendaftaran(){
-		uangDaftar = 5000;
+		uangDaftar = 50000;
 		return uangDaftar;
 	}
 
 	public void execute(DelegateExecution execution) throws Exception {
-		Pemohon pemohon = new Pemohon();
-		pemohon.setNama(execution.getVariable("nama"));
-		pemohon.setNik(execution.getVariable("nik"));
-		pemohon.setTanggalLahir(execution.getVariable("tanggalLahir"));
-		pemohon.setKelas(execution.getVariable("kelas"));
-		pemohon.setNamaKlinik(execution.getVariable("namaKlinik"));
+//		Pemohon pemohon = new Pemohon();
+//		pemohon.setNama(execution.getVariable("nama"));
+//		pemohon.setNik(execution.getVariable("nik"));
+//		pemohon.setTanggalLahir(execution.getVariable("tanggalLahir"));
+//		pemohon.setKelas(execution.getVariable("kelas"));
+//		pemohon.setNamaKlinik(execution.getVariable("namaKlinik"));
+		
 		this.nomorPembayaran();
 		this.uangPendaftaran();
 		execution.setVariable("uangDaftar", uangDaftar);

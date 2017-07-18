@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <bpmn:definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" id="Definitions_1" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="1.7.2">
   <bpmn:collaboration id="pendaftaran-bpjs">
-    <bpmn:participant id="Participant_1fw3p2v" name="Pendaftaran BPJS" processRef="Process_1" />
+    <bpmn:participant id="Participant_1fw3p2v" name="Pendaftaran BPJS" processRef="Pendaftaran_BPJS" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_1" isExecutable="true">
+  <bpmn:process id="Pendaftaran_BPJS" isExecutable="true">
     <bpmn:laneSet>
       <bpmn:lane id="Lane_13wuug0" name="Pemohon">
         <bpmn:flowNodeRef>StartEvent_1</bpmn:flowNodeRef>
@@ -61,7 +61,7 @@
       <bpmn:incoming>SequenceFlow_0y7mnva</bpmn:incoming>
     </bpmn:endEvent>
     <bpmn:sequenceFlow id="SequenceFlow_0y7mnva" sourceRef="ManualTask_0juzjny" targetRef="EndEvent_0a0r3mt" />
-    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:candidateUsers="john">
+    <bpmn:userTask id="UserTask_1w7apo5" name="Mengupload semua dokumen persyaratan" camunda:formKey="embedded:app:forms/upload-dokumen.html" camunda:assignee="john">
       <bpmn:extensionElements>
         <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="create" />
       </bpmn:extensionElements>
@@ -133,13 +133,6 @@
       <bpmn:incoming>SequenceFlow_0j9fee7</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0x8fbzs</bpmn:outgoing>
     </bpmn:userTask>
-    <bpmn:userTask id="UserTask_1euizii" name="Menerima pembayaran" camunda:formKey="embedded:app:forms/nomor-pembayaran.html" camunda:assignee="peter">
-      <bpmn:extensionElements>
-        <camunda:taskListener class="org.camunda.bpm.getstarted.pendaftaranbpjs.TaskAssignmentListener" event="assignment" />
-      </bpmn:extensionElements>
-      <bpmn:incoming>SequenceFlow_1rb6uvq</bpmn:incoming>
-      <bpmn:outgoing>SequenceFlow_12ccfoy</bpmn:outgoing>
-    </bpmn:userTask>
     <bpmn:sequenceFlow id="SequenceFlow_1rb6uvq" sourceRef="ManualTask_1mbz2xg" targetRef="UserTask_1euizii" />
     <bpmn:sequenceFlow id="SequenceFlow_1w67uem" sourceRef="ManualTask_0gmkp2t" targetRef="UserTask_1aqe9p1" />
     <bpmn:userTask id="UserTask_15dx9zp" name="Mengisi formulir pendaftaran BPJS" camunda:formKey="embedded:app:forms/pendaftaran-bpjs.html" camunda:assignee="john">
@@ -151,6 +144,10 @@
     </bpmn:userTask>
     <bpmn:sequenceFlow id="SequenceFlow_1vur1c9" sourceRef="UserTask_15dx9zp" targetRef="UserTask_1w7apo5" />
     <bpmn:sequenceFlow id="SequenceFlow_0pe7aj4" sourceRef="ManualTask_1kr0jb4" targetRef="UserTask_15dx9zp" />
+    <bpmn:manualTask id="UserTask_1euizii" name="Menerima pembayaran">
+      <bpmn:incoming>SequenceFlow_1rb6uvq</bpmn:incoming>
+      <bpmn:outgoing>SequenceFlow_12ccfoy</bpmn:outgoing>
+    </bpmn:manualTask>
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="pendaftaran-bpjs">
@@ -219,7 +216,7 @@
         <di:waypoint xsi:type="dc:Point" x="1082" y="622" />
         <di:waypoint xsi:type="dc:Point" x="1082" y="74" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="1005.5" y="215" width="90" height="20" />
+          <dc:Bounds x="1021.5" y="597" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1hdb7rm_di" bpmnElement="SequenceFlow_1hdb7rm">
@@ -336,15 +333,12 @@
       <bpmndi:BPMNShape id="UserTask_1lb5nj5_di" bpmnElement="UserTask_1lb5nj5">
         <dc:Bounds x="1615" y="384" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="UserTask_1euizii_di" bpmnElement="UserTask_1euizii">
-        <dc:Bounds x="951" y="582" width="100" height="80" />
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="SequenceFlow_1rb6uvq_di" bpmnElement="SequenceFlow_1rb6uvq">
         <di:waypoint xsi:type="dc:Point" x="945" y="34" />
         <di:waypoint xsi:type="dc:Point" x="1001" y="34" />
         <di:waypoint xsi:type="dc:Point" x="1001" y="582" />
         <bpmndi:BPMNLabel>
-          <dc:Bounds x="903" y="318" width="90" height="20" />
+          <dc:Bounds x="928" y="9" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="SequenceFlow_1w67uem_di" bpmnElement="SequenceFlow_1w67uem">
@@ -371,6 +365,9 @@
           <dc:Bounds x="333.5" y="24" width="90" height="20" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
+      <bpmndi:BPMNShape id="ManualTask_19mtxgr_di" bpmnElement="UserTask_1euizii">
+        <dc:Bounds x="951" y="582" width="100" height="80" />
+      </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
   </bpmndi:BPMNDiagram>
 </bpmn:definitions>

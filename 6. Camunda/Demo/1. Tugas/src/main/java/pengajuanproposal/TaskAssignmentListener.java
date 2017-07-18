@@ -34,6 +34,7 @@ public class TaskAssignmentListener implements TaskListener {
   String assignee;
   String taskId;
   String taskName;
+  String email;
   
   String[] recipient;
   
@@ -89,11 +90,13 @@ public class TaskAssignmentListener implements TaskListener {
           message.addRecipient(Message.RecipientType.TO, new InternetAddress(user.getEmail()));
           message.setSubject("Task " + taskName);
           
-          String emailBody = user.getFirstName() +",<br>";
-          emailBody += "Tolong Selesaikan Task " +taskName + " di bawah ini.<br>";
-          emailBody += "http://localhost:1234/camunda/app/tasklist/default/#/?task="+taskId;
+          String name = user.getFirstName();
+          String emailBody ="";
+          emailBody += "Dear "+name+",<br>";
+          emailBody += "Anda mendapatkan task " +taskName + " untuk dikerjakan.<br>";
+          emailBody += "Segera akses http://localhost:1234/camunda/app/tasklist/default/#/?task="+taskId +" untuk menjalankannya.<br>";
+          emailBody += "Terima kasih.";
           message.setContent(emailBody, "text/html");
-          
 
           Transport transport = session.getTransport("smtp");            
           transport.connect(HOST, USER, PWD);

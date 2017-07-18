@@ -1,7 +1,23 @@
 <html>
 
 <head></head>
+<script>
+	function printDiv(divName){
+		var printContents = document.getElementById(divName).innerHTML;
+		var originalContents = document.body.innerHTML;
+		
+		document.body.innerHTML = printContents;
+		
+		window.print();
+		
+		document.body.innerHTML = originalContents;
+		window.close();
+	
+	
+	}
 
+
+</script>
 
 	
 <body>
@@ -18,18 +34,22 @@
 	      
     });
   	</script>
+  <div id ="printableArea">
   	<table>
 
     <tr>
-      <td>Nomor:</td>
+      <td>Nomor :</td>
       <td>{{ nomor }}</td>
     </tr>
 
     <tr>
-      <td>jadwal:</td>
+      <td>jadwal :</td>
       <td>{{jadwal}}</td>
     </tr>
+    
     </table>
+    </div>
 </form> 
+ <input type ="button" onclick = "printDiv('printableArea')" value = "Cetak Jadwal"/>
 </body>
 </html>

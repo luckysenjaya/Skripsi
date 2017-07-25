@@ -7,7 +7,7 @@
 
 \textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, yaitu sistem yang dapat mengeksekusi dan mengotomasi proses bisnis yang berbentuk \textit{workflow}. Salah satu BPMS yang digunakan di skripsi ini adalah Camunda yang berbasis Java. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} yang ada pada \textit{workflow} dapat dipropagasi dan diintegrasikan dengan sistem email. Dengan model komunikasi ini, aktor dapat segera melakukan pekerjaan dari mana dan kapan saja. Hal ini meningkatkan efektifitas dan efisiensi komunikasi pada organisasi. 
 
-Dalam skripsi ini, dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Ketika ada suatu \textit{user task}, sistem akan mengirimkan email ke pengguna yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan. Untuk mencapainya, dibuat sebuah \textit{listener} yang dikaitkan di \textit{event} pada \textit{workflow}. \textit{Listener}ini dapat dibuat dengan berbagai bahasa (misalnya Java). 
+Dalam skripsi ini, dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Ketika ada suatu \textit{user task}, sistem akan mengirimkan email ke pengguna yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan. Untuk mencapainya, dibuat sebuah \textit{listener} yang dikaitkan pada \textit{workflow}. Implementasi \textit{listener} ini dapat dibuat dengan bahasa Java. 
 
 
 
@@ -47,7 +47,7 @@ Berdasarkan rumusan masalah yang dipaparkan sebelumnya, tujuan dari penelitian i
 	\item Pemodelan BPMN menggunakan versi 2.0 dan menggunakan editor Camunda Modeler versi 1.7.2, yaitu versi terbaru untuk pada bulan Mei 2017.
 	\item Perangkat lunak BPMS Camunda yang digunakan merupakan versi 7.6.0 dan berjalan pada tomcat versi 8.0.24, yaitu versi terbaru pada bulan Mei 2017.
 	\item Semua uji kasus berada di lingkungan Camunda. Hal ini dilakukan agar skripsi ini lebih fokus kepada integrasi email.
-	\item Sistem email yang digunakan adalah Google Mail.
+	\item Menggunakan Google Mail sebagai sistem email.
 	\item Menggunakan dua kasus uji, yaitu satu kasus sederhana dan satu kasus kompleks.
 \end{enumerate}
 
@@ -77,8 +77,7 @@ Metodologi yang digunakan dalam penelitian ini adalah sebagai berikut:
 	\item Bab 1 Pendahuluan, berisi latar belakang masalah, rumusan masalah, tujuan penelitian, batasan masalah, metodologi penelitian, dan sistematika penulisan.
 	\item Bab 2 Dasar Teori, berisi dasar teori yang mencakup \textit{Business Process Management}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, BPMS Camunda, Forms SDK dan sistem e-mail.
 	\item Bab 3 Hasil Studi, berisi masalah proses bisnis yang diselesaikan menggunakan otomasi BPMS Camunda. Mulai dari memodelkan \textit{workflow}, instalasi Camunda, menghubungkan BPMN dan BPMS Camunda hingga otomasi menggunakan BPMS Camunda.
-	\item Bab 3 Analisis, Berisi analisis BPMN dengan menggunakan skenario, analisis event yang terkait dengan sistem email  dan mekanisme integrasi sistem email.
-	\item Bab 4 Analisis dan Perancangan, berisi analisis hasil studi mengenai \textit{event} yang terkait dengan integrasi sistem email beserta mekanisme instegrasinya, analisis kebutuhan, dan rancangan sistem yang berupa rancangan alamat email dan algoritma pengiriman email.
+	\item Bab 4 Analisis dan Perancangan, berisi analisis hasil studi mengenai \textit{event} yang terkait dengan integrasi sistem email beserta mekanisme instegrasinya, analisis kebutuhan, dan rancangan sistem yang berupa rancangan alamat email, algoritma pengiriman email dan rancangan antarmuka.
 	\item Bab 5 Implementasi, dan Pengujian Berisi implementasi dari program yang dibuat dan pengujian aplikasi berdasarkan contoh kasus pada bab tiga.
 	\item Bab 6 Penutup, Berisi kesimpulan dan saran-saran untuk pengembangan selanjutnya.
 \end{enumerate}

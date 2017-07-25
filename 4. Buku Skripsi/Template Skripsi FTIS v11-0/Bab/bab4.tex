@@ -123,7 +123,7 @@ Berikut adalah algoritma untuk mengirimkan email.
 \subsection{\textit{Task Event Listener}}
 \label{sec:perancangansistem_taskeventlistener}
 \textit{Task Event Listener} bereaksi ke \textit{Task Event} seperti \textit{Created, Assigned, dan Completed}. Implementasi \textit{Task Listener} berupa kode Java dapat dilihat di bawah ini :
-\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=PembangkitJadwal.java]
+\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TaskAssignmentListener.java]
 public class TaskAssignmentListener implements TaskListener{
 	public void notify(DelegateTask delegateTask) {
 	
@@ -139,3 +139,18 @@ Parameter delegateTask dapat mengambil maupun menyimpan informasi \textit{task} 
 	\item getCandidates(), mendapatkan \textit{candidate users/groups} dan addCandidateGroup() / addCandidateUser() untuk menentukan \textit{candidate users/groups}
 	
 \end{itemize}
+
+\subsection{Perancangan Antarmuka}
+\label{sec:perancangansistem_antarmuka}
+Antarmuka yang digunakan memiliki dua masukan, yaitu email dan password Gmail yang merepresentasikan sistem. Ada dua tombol, yaitu tombol untuk memilih direktori tujuan dan tombol untuk membangkitkan kelas Java yang berisi \textit{Task Event Listener} pada direktori yang telah dipilih sebelumnya. Berikut adalah tampilan antarmukanya :
+
+	\begin{figure}[H]
+			\centering
+			\includegraphics[scale=1]{Gambar/Bab-4/UI/1}
+			\caption{Tampilan Antarmuka untuk Membangkitkan Kode \textit{Task Event Listener}} 
+			\label{fig:perancangansistem_antarmuka}
+	\end{figure}
+	
+
+
+ 

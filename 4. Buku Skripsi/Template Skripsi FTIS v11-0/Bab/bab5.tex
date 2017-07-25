@@ -24,7 +24,7 @@ Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode sec
 \end{lstlisting}
 	
 
-	\item Kode untuk mengambil assignee (aktor dari \textit{task}, mengambil id \textit{task}, dan mengambil alamat email aktor.
+	\item Kode untuk mengambil assignee (aktor dari \textit{task}, mengambil id \textit{task}, dan mengambil alamat email aktor. Method notify() dipanggil ketika \textit{event listener} pada\textit{task} dipanggil. Misalnya suatu \textit{task} yang menggunakan \textit{event listener create} akan memanggil method notify() ketika \textit{task} dibuat.
 	\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TaskAssignmentListener.java]
 
  public void notify(DelegateTask delegateTask) {
@@ -41,7 +41,7 @@ Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode sec
                props.put("mail.smtp.starttls.enable", "true");
 
 \end{lstlisting}
-	\item Kode untuk mendapatkan aktor apabila atribut assignee memiliki nilai.
+	\item Kode untuk mendapatkan aktor apabila atribut assignee pada BPMN memiliki nilai.
 	\begin{lstlisting}[language=Java,basicstyle=\tiny,caption =TaskAssignmentListener.java]
 	if (assignee != null) {
       IdentityService identityService = Context.getProcessEngineConfiguration().getIdentityService();
@@ -52,7 +52,7 @@ Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode sec
     }
 	\end{lstlisting}
 	
-		\item Kode untuk mendapatkan aktor apabila atribut assignee tidak memiliki nilai.
+		\item Kode untuk mendapatkan aktor apabila atribut assignee pada BPMN tidak memiliki nilai. Kode ini mengambil aktor yang pada \textit{Candidate User} atau \textit{Candidate Group}.
 	\begin{lstlisting}[language=Java,basicstyle=\tiny,caption =TaskAssignmentListener.java]
 	    	TaskEntity task = (TaskEntity)delegateTask;
     	List<IdentityLinkEntity> identityLinks = task.getIdentityLinks();
@@ -75,9 +75,13 @@ Beberapa potongan kode di bawah ini adalah kode untuk pengiriman email. Kode sec
 	
 	
 
-	\item Kode untuk membangkitkan subjek dan isi email
+	\item Kode untuk membangkitkan subjek dan isi email. Kelas Properties menyimpan konfigurasi email yang akan digunakan. 
 	\begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TaskAssignmentListener.java]
-
+ props = System.getProperties();
+          props.put("mail.smtp.port", "587");
+          props.put("mail.smtp.auth", "true");
+          props.put("mail.smtp.starttls.enable", "true");
+					
  session = Session.getDefaultInstance(props, null);
                message = new MimeMessage(session);
                message.addRecipient(Message.RecipientType.TO, new InternetAddress(recipient));

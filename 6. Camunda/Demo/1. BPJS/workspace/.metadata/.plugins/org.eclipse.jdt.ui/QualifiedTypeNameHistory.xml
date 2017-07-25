@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="java.util.Random"/>
 <fullyQualifiedTypeName name="java.util.logging.Logger"/>
-<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.JavaDelegate"/>
 <fullyQualifiedTypeName name="org.apache.commons.logging.Log"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="java.awt.List"/>
@@ -10,4 +9,5 @@
 <fullyQualifiedTypeName name="org.camunda.bpm.model.dmn.instance.List"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.camunda.bpm.engine.task.IdentityLinkType"/>
+<fullyQualifiedTypeName name="org.camunda.bpm.engine.delegate.JavaDelegate"/>
 </qualifiedTypeNameHistroy>

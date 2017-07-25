@@ -265,7 +265,7 @@ Komponen-komponen pada BPMS Camunda adalah sebagai berikut :
 	
 \end{itemize}
 
-\section{Forms SDK}
+\subsection{Forms SDK}
 \label{formssdk}
 Camunda menggunakan Forms SDK untuk mengimplementasikan \textit{user task} menggunakan aplikasi berbasis HTML5 / JavaScript. Forms SDK menyediakan instruksi untuk mengakses variabel proses pada \textit{form} HTML. Terdapat dua tipe instruksi yaitu cam-variable-name yang digunakan untuk memberi nama proses / \textit{task} / variabel dan cam-variable-type yang digunakan untuk mementukan tipe dari variabel. Elemen HTML yang didukung adalah :
 \begin{enumerate}
@@ -351,13 +351,14 @@ Nama variabel pada cam-variable-name harus sama dengan nama variabel pada cam-fi
 JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. JavaMail dibuat dalam lingkungan Java Enterprise Edition (Java EE) yang merupakan lingkungan komputasi untuk pengembangan perangkat lunak skala besar dan menggunakan jaringan yang aman.
 
 
-Untuk menggunakan JavaMail diperlukan beberapa kelas, yaitu :
+Untuk menggunakan JavaMail diperlukan beberapa kelas utama, yaitu :
 \begin{itemize}
-	\item Kelas Session, kelas untuk mengumpulkan atribut email yang akan digunakan. Kelas Session mengambil berbagai atribut dari kelas Properties, seperti informasi server email yang akan digunakan.
+	\item Kelas Session, kelas untuk mengumpulkan atribut email yang akan digunakan. Kelas Session mengambil berbagai atribut dari kelas Properties, seperti informasi server email yang akan digunakan. Berbagai atribut yang dapat disimpan antara lain :
 	\item Kelas MimeMessage, kelas untuk menulis email. Kelas ini menyediakan berbagai atribut untuk menulis email. Di antaranya adalah alamat email asal, alamat email penerima, subjek, isi email, dll.
 	\item Kelas Transport, kelas untuk membuat koneksi ke email \textit{server} dan mengirim email.
 \end{itemize}
 Di bawah ini adalah contoh kode pengiriman email menggunakan JavaMail API : 
+
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=Contoh Kode Pengiriman Email]
 Properties props = new Properties();
     props.put("mail.smtp.host", "my-mail-server");

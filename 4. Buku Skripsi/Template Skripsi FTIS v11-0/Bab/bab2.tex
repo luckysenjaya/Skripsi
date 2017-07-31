@@ -6,11 +6,7 @@ Bab dua ini berisi dasar-dasar teori yang terkait dengan BPM, BPMN, BPMS, dan si
 
 \section{\textit{Business Process} (BP)}
 \label{sec:bp}
-\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen\cite{dumas:13} .
-
-\subsection{Komponen \textit{Business Process}}
-\label{sec:komponenBP}
-\textit{Business Process Management} memiliki komponen-komponen sebagai berikut :
+\textit{Business Process} adalah kumpulan dari \textit{event}/kejadian, \textit{activity}/kegiatan, dan \textit{decision point}/keputusan serta melibatkan sejumlah aktor dan objek yang bertujuan untuk menghasilkan nilai dalam bentuk produk/jasa yang berguna bagi konsumen\cite{dumas:13}. \textit{Business Process} memiliki komponen-komponen sebagai berikut :
 \begin{description}
 	\item{\textit{Event}} \hfill \\\textit{Event} adalah kejadian yang terjadi saat proses bisnis berjalan. 
 	\item{\textit{Activity}} \hfill \\\textit{Activity} adalah kumpulan kegiatan yang dapat dikerjakan. Ketika suatu \textit{Activity} berupa sebuah kegiatan yang sederhana, \textit{activity} disebut dengan \textit{task}. 
@@ -23,7 +19,7 @@ Komponen-komponen penyusun proses bisnis dapat dilihat pada Gambar ~\ref{kompone
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.7]{Gambar/Bab-2/1-bp-components}
-	\caption{Komponen BPM} 
+	\caption{Komponen \textit{Business Process}} 
 	\label{komponenbp}
 \end{figure}
 
@@ -33,10 +29,7 @@ Komponen-komponen penyusun proses bisnis dapat dilihat pada Gambar ~\ref{kompone
 
 \section{\textit{Business Process Management}(BPM)}
 \label{sec:bpm}
-\textit{Business Process Management} merupakan kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. 
-\subsection{Siklus \textit{Business Process Management}}
-\label{sec:siklusBPM}
-Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
+\textit{Business Process Management} merupakan kumpulan metode, teknik, dan alat untuk menemukan, menganalisa, mendesain kembali, menjalankan, dan mengawasi proses bisnis. Suatu proses bisnis tidak selalu berjalan dengan baik. Banyak hal yang tidak diantisipasi sebelumnya dapat menggangu proses bisnis. Untuk menjaga kualitas dari sebuah proses bisnis diperlukan pengawasan dan kontrol pada suatu fase tertentu serta perbaikan apabila diperlukan. Maka dari itu, suatu bisnis proses dapat dilihat sebagai suatu siklus yang terus menerus meningkatkan kualitasnya. Siklus dalam proses bisnis berupa :
 
 \begin{description}
 	\item{\textit{Process Identification}} \hfill \\ Pada fase ini, suatu masalah bisnis ditemukan, kemudian proses-proses yang berhubungan dengan masalah bisnis tersebut diidentifikasi, dibatasi, dan dihubungkan satu sama lain. Proses ini terbagi menjadi dua tahap, yaitu \textit{designation} dan \textit{evaluation}. Tahap \textit{designation} bertujuan untuk mengenali proses-proses yang ada dan hubungan antar proses tersebut. Sedangkan tahap \textit{evaluation} memprioritaskan proses-proses yang menghasilkan nilai dan mempertimbangkan proses yang memiliki risiko atau tidak menghasilkan nilai. Fase ini menghasilkan arsitektur dari proses bisnis yang merepresentasikan proses bisnis dan relasi-relasinya.   
@@ -57,7 +50,7 @@ Siklus BPM dapat dilihat pada Gambar ~\ref{siklusbpm}.
 
 \section{\textit{Business Process Model and Notation}}
 \label{sec:bpmn}
-Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\cite{bpmn:15:camunda}. Notasi-notasi tersebut terdiri dari \textit{Event}, \textit{Activity}, \textit{Gateway}, \textit{Data}, \textit{Artifact}, \textit{Pools}, dan \textit{Lanes}.
+Business Process Model Notation (BPMN) adalah notasi grafis yang menggambarkan langkah-langkah dalam proses bisnis\footnote{https://camunda.org/bpmn/reference}. Notasi-notasi tersebut terdiri dari \textit{Event}, \textit{Activity}, \textit{Gateway}, \textit{Data}, \textit{Artifact}, \textit{Pools}, dan \textit{Lanes}.
 
 \subsection{\textit{Event}}
 \label{sec:event}
@@ -348,7 +341,7 @@ Nama variabel pada cam-variable-name harus sama dengan nama variabel pada cam-fi
 
 \subsection{JavaMail}
 \label{javamail}
-JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\cite{javamail}. JavaMail dibuat dalam lingkungan Java Enterprise Edition (Java EE) yang merupakan lingkungan komputasi untuk pengembangan perangkat lunak skala besar dan menggunakan jaringan yang aman.
+JavaMail adalah Java API yang digunakan untuk mengirim dan menerima email melalui SMTP (Simple Mail Transfer Protocol), POP3 (Post Office Protocol 3), dan IMAP (Internet Message Access Protocol)\footnote{http://www.oracle.com/technetwork/java/javamail/index.html}. JavaMail dibuat dalam lingkungan Java Enterprise Edition (Java EE) yang merupakan lingkungan komputasi untuk pengembangan perangkat lunak skala besar dan menggunakan jaringan yang aman.
 
 
 Untuk menggunakan JavaMail diperlukan beberapa kelas utama, yaitu :

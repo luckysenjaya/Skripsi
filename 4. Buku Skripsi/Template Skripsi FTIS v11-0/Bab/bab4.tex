@@ -19,10 +19,13 @@ Pada bab sebelumnya, telah dijelaskan langkah-langkah untuk mengotomasi proses b
 Berdasarkan \textit{flowchart} ini, maka untuk mempropagasi email ada beberapa hal yang dibutuhkan, yaitu :
 \begin{enumerate}
 	\item Model proses menggunakan BPMN yang sudah dilengkapi form HTML untuk \textit{user task}, implementasi untuk \textit{service task} dan atribut lain yang diperlukan.
-	\item Alamat email yang merepresentasikan sistem.
-	\item Algoritma untuk mengirim email (TaskListener).
 	\item Kumpulan \textit{user/group} yang akan mengerjakan \textit{task}.
 	\item Business Process Management System (BPMS), yaitu tools untuk mengotomasi jalannya proses.
+\end{enumerate}
+Sedangkan untuk mempropagasi email dibutuhkan dua hal berikut :
+\begin{enumerate}
+	\item Alamat email yang merepresentasikan sistem.
+	\item Algoritma untuk mengirim email pemberitahuan ke pemilik \textit{task}.
 \end{enumerate}
 
 
@@ -69,6 +72,7 @@ Camunda memiliki berbagai jenis \textit{tasks} seperti \textit{user tasks, manua
 
 \item Mekanisme Integrasi Sistem Email
 \label{integrasi}
+
 \textit{User tasks} memiliki atribut \textit{Task Listener} yang dapat mengeksekusi perintah. \textit{Task Listener} memiliki dua atribut, yaitu \textit{Event Type} dan \textit{Listener Type}. Terdapat empat pilihan dari \textit{Event Type}, yaitu \textit{create, assignment, complete, delete}. 
 		\begin{figure}[H]
 			\centering
@@ -98,7 +102,7 @@ Untuk mengimplementasikan integrasi email dengan sistem BPMS, ada beberapa hal y
 
 \subsection{Rancangan Email}
 \label{Rancangansistem_rancanganemail}
-Alamat email yang digunakan untuk merepresentasikan sistem berbasis Gmail SMTP. Server Gmail SMTP memiliki batas pengiriman email sebanyak 2.000 email per hari. Gmail SMTP yang akan digunakan memiliki konfigurasi sebagai berikut \cite{smtpgoogle} :
+Alamat email yang digunakan untuk merepresentasikan sistem berbasis Gmail SMTP. Server Gmail SMTP memiliki batas pengiriman email sebanyak 2.000 email per hari. Gmail SMTP yang akan digunakan memiliki konfigurasi sebagai berikut \footnote{https://support.google.com/a/answer/176600} :
 \begin{itemize}
 	\item Alamat server = smtp.gmail.com.
 	\item Port = 587 (menggunakan TLS).

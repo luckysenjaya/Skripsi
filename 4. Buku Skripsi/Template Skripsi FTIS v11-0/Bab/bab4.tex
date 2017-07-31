@@ -1,17 +1,73 @@
 \chapter{Analisis dan Perancangan}
 \label{chap:analisisdanperancangan_hasilStudi}
 
-\section{Analisis Hasil Studi}
-\label{sec:analisisdanperancangan_hasilStudi}
-Berdasarkan hasil studi di bab sebelumnya, beberapa hal yang perlu dianalisis adalah \textit{event} apa yang diintegrasikan dengan sistem email dan bagaimana mekanisme integrasi sistem email
-\subsection{\textit{Event} yang Terkait dengan Integrasi Sistem Email}
+\section{Analisis Masalah dan Solusi}
+\label{sec:analisisdanperancangan_masalahdansolusi}
+Pada bagian ini, dilakukan analisis terhadap masalah propagasi \textit{workflow} dengan sistem email. Analisis ini akan menjawab \textit{event} yang terkait dengan integrasi sistem email dan mekanisme integrasi BPMS dan sistem email.
+
+\subsection{Analisis Masalah}
+\label{analisisdanperancangan_analisismasalah}
+Pada bab sebelumnya, telah dijelaskan langkah-langkah untuk mengotomasi proses bisnis menggunakan BPMS Camunda. Dalam proses otomasi tersebut, ada beberapa hal yang dibutuhkan agar proses otomasi berjalan dengan lancar. Untuk mengidentifikasi hal-hal yang dibutuhkan tersebut, berikut adalah \textit{workflow} yang menjelaskan langkah-langkah mengotomasi proses bisnis menggunakan BPMS Camunda :
+
+		\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.4]{Gambar/Bab-4/HighLevelFlowchart}
+			\caption{Flowchart Otomasi Proses Bisnis} 
+			\label{fig:stepflowchart}
+		\end{figure}
+
+Berdasarkan \textit{flowchart} ini, maka untuk mempropagasi email ada beberapa hal yang dibutuhkan, yaitu :
+\begin{enumerate}
+	\item Model proses menggunakan BPMN yang sudah dilengkapi form HTML untuk \textit{user task}, implementasi untuk \textit{service task} dan atribut lain yang diperlukan.
+	\item Alamat email yang merepresentasikan sistem.
+	\item Algoritma untuk mengirim email (TaskListener).
+	\item Kumpulan \textit{user/group} yang akan mengerjakan \textit{task}.
+	\item Business Process Management System (BPMS), yaitu tools untuk mengotomasi jalannya proses.
+\end{enumerate}
+
+
+Kebutuhan tersebut dibagikan ke tiga partisipan yang memiliki perannya masing-masing, yaitu desainer, admin, dan aktor.
+
+\begin{enumerate}
+\item Tugas Desainer 
+Seorang desainer model proses memiliki beberapa tugas, yaitu :
+\begin{enumerate}
+	\item Merancang model proses.
+	\item Menambahkan form HTML pada \textit{user task}, \textit{implementasi service task}, \textit{task listener} untuk propagasi email, dan berbagai atribut lainnnya sesuai kebutuhan.
+	\item Membuat alamat email yang merepresentasikan sistem.
+	\item Menambahkan \textit{username}, \textit{password}, dan \textit{host} email pada aplikasi task listener.
+	\item Mendelegasikan task kepada user/group yang akan mengerjakan.
+\end{enumerate}
+
+\item Tugas Admin
+Seorang admin memiliki dua tugas, yaitu :
+\begin{enumerate}
+	\item Menambahkan user/group yang akan mengerjakan \textit{tasks} pada Camunda Admin.
+	\item Menjalankan dan memulai proses.
+\end{enumerate}
+
+\item Tugas Aktor
+Seorang aktor memiliki dua tugas, yaitu :
+\begin{enumerate}
+	\item Memberitahu alamat email kepada admin.
+	\item Mengerjakan \textit{task}.
+\end{enumerate}
+
+\end{enumerate}
+
+
+\subsection{Usulan Solusi}
+\label{sec:usulansolusi}
+
+\begin{enumerate}
+\item\textit{Event} yang Terkait dengan Integrasi Sistem Email
 \label{sec:eventUserTask}
 
 Integrasi Camunda dengan sistem email pada skripsi ini bertujuan untuk memberi tahu aktor Camunda apabila ada \textit{tasks} yang perlu dikerjakan oleh aktor. Ketika aktor menerima email mengenai \textit{tasks} yang perlu dikejakan, aktor dapat langsung mengerjakannya. 
 
 Camunda memiliki berbagai jenis \textit{tasks} seperti \textit{user tasks, manual tasks, service task}, dan lainnya. Karena proses integrasi email dengan Camunda melibatkan aktor (aktor menerima pemberitahuan pekerjaannya melalui email), \textit{task} yang akan diintegrasikan dengan sistem email adalah \textit{user tasks}.
 
-\subsection{Mekanisme Integrasi Sistem Email}
+\item Mekanisme Integrasi Sistem Email
 \label{integrasi}
 \textit{User tasks} memiliki atribut \textit{Task Listener} yang dapat mengeksekusi perintah. \textit{Task Listener} memiliki dua atribut, yaitu \textit{Event Type} dan \textit{Listener Type}. Terdapat empat pilihan dari \textit{Event Type}, yaitu \textit{create, assignment, complete, delete}. 
 		\begin{figure}[H]
@@ -33,96 +89,97 @@ Untuk mengintegrasikan \textit{user tasks} dengan email, \textit{event type} yan
 Apabila menggunakan \textit{event create}, \textit{task} harus memiliki pemiliknya masing-masing ketika BPMN dibuat atau memiliki \textit{candidate user/group}. Bila pemilik \textit{task} belum ditentukan, email tidak akan terkirim, karena \textit{event create} sudah selesai dipanggil sebelum \textit{task} memiliki pemilik. Pengiriman email untuk \textit{task} yang belum memiliki aktor dapat menggunakan \textit{event create}. Sedangkan pada \textit{event assignment}, pengiriman email dilakukan setelah \textit{task} didelegasikan ke masing-masing user.
 
 
-\section{Analisis Kebutuhan}
-\label{analisisdanperancangan_analisiskebutuhan}
-Berdasarkan analisis di bagian sebelumnya, maka untuk mempropagasi email diperlukan beberapa persyaratan, yaitu :
-\begin{enumerate}
-	\item Model proses menggunakan BPMN yang sudah dilengkapi form HTML untuk \textit{user task}, implementasi untuk \textit{service task} dan atribut lain yang diperlukan.
-	\item Kumpulan \textit{user/group} yang akan mengerjakan tugas.
-	\item Alamat email yang merepresentasikan sistem.
-	\item Algoritma untuk mengirim email.
-	\item Business Process Management System (BPMS), yaitu tools untuk mengotomasi jalannya proses.
 \end{enumerate}
 
 
-Selain itu, dibutuhkan partisipan yang memiliki perannya masing-masing. Seorang Desainer bertugas merancang BPMN, seorang admin bertugas mengatur jalannya otomasi proses bisnis, sedangkan aktor bertugas mengerjakan \textit{tasks}
+\section{Rancangan Sistem}
+\label{sec:analisisdanperancangan_rancangansistem}
+Untuk mengimplementasikan integrasi email dengan sistem BPMS, ada beberapa hal yang perlu dirancang terlebih dahulu, seperti rancangan email yang akan dikirim, algoritma untuk pengiriman email, dan rancangan antarmuka.
 
-\begin{enumerate}
-\item Tugas Desainer 
-Berdasarkan perancangan sistem di atas, seorang desainer model proses memiliki beberapa tugas, yaitu :
-\begin{enumerate}
-	\item Merancang model proses.
-	\item Menambahkan form HTML pada \textit{user task}, \textit{implementasi service task}, \textit{task listener} untuk propagasi email, dan berbagai atribut lainnnya sesuai kebutuhan.
-	\item Mendelegasikan task kepada user/group yang akan mengerjakan.
-\end{enumerate}
-
-\item Tugas Admin
-\begin{enumerate}
-	\item Membuat alamat email yang merepresentasikan sistem.
-	\item Menambahkan \textit{username}, \textit{password}, dan \textit{host} email pada kode task listener yang berhubungan dengan propagasi email.
-	\item Menambahkan user/group yang akan mengerjakan \textit{tasks} pada Camunda Admin.
-	\item Menjalankan dan memulai proses.
-\end{enumerate}
-
-\item Tugas Aktor
-	\begin{enumerate}
-	\item Memberitahu alamat email kepada admin.
-	\item Mengerjakan \textit{task}.
-\end{enumerate}
-
-\end{enumerate}
-
-
-\section{Perancangan Sistem}
-\label{sec:analisisdanperancangan_perancangansistem}
-
-
-\subsection{Perancangan Aktor}
-\label{perancangansistem_perancanganaktor}
-Untuk pengujian skenario, ada beberapa aktor yang dibuat, yaitu :
-\begin{enumerate}
-	\item John, dengan alamat email johncamunda@gmail.com dan bagian dari grup \textit{sales}.
-	\item Mary, dengan alamat email marycamunda@yahoo.com dan bagian dari grup \textit{accounting}.
-	\item Peter, dengan alamat email petercamunda@gmail.com dan bagian dari grup \textit{management}.
-\end{enumerate}
-
-
-
-
-
-\subsection{Perancangan Email}
-\label{perancangansistem_perancanganemail}
-
-Alamat email yang digunakan untuk merepresentasikan sistem berbasis Gmail SMTP. Gmail SMTP yang akan digunakan memiliki konfigurasi sebagai berikut \cite{smtpgoogle} :
+\subsection{Rancangan Email}
+\label{Rancangansistem_rancanganemail}
+Alamat email yang digunakan untuk merepresentasikan sistem berbasis Gmail SMTP. Server Gmail SMTP memiliki batas pengiriman email sebanyak 2.000 email per hari. Gmail SMTP yang akan digunakan memiliki konfigurasi sebagai berikut \cite{smtpgoogle} :
 \begin{itemize}
 	\item Alamat server = smtp.gmail.com.
-	\item Port = 587.
+	\item Port = 587 (menggunakan TLS).
 	\item Username Gmail.
 	\item Password Gmail.
 \end{itemize}
 Email yang akan dikirimkan ke aktor memiliki format :
 \begin{enumerate}
-	\item Subjek :
+	\item Subjek.
 	\item Nama aktor.
 	\item Nama \textit{task}.
-	\item Link ke \textit{task}, yaitu http://localhost/camunda/app/tasklist/default/\#/?task=(\textit{id task}).
-\end{enumerate} 
+	\item Tautan ke \textit{task}, yaitu http://localhost/camunda/app/tasklist/default/\#/?task=(\textit{id task}).
+\end{enumerate}
+Berikut adalah contoh email yang akan dikirim :
+			\begin{figure}[H]
+			\centering
+			\includegraphics[scale=0.8]{Gambar/Bab-5/kasus2/12}
+			\caption{Contoh Email} 
+			\label{fig:perancangan_contohemail}
+	\end{figure}
+ 
 
-\subsection{Algoritma Pengiriman Email}
-\label{sec:perancangansistem_algoritma}
+\subsection{Rancangan Algoritma Pengiriman Email}
+\label{sec:Rancangansistem_algoritma}
+\begin{itemize}
 
-Berikut adalah algoritma untuk mengirimkan email.
+\item Untuk mengirim email ke pemilik \textit{task}, langkah-langkahnya adalah sebagai berikut :
 \begin{enumerate}
 	\item Mengambil id dari \textit{task}.
-	\item Mengambil email aktor yang akan mengerjakan \textit{task}.
-	\item Membangkitkan subjek dan isi email yang berisi tautan ke task yang akan dikerjakan. Tautan didapatkan dari id \textit{task}.
+	\item Mengambil informasi aktor yang akan mengerjakan \textit{task}. Informasi aktor yang mengerjakan task didapatkan dari kolom assignee, candidateUser, atau candidateGroup.
+	\item Jika assignee memiliki nilai, email dikirim ke aktor pada kolom assignee, jika tidak maka email dikirim ke aktor pada kolom candidateUser dan/atau CandidateGroup. 
+	\item Membangkitkan subjek dan isi email yang berisi tautan ke \textit{task} yang akan dikerjakan. 
 	\item Membuat koneksi ke email server dengan \textit{username} dan \textit{password}
 	\item Mengirim email.
 \end{enumerate}
 
-\subsection{\textit{Task Event Listener}}
-\label{sec:perancangansistem_taskeventlistener}
-\textit{Task Event Listener} bereaksi ke \textit{Task Event} seperti \textit{Created, Assigned, dan Completed}. Implementasi \textit{Task Listener} berupa kode Java dapat dilihat di bawah ini :
+Berikut adalah pseudocode untuk mengirim email ke pemilik \textit{task} :
+
+\begin{lstlisting}[basicstyle=\tiny,caption=Pseudocode TaskAssignmentListener]
+taskListener(){
+	Mengambil nilai assignee 
+	Mengambil taskId
+	Mengambil taskName
+	Mengambil candidateUsers
+	Mengambil candidateGroup
+	Mengambil username Gmail
+	Mengambil password Gmail
+	
+	IF assignee punya nilai Then
+		sendEmail(user)
+	ELSE
+		IF candidateUser punya nilai THEN
+			sendEmail(candidateUser)
+		ENDIF
+		IF candidateGroup punya nilai Then
+			FOR setiap user di candidateGroup
+				sendEmail(user)
+			ENDFOR
+		ENDIF
+	ENDIF
+}
+
+sendEmail(user){
+	Menentukan port menjadi 587
+	Menentukan status auth menjadi true
+	Menentukan status tls menjadi true
+	
+	Membuat koneksi ke server dengan username dan password Gmail untuk autentikasi
+	
+	Menentukan penerima email dari user
+	Menentukan subjek email yaitu ("Task" + taskName)
+	Menentukan isi email yaitu ("Dear " + user.getName() + \n + "Anda mendapatkan task " +taskName +" untuk dikerjakan \n Segera akses http://localhost:1234/camunda/app/tasklist/default/#/?task="+taskId +"untuk menjalankannya. \n Terima kasih.")
+
+	Mengirim email
+}
+
+\end{lstlisting}
+
+%\subsection{\textit{Task Event Listener}}
+%\label{sec:perancangansistem_taskeventlistener}
+\item \textit{Task Event Listener} bereaksi ke \textit{Task Event} seperti \textit{Created, Assigned, dan Completed}. Implementasi \textit{Task Listener} berupa kode Java dapat dilihat di bawah ini :
 \begin{lstlisting}[language=Java,basicstyle=\tiny,caption=TaskAssignmentListener.java]
 public class TaskAssignmentListener implements TaskListener{
 	public void notify(DelegateTask delegateTask) {
@@ -139,8 +196,9 @@ Parameter delegateTask dapat mengambil maupun menyimpan informasi \textit{task} 
 	\item getCandidates(), mendapatkan \textit{candidate users/groups} dan addCandidateGroup() / addCandidateUser() untuk menentukan \textit{candidate users/groups}
 	
 \end{itemize}
+\end{itemize}
 
-\subsection{Perancangan Antarmuka}
+\subsection{Rancangan Antarmuka untuk Membangkitkan Kode \textit{Task Event Listener}}
 \label{sec:perancangansistem_antarmuka}
 Antarmuka yang digunakan memiliki dua masukan, yaitu email dan password Gmail yang merepresentasikan sistem. Ada dua tombol, yaitu tombol untuk memilih direktori tujuan dan tombol untuk membangkitkan kelas Java yang berisi \textit{Task Event Listener} pada direktori yang telah dipilih sebelumnya. Berikut adalah tampilan antarmukanya :
 

@@ -120,9 +120,16 @@ Implementasi algoritma pengiriman email (TaskAssignmentListener.java) dikaitkan 
 
 \section{Pengujian}
 \label{sec:pengujian}
-Pengujian dilakukan pada skenario yang ada pada subbab \ref{hasilstudi_bpmn_masalah} Masalah Proses Bisnis. Ada dua skenario yang diuji, yaitu Pengajuan Proposal dan Pendaftaran BPJS. Kriteria yang diuji adalah berhasil atau tidaknya pengiriman email dan lama pengiriman email.
+Pengujian dilakukan pada skenario yang ada pada subbab \ref{hasilstudi_bpmn_masalah} Masalah Proses Bisnis. Ada dua skenario yang diuji, yaitu Pengajuan Proposal dan Pendaftaran BPJS. Kriteria yang diuji adalah berhasil atau tidaknya pengiriman email ke masing-masing aktor dan lama pengiriman email. Pengujian melibatkan tiga aktor, yaitu : 
+\begin{enumerate}
+	\item John, dengan alamat email johncamunda@gmail.com dan bagian dari grup \textit{sales}.
+	\item Mary, dengan alamat email marycamunda@yahoo.com dan bagian dari grup \textit{accounting}.
+	\item Peter, dengan alamat email petercamunda@gmail.com dan bagian dari grup \textit{management}.
+\end{enumerate}
 
-\subsection{Pengujian Kasus Pengajuan Proposal}
+
+
+\subsection{Hasil Pengujian Kasus Pengajuan Proposal}
 \label{pengujian_kasus1}
 Workflow Pengajuan Proposal dapat dilihat pada subbab \ref{hasilstudi_workflow}
 \begin{enumerate}
@@ -194,7 +201,7 @@ Workflow Pengajuan Proposal dapat dilihat pada subbab \ref{hasilstudi_workflow}
 
 
 
-\subsection{Pengujian Kasus Pendaftaran BPJS}
+\subsection{Hasil Pengujian Kasus Pendaftaran BPJS}
 \label{pengujian_kasus2}
 Workflow Kasus Pendaftaran BPJS dapat dilihat pada subbab \ref{hasilstudi_workflow}
 \begin{enumerate}
@@ -339,10 +346,11 @@ Workflow Kasus Pendaftaran BPJS dapat dilihat pada subbab \ref{hasilstudi_workfl
 
 		
 
-\section{Hasil Pengujian}
-\label{hasilpengujian}
+\section{Analisis Pengujian}
+\label{analisispengujian}
 Berdasarkan pengujian dua kasus yang telah dilakukan (Pengajuan Proposal dan Pendaftaran BPJS), hasilnya adalah :
 \begin{enumerate}
 	\item Seluruh \textit{user task} mengirimkan email ke pemilik \textit{task}.
-	\item Email langsung dikirim ke pemilik \textit{task} setelah \textit{task} siap dikerjakan. Dapat dilihat dari waktu \textit{task} sebelumnya selesai dan waktu email diterima oleh pemilik \textit{task} yang akan dikerjakan.
+	\item Email langsung dikirim ke pemilik \textit{task} setelah \textit{task} siap dikerjakan. Dapat dilihat dari waktu \textit{task} sebelumnya selesai dan waktu email diterima oleh pemilik \textit{task} yang akan dikerjakan. Misalnya pada kasus Pendaftaran BPJS nomor 13 dan 14, Mary memverifikasi pendaftaran pada pukul 2:47 PM dan menerima email untuk mencetak kartu BPJS (\textit{task} selanjutnya) pada pukul 2:47 PM.
 \end{enumerate}
+Berdasarkan hasil ini, maka dapat disimpulkan bahwa propagasi email sudah berhasil dilakukan.

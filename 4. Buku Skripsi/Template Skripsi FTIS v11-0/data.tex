@@ -63,8 +63,8 @@
 % \mode{kosong}
 % \mode{cover}
 % \mode{sidang}
- \mode{sidang_akhir}
-%\mode{final} 
+% \mode{sidang_akhir}
+ \mode{final} 
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -109,7 +109,7 @@
 % menampilkan, kosongkan parameter (i.e. \gambar{ }, \tabel{ })
 %=============================================================================
 \gambar{ }
-\tabel{ }
+\tabel{NO}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -165,9 +165,9 @@
 % !!Lihat singkatan pembimbing dan penguji anda di file dosen.tex
 %=============================================================================
 \namanpm{Lucky Senjaya Darmawan}{2012730009}	%hilangkan tanda << & >>
-\tanggal{}{05}{2017}			%hilangkan tanda << & >>
-\pembimbing{GDK}{<<pembimbing pendamping/2>>} %hilangkan tanda << & >>    
-\penguji{<<penguji 1>>}{<<penguji 2>>} 				%hilangkan tanda << & >>
+\tanggal{30}{5}{2017}			%hilangkan tanda << & >>
+\pembimbing{\GDK}{ } %hilangkan tanda << & >>    
+\penguji{\VSM}{\RDL} 				%hilangkan tanda << & >>
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -195,17 +195,18 @@
 % PERHATIAN: langsung mulai setelah '{' awal, jangan mulai menulis di baris 
 %			 bawahnya
 %=============================================================================
-\abstrakINA{\textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan perangkat lunak untuk otomasi proses bisnis, yaitu BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email. 
+\abstrakINA{\textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan perangkat lunak untuk otomasi proses bisnis, yaitu BPMS \textit{(Business Process Management System)}, seperti Camunda. Agar eksekusi \textit{workflow} lebih alamiah dan sesuai dengan model komunikasi organisasi saat ini, maka \textit{event} dapat dipropagasi dan diintegrasikan dengan sistem email. Tetapi mekanisme propagasi ini belum tersedia di BPMS Camunda.
 
-Dalam skripsi ini, dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Ketika ada suatu \textit{user task}, sistem email akan mengirim email ke pengguna yang akan mengerjakan task tersebut. Email tersebut berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.
+Dalam skripsi ini, dikembangkan suatu mekanisme propagasi email BPMS menggunakan sistem Java. Integrasi sistem email pada BPMS dibuat pada \textit{event} yang tertera pada \textit{user task}. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Pada \textit{task} tersebut disisipkan implementasi sistem email menggunakan Java. Ketika ada suatu \textit{user task}, sistem email akan mengirim email ke pengguna yang akan mengerjakan task tersebut. Email tersebut berisi tautan yang mengarah ke tugas yang perlu dikerjakan tersebut.  
 
-Berdasarkan pengujian, sistem dapat mengirim email ke masing-masing pemilik \textit{task}. Email langsung dikirim setelah \textit{user task} siap untuk dikerjakan. Dengan ini dapat disimpulkan proses integrasi \textit{user task} dan sistem email dapat dilakukan.}
+Berdasarkan pengujian menggunakan kasus Pengajuan Proposal dan Pendaftaran BPJS, sistem dapat mengirim email ke masing-masing pemilik \textit{task}. Email langsung dikirim setelah \textit{user task} siap untuk dikerjakan. Dengan demikian dapat disimpulkan propagasi email dan BPMS berhasil dilakukan.}
 
-\abstrakENG{Workflow is business process model that can be described as a flow map or BPMN (Business Process Model and Notation). Workflow can be automated using BPMS (Business Process Management System), such as Camunda. Workflow execution will be more natural with current orgaizational communication models, event can be propagated and integrated with email system.
+\abstrakENG{Workflow is business process model that can be described as a flow map or BPMN (Business Process Model and Notation). Workflow can be automated using BPMS (Business Process Management System), such as Camunda. Workflow execution will be more natural with current orgaizational communication models, event can be propagated and integrated with email system. But this mechanism hasn't available in BPMS Camunda.
 
-This thesis will develop integration between user task and email system. User task is task that need to be done by the user. When there is a user task, email system will send email to user. The email contains link to the task that needs to be done.
 
-According to experiment, system can send email to task owner. System send the email instantly after task ready. With this, we can conclude that user task can be integrated with email system.
+This thesis will develop BPMS email propagation using Java system. Email system integration with BPMS placed inside user task event. User task is task that need to be done by the user. Email system implementation using Java attached to the user task. When there is a user task, email system will send email to user. The email contains link to the task that needs to be done. 
+
+According to experiment Pengajuan Proposal and Pendaftaran BPJS, system can send email to task owner. System send the email instantly after task ready. With this, we can conclude that BPMS can be propagated with email system. 
 } 
 %=============================================================================
 
@@ -217,8 +218,8 @@ According to experiment, system can send email to task owner. System send the em
 % - kunciINA: kata-kata kunci dalam bahasa indonesia
 % - kunciENG: keywords in english
 %=============================================================================
-\kunciINA{Alur Kerja, Proses Bisnis, BPMN, BPMS, Camunda, Email}
-\kunciENG{Workflow, Business Process, BPMN, BPMS, Camunda, Email}
+\kunciINA{Proses Bisnis, BPMN, BPMS, Camunda, Email, Integrasi Email}
+\kunciENG{Business Process, BPMN, BPMS, Camunda, Email, Email Integration}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -227,7 +228,7 @@ According to experiment, system can send email to task owner. System send the em
 %=============================================================================
 % Persembahan : kepada siapa anda mempersembahkan skripsi ini ...
 %=============================================================================
-\untuk{<<kepada siapa anda mempersembahkan skripsi ini\ldots?>>}
+\untuk{Teknik Informatika UNPAR dan diri sendiri}
 %=============================================================================
 
 %_____________________________________________________________________________
@@ -237,7 +238,18 @@ According to experiment, system can send email to task owner. System send the em
 % Kata Pengantar: tempat anda menuliskan kata pengantar dan ucapan terima 
 % kasih kepada yang telah membantu anda bla bla bla ....  
 %=============================================================================
-\prakata{\kant[3-4]}
+\prakata{Puji syukur kepada Tuhan Yang Maha ESA atas seluruh karunia-Nya yang diberikan kepada penulis sehingga dapat menyelesaikan tugas akhir ini dengan baik. Tugas akhir berjudul \textbf{Studi dan Integrasi Workflow Menggunakan BPMS dan Sistem Email} diajukan sebagai salah satu syarat untuk menyelesaikan studi pada jurusan Teknik Informatika di Fakultas Teknologi Informasi dan Sains, Universitas Katolik Parahyangan. Pada kesempatan ini, penulis juga mengucapkan terima kasih kepada pihak-pihak yang telah memberikan dukungan untuk menyelesaikan tugas akhir ini, yaitu:
+\begin{itemize}
+	\item Orang tua dan keluarga yang selalu memberikan dukungan selama proses pengerjaan tugas akhir ini.
+	\item Bapak Gede Karya, M.T.,CISA sebagai pembimbing utama yang telah meluangkan waktunya untuk membantu dan membimbing dengan penuh kesabaran selama pengerjaan tugas akhir ini.
+	\item Dr. Veronica Sri Moertini dan Ibu Rosa De Lima, M.KOM. sebagai penguji yang telah meluangkan waktunya untuk menguji dan memberikan masukan-masukan untuk tugas akhir ini.
+	\item Teman-teman Teknik Informatika UNPAR angkatan 2012 yang telah memberikan semangat untuk menyelesaikan tugas akhir ini.
+	\item Pihak-pihak lain yang belum disebutkan yang berperan dalam penyelesaian tugas akhir ini.
+	
+	Akhir kata, penulis berharap tugas akhir ini dapat bermanfaat bagi para pembaca yang hendak melakukan penelitian dan pengembangan yang terkait dengan tugas akhir ini. Penulis menyadari bahwa penyusunan tugas akhir ini masih jauh dari semburna, sehingga penulis menerima kritik dan saran yang bersifat membangun.
+\end{itemize}
+
+  }
 %=============================================================================
 
 %_____________________________________________________________________________

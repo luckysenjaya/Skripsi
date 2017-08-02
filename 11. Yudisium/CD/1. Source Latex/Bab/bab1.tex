@@ -1,0 +1,85 @@
+%versi 2 (8-10-2016) 
+\chapter{Pendahuluan}
+\label{chap:intro}
+   
+\section{Latar Belakang}
+\label{sec:label}
+
+\textit{Workflow} merupakan pemodelan proses bisnis yang dapat digambarkan sebagai \textit{flow map} atau BPMN \textit{(Business Process Model and Notation).} \textit{Workflow} ini dapat diotomasi menggunakan BPMS \textit{(Business Process Management System)}, yaitu sistem yang dapat mengeksekusi dan mengotomasi proses bisnis yang berbentuk \textit{workflow}. Salah satu BPMS yang digunakan di skripsi ini adalah Camunda yang berbasis Java. Agar eksekusi \textit{workflow} lebih alamiah dengan model komunikasi organisasi saat ini, maka \textit{event} yang ada pada \textit{workflow} dapat dipropagasi dan diintegrasikan dengan sistem email. Dengan model komunikasi ini, aktor dapat segera melakukan pekerjaan dari mana dan kapan saja. Hal ini meningkatkan efektifitas dan efisiensi komunikasi pada organisasi. 
+
+Dalam skripsi ini, dibuat suatu integrasi antara \textit{user task} dan sistem email. \textit{User task} adalah suatu tugas yang perlu dilakukan oleh pengguna. Ketika ada suatu \textit{user task}, sistem akan mengirimkan email ke pengguna yang akan mengerjakan task tersebut. Email tersebut akan berisi tautan yang mengarah ke tugas yang perlu dikerjakan. Untuk mencapainya, dibuat sebuah \textit{listener} yang dikaitkan pada \textit{workflow}. Implementasi \textit{listener} ini dapat dibuat dengan bahasa Java. 
+
+
+
+\section{Rumusan Masalah}
+\label{sec:rumusan}
+
+Berdasarkan latar belakang yang dipaparkan sebelumnya, maka rumusan masalah dalam skripsi ini adalah sebagai berikut :
+\begin{enumerate}
+	\item Bagaimana cara kerja BPMN dan BPMS?
+	\item Bagaimana memodelkan \textit{workflow} dengan BPMN?
+	\item Event-event \textit{workflow} apa saja yang dapat dipropagasi ke sistem email?
+	\item Bagaimana mekanisme propagasi dan integrasi \textit{workflow} dengan sistem email?
+	\item Bagaimana mengimplementasikan dan menguji integrasi \textit{workflow} dengan sistem email?
+\end{enumerate} 
+
+
+
+
+\section{Tujuan}
+\label{sec:tujuan}
+
+Berdasarkan rumusan masalah yang dipaparkan sebelumnya, tujuan dari penelitian ini adalah :
+\begin{enumerate}
+	\item Mempelajari BPMN dan BPMS.
+	\item Memodelkan \textit{workflow} dengan BPMN.
+	\item Mengidentifikasi event-event \textit{workflow} yang dapat dipropagasi ke sistem email.
+	\item Menentukan mekanisme propagasi dan mengintegrasikan \textit{workflow} dengan sistem email.
+	\item Menguji integrasi \textit{workflow} dengan sistem email.
+\end{enumerate}
+
+
+
+
+\section{Batasan Masalah}
+\label{sec:batasan}
+\begin{enumerate}
+	\item Pemodelan BPMN menggunakan versi 2.0 dan menggunakan editor Camunda Modeler versi 1.7.2, yaitu versi terbaru untuk pada bulan Mei 2017.
+	\item Perangkat lunak BPMS Camunda yang digunakan merupakan versi 7.6.0 dan berjalan pada tomcat versi 8.0.24, yaitu versi terbaru pada bulan Mei 2017.
+	\item Semua uji kasus berada di lingkungan Camunda. Hal ini dilakukan agar skripsi ini lebih fokus kepada integrasi email.
+	\item Menggunakan Google Mail sebagai sistem email.
+	\item Menggunakan dua kasus uji, yaitu kasus pengajuan proposal dan kasus pendaftaran BPJS.
+\end{enumerate}
+
+
+
+
+\section{Metodologi}
+\label{sec:metlit}
+
+Metodologi yang digunakan dalam penelitian ini adalah sebagai berikut:
+\begin{enumerate}
+	\item Melakukan studi mengenai proses bisnis, \textit{workflow}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, dan sistem e-mail. 
+	\item Memodelkan proses bisnis tertentu menggunakan BPMN.
+	\item Mengidentifikasikan \textit{event-event} dari \textit{workflow} yang dapat diintegrasikan dengan sistem email.
+	\item Merancang integrasi sistem email.
+	\item Mengimplementasikan sistem email ke BPMS.
+	\item Melakukan pengujian fungsionalitas.
+\end{enumerate}
+
+
+
+
+\section{Sistematika Pembahasan}
+\label{sec:sispem}
+
+\begin{enumerate}
+	\item Bab 1 Pendahuluan, berisi latar belakang masalah, rumusan masalah, tujuan penelitian, batasan masalah, metodologi penelitian, dan sistematika penulisan.
+	\item Bab 2 Dasar Teori, berisi dasar teori yang mencakup \textit{Business Process Management}, \textit{Business Process Model and Notation (BPMN)}, \textit{Business Process Management System (BPMS)}, BPMS Camunda, Forms SDK dan sistem e-mail.
+	\item Bab 3 Hasil Studi, berisi masalah proses bisnis yang diselesaikan menggunakan otomasi BPMS Camunda. Mulai dari memodelkan \textit{workflow}, instalasi Camunda, menghubungkan BPMN dan BPMS Camunda hingga otomasi menggunakan BPMS Camunda.
+	\item Bab 4 Analisis dan Perancangan, berisi analisis hasil studi, yaitu analisis kebutuhan, \textit{event} yang terkait dengan integrasi sistem email beserta mekanisme instegrasinya, dan rancangan sistem yang berupa rancangan aktor, rancangan alamat email, rancangan algoritma, dan rancangan antarmuka.
+	\item Bab 5 Implementasi, dan Pengujian Berisi implementasi dari program yang dibuat dan pengujian aplikasi berdasarkan contoh kasus pada bab tiga.
+	\item Bab 6 Penutup, Berisi kesimpulan dan saran-saran untuk pengembangan selanjutnya.
+\end{enumerate}
+
+

@@ -1,0 +1,67 @@
+\select@language {bahasa}
+\contentsline {chapter}{Kata Pengantar}{xv}{chapter*.1}
+\contentsline {chapter}{Daftar Isi}{xvii}{section*.2}
+\contentsline {chapter}{Daftar Gambar}{xix}{section*.3}
+\contentsline {chapter}{\numberline {1}Pendahuluan}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}Latar Belakang}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Rumusan Masalah}{1}{section.1.2}
+\contentsline {section}{\numberline {1.3}Tujuan}{1}{section.1.3}
+\contentsline {section}{\numberline {1.4}Batasan Masalah}{2}{section.1.4}
+\contentsline {section}{\numberline {1.5}Metodologi}{2}{section.1.5}
+\contentsline {section}{\numberline {1.6}Sistematika Pembahasan}{2}{section.1.6}
+\contentsline {chapter}{\numberline {2}Dasar Teori}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}\textit {Business Process} (BP)}{3}{section.2.1}
+\contentsline {section}{\numberline {2.2}\textit {Business Process Management}(BPM)}{4}{section.2.2}
+\contentsline {section}{\numberline {2.3}\textit {Business Process Model and Notation}}{5}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}\textit {Event}}{5}{subsection.2.3.1}
+\contentsline {subsection}{\numberline {2.3.2}\textit {Activity}}{6}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}\textit {Gateway}}{6}{subsection.2.3.3}
+\contentsline {subsection}{\numberline {2.3.4}\textit {Data}}{7}{subsection.2.3.4}
+\contentsline {subsection}{\numberline {2.3.5}\textit {Artifact}}{7}{subsection.2.3.5}
+\contentsline {subsection}{\numberline {2.3.6}\textit {Pools} dan \textit {Lanes}}{7}{subsection.2.3.6}
+\contentsline {section}{\numberline {2.4}\textit {Business Process Management System (BPMS)}}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}BPMS Camunda}{8}{section.2.5}
+\contentsline {subsection}{\numberline {2.5.1}Arsitektur BPMS Camunda}{8}{subsection.2.5.1}
+\contentsline {subsection}{\numberline {2.5.2}Forms SDK}{12}{subsection.2.5.2}
+\contentsline {section}{\numberline {2.6}Email}{13}{section.2.6}
+\contentsline {subsection}{\numberline {2.6.1}Mail Server}{13}{subsection.2.6.1}
+\contentsline {subsection}{\numberline {2.6.2}JavaMail}{13}{subsection.2.6.2}
+\contentsline {chapter}{\numberline {3}Hasil Studi}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}Hasil Studi BPMN}{15}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Masalah Proses Bisnis}{15}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Memodelkan Proses Bisnis dengan \textit {Workflow}}{16}{subsection.3.1.2}
+\contentsline {subsubsection}{Pengajuan Proposal}{16}{subsubsection*.4}
+\contentsline {subsubsection}{Pendaftaran BPJS}{17}{subsubsection*.5}
+\contentsline {section}{\numberline {3.2}Menyiapkan BPMS Camunda}{19}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Instalasi Camunda}{19}{subsection.3.2.1}
+\contentsline {subsubsection}{Mempersiapkan Proyek Java}{19}{subsubsection*.6}
+\contentsline {subsection}{\numberline {3.2.2}Kasus 1 - Pengajuan Proposal}{20}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Kasus 2 - Pendaftaran BPJS}{23}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Menjalankan Camunda}{25}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Otomasi Kasus 1 - Pengajuan Proposal}{25}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Otomasi Kasus 2 - Pendaftaran BPJS}{26}{subsection.3.3.2}
+\contentsline {chapter}{\numberline {4}Analisis dan Perancangan}{31}{chapter.4}
+\contentsline {section}{\numberline {4.1}Analisis Masalah dan Solusi}{31}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Analisis Masalah}{31}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Usulan Solusi}{32}{subsection.4.1.2}
+\contentsline {section}{\numberline {4.2}Rancangan Sistem}{33}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Rancangan Email}{33}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Rancangan Algoritma Pengiriman Email}{34}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Rancangan Antarmuka untuk Membangkitkan Kode \textit {Task Event Listener}}{35}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Implementasi dan Pengujian}{37}{chapter.5}
+\contentsline {section}{\numberline {5.1}Lingkungan Implementasi}{37}{section.5.1}
+\contentsline {section}{\numberline {5.2}Implementasi Algoritma Pengiriman Email}{37}{section.5.2}
+\contentsline {section}{\numberline {5.3}Pengujian}{39}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Hasil Pengujian Kasus Pengajuan Proposal}{39}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Hasil Pengujian Kasus Pendaftaran BPJS}{43}{subsection.5.3.2}
+\contentsline {section}{\numberline {5.4}Analisis Pengujian}{50}{section.5.4}
+\contentsline {chapter}{\numberline {6}Kesimpulan dan Saran}{53}{chapter.6}
+\contentsline {section}{\numberline {6.1}Kesimpulan}{53}{section.6.1}
+\contentsline {section}{\numberline {6.2}Saran}{53}{section.6.2}
+\contentsline {chapter}{Daftar Referensi}{55}{chapter*.7}
+\renewcommand {\cftchappresnum }{\bf \scshape }
+\contentsline {chapter}{\numberline {A}Kode Program Pengiriman Email}{57}{appendix.A}
+\contentsline {chapter}{\numberline {B}Kode pom.xml}{59}{appendix.B}
+\contentsline {chapter}{\numberline {C}Kode Skenario}{61}{appendix.C}
+\contentsline {section}{\numberline {C.1}Kasus 1 - Pengajuan Proposal}{61}{section.C.1}
+\contentsline {section}{\numberline {C.2}Kasus 2 - Pendaftaran BPJS}{61}{section.C.2}

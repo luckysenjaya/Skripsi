@@ -28,8 +28,8 @@ import org.camunda.bpm.engine.task.IdentityLinkType;
 
 public class TaskAssignmentListener implements TaskListener {
   private static final String HOST = "smtp.gmail.com";
-  private static final String USER = "camundasys@gmail.com";
-  private static final String PWD = "epW3S4KN";
+  private static final String USER = "";
+  private static final String PWD = "";
   
   String assignee;
   String taskId;
